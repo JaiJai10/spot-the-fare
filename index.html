@@ -1494,6 +1494,44 @@ async function fetchCPHArrivals(){
 const KGL_LOC2VID = {"Operaen":"operaen","Gamle Scene":"gamle_scene","Skuespilhuset":"skuespilhuset"};
 const KGL_CAT = {"Opera":["🎭","kultur","🎭 Opera"],"Musical":["🎭","kultur","🎭 Musical"],
   "Dans":["🩰","kultur","🩰 Ballet/Dans"],"Koncert":["🎼","koncert","🎼 Koncert"],"Rundvisning":["🚶","kultur","🚶 Rundvisning"]};
+/* Koncerter — Loppen (JSON-LD) + Rust (struktureret liste) */
+async function fetchLoppen(){
+  const txt = await proxyFetch("https://www.loppen.dk/", 30000);
+  const out = [];
+  const re = /<script type="application\/ld\+json">(.*?)<\/script>/g;
+  let m;
+  while((m=re.exec(txt))){
+    try{
+      const d = JSON.parse(m[1]);
+      const items = Array.isArray(d)? d : [d];
+      items.forEach(it=>{
+        if(it && it.startDate && it.name){
+          out.push({navn:"Loppen: "+it.name.replace(/\s+/g," ").trim(), vid:"loppen", type:"koncert",
+            type_label:"🎸 Koncert", ikon:"🎸", dato:it.startDate.slice(0,10),
+            start:it.startDate.slice(11,16), slut:String((+it.startDate.slice(11,13)+2)%24).padStart(2,"0")+it.startDate.slice(13,16),
+            vindue:"", kilde:"loppen.dk", note:"Koncert på Loppen, Christiania", kapacitet:350, score:null});
+        }
+      });
+    }catch(e){}
+  }
+  return out;
+}
+async function fetchRust(){
+  const txt = await proxyFetch("https://www.rust.dk/", 30000);
+  const out = [];
+  const re = /(\d{2}\.\d{2}\.\d{4})<\/[^>]+>[^<]*<[^>]*>[^<]*Koncert[\s\S]{0,300}?([A-ZÆØÅ][^<]{2,60})/g;
+  let m;
+  while((m=re.exec(txt))){
+    const dk = m[1];
+    const iso = "20"+dk.slice(6)+"-"+dk.slice(3,5)+"-"+dk.slice(0,2);
+    out.push({navn:"Rust: "+m[2].replace(/&amp;/g,"&").replace(/&#8211;/g,"–").trim(), vid:"rust", type:"koncert",
+      type_label:"🎸 Koncert", ikon:"🎸", dato:iso, start:"20:00",
+      slut:"22:00", vindue:"", kilde:"rust.dk", note:"Koncert på Rust, Nørrebro", kapacitet:700, score:null});
+  }
+  const seen = new Set();
+  return out.filter(e=>{ const k=e.navn+e.dato; if(seen.has(k)) return false; seen.add(k); return true; });
+}
+
 async function fetchKGL(){
   const txt = await proxyFetch("https://www.kglteater.dk/api/calendar/activities", 30000);
   const d = JSON.parse(txt);
@@ -1602,6 +1640,8 @@ async function buildBrowserData(){
   push("https://cruisedig.com/node/285", txt=>parseCruiseHTML(txt, dayStr));
   push("https://api.flightradar24.com/common/v1/airport.json?code=CPH&plugin%5B%5D=schedule&plugin-setting%5Bschedule%5D%5Bmode%5D=arrivals&plugin-setting%5Bschedule%5D%5Blimit%5D=100", fetchCPHArrivals);
   push("https://www.kglteater.dk/api/calendar/activities", fetchKGL);
+  push("https://www.loppen.dk/", fetchLoppen);
+  push("https://www.rust.dk/", fetchRust);
   const groups = new Array(jobs.length);
   let idx=0;
   const worker = async()=>{

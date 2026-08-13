@@ -17678,6 +17678,1599 @@
    "kilde": "Klubbernes kampprogram",
    "note": "Mod Skovshoved IF",
    "dato": "2026-08-24"
+  },
+  {
+   "id": "kcrus081320",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: Smuk (+ HUND)",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-08-13"
+  },
+  {
+   "id": "kcrus081420",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: Legobygger123 + Yungholgi + Narkovrag27 (UDSOLGT)",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-08-14"
+  },
+  {
+   "id": "kcrus081520",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: Legobygger123 + Narkovrag27 + Yungholgi (EKSTRA)",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-08-15"
+  },
+  {
+   "id": "kcrus082020",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: Jakob Hasselstrøm (+ Ella Olympia)",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-08-20"
+  },
+  {
+   "id": "kcrus082120",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: Takuya Nakamura (UDSOLGT)",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-08-21"
+  },
+  {
+   "id": "kcrus082720",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: Lil Mazda Tribute Night",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-08-27"
+  },
+  {
+   "id": "kcrus082820",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: SheFunk",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-08-28"
+  },
+  {
+   "id": "kcrus082920",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: BAD (+ $MALIKK)",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-08-29"
+  },
+  {
+   "id": "kcrus090220",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: Hesketh (+ Raw Umbra)",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-09-02"
+  },
+  {
+   "id": "kcrus090320",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: Rust In Peace: Hollywood Babylons + Seasonal Depression + Rhinestone Current",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-09-03"
+  },
+  {
+   "id": "kcrus090420",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: JOY (Anonymous) (UDSOLGT)",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-09-04"
+  },
+  {
+   "id": "kcrus090520",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: Trubaduren & Hans Rockband",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-09-05"
+  },
+  {
+   "id": "kcrus090620",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: Milkweed (UK)",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-09-06"
+  },
+  {
+   "id": "kcrus090720",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: Fatboi Sharif (US) (+ Olof Melander)",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-09-07"
+  },
+  {
+   "id": "kcrus090820",
+   "vid": "rust",
+   "ikon": "🎸",
+   "navn": "Rust: she's green (US)",
+   "venue": "Rust · Nørrebro",
+   "lat": 55.6912,
+   "lon": 12.5593,
+   "kapacitet": 700,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 31,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Guldbergsgade",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Rust, Nørrebro"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Guldbergsgade",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Rust, Nørrebro",
+   "dato": "2026-09-08"
+  },
+  {
+   "id": "kclop081320",
+   "vid": "loppen",
+   "ikon": "🎸",
+   "navn": "Loppen: COFFINS + DEAD VOID",
+   "venue": "Loppen · Christiania",
+   "lat": 55.674,
+   "lon": 12.5973,
+   "kapacitet": 350,
+   "start": "20:30",
+   "slut": "22:30",
+   "vindue": "22:30 – 23:30",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 25,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Christiania",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Loppen, Christiania"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Christiania",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Loppen, Christiania",
+   "dato": "2026-08-13"
+  },
+  {
+   "id": "kclop081719",
+   "vid": "loppen",
+   "ikon": "🎸",
+   "navn": "Loppen: CURRENT JOYS + FANTASY OF A BROKEN HEART",
+   "venue": "Loppen · Christiania",
+   "lat": 55.674,
+   "lon": 12.5973,
+   "kapacitet": 350,
+   "start": "19:00",
+   "slut": "21:00",
+   "vindue": "21:00 – 22:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 25,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Christiania",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Loppen, Christiania"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Christiania",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Loppen, Christiania",
+   "dato": "2026-08-17"
+  },
+  {
+   "id": "kclop082620",
+   "vid": "loppen",
+   "ikon": "🎸",
+   "navn": "Loppen: AUTOMATIC + DREAMSTRUCK",
+   "venue": "Loppen · Christiania",
+   "lat": 55.674,
+   "lon": 12.5973,
+   "kapacitet": 350,
+   "start": "20:30",
+   "slut": "22:30",
+   "vindue": "22:30 – 23:30",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 25,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Christiania",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Loppen, Christiania"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Christiania",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Loppen, Christiania",
+   "dato": "2026-08-26"
+  },
+  {
+   "id": "kclop082720",
+   "vid": "loppen",
+   "ikon": "🎸",
+   "navn": "Loppen: RELEASE PARTY (Og Du Lyser + BBYBITES DJ)",
+   "venue": "Loppen · Christiania",
+   "lat": 55.674,
+   "lon": 12.5973,
+   "kapacitet": 350,
+   "start": "20:30",
+   "slut": "22:30",
+   "vindue": "22:30 – 23:30",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 25,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Christiania",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Loppen, Christiania"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Christiania",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Loppen, Christiania",
+   "dato": "2026-08-27"
+  },
+  {
+   "id": "kclop082921",
+   "vid": "loppen",
+   "ikon": "🎸",
+   "navn": "Loppen: KING PARROT",
+   "venue": "Loppen · Christiania",
+   "lat": 55.674,
+   "lon": 12.5973,
+   "kapacitet": 350,
+   "start": "21:00",
+   "slut": "23:00",
+   "vindue": "23:00 – 00:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 25,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Christiania",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Loppen, Christiania"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Christiania",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Loppen, Christiania",
+   "dato": "2026-08-29"
+  },
+  {
+   "id": "kclop090320",
+   "vid": "loppen",
+   "ikon": "🎸",
+   "navn": "Loppen: ORA COGAN + ELAINE MALONE",
+   "venue": "Loppen · Christiania",
+   "lat": 55.674,
+   "lon": 12.5973,
+   "kapacitet": 350,
+   "start": "20:30",
+   "slut": "22:30",
+   "vindue": "22:30 – 23:30",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 25,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Christiania",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Loppen, Christiania"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Christiania",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Loppen, Christiania",
+   "dato": "2026-09-03"
+  },
+  {
+   "id": "kclop090421",
+   "vid": "loppen",
+   "ikon": "🎸",
+   "navn": "Loppen: DATE CAMP",
+   "venue": "Loppen · Christiania",
+   "lat": 55.674,
+   "lon": 12.5973,
+   "kapacitet": 350,
+   "start": "21:00",
+   "slut": "23:00",
+   "vindue": "23:00 – 00:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 25,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Christiania",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Loppen, Christiania"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Christiania",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Loppen, Christiania",
+   "dato": "2026-09-04"
+  },
+  {
+   "id": "kclop091221",
+   "vid": "loppen",
+   "ikon": "🎸",
+   "navn": "Loppen: THE DEPTHS WE EXPLORED + BLOOD ORANGE MOON",
+   "venue": "Loppen · Christiania",
+   "lat": 55.674,
+   "lon": 12.5973,
+   "kapacitet": 350,
+   "start": "21:00",
+   "slut": "23:00",
+   "vindue": "23:00 – 00:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 25,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Christiania",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Loppen, Christiania"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Christiania",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Loppen, Christiania",
+   "dato": "2026-09-12"
+  },
+  {
+   "id": "kclop091319",
+   "vid": "loppen",
+   "ikon": "🎸",
+   "navn": "Loppen: MAUSTETYTÖT",
+   "venue": "Loppen · Christiania",
+   "lat": 55.674,
+   "lon": 12.5973,
+   "kapacitet": 350,
+   "start": "19:00",
+   "slut": "21:00",
+   "vindue": "21:00 – 22:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 25,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Christiania",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Loppen, Christiania"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Christiania",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Loppen, Christiania",
+   "dato": "2026-09-13"
+  },
+  {
+   "id": "kclop091720",
+   "vid": "loppen",
+   "ikon": "🎸",
+   "navn": "Loppen: CORY HANSON + COLE BERLINER",
+   "venue": "Loppen · Christiania",
+   "lat": 55.674,
+   "lon": 12.5973,
+   "kapacitet": 350,
+   "start": "20:30",
+   "slut": "22:30",
+   "vindue": "22:30 – 23:30",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 25,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Christiania",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Loppen, Christiania"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Christiania",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Loppen, Christiania",
+   "dato": "2026-09-17"
+  },
+  {
+   "id": "kclop091821",
+   "vid": "loppen",
+   "ikon": "🎸",
+   "navn": "Loppen: SEBASTIAN WOLFF",
+   "venue": "Loppen · Christiania",
+   "lat": 55.674,
+   "lon": 12.5973,
+   "kapacitet": 350,
+   "start": "21:00",
+   "slut": "23:00",
+   "vindue": "23:00 – 00:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 25,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Christiania",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Loppen, Christiania"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Christiania",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Loppen, Christiania",
+   "dato": "2026-09-18"
+  },
+  {
+   "id": "kclop091921",
+   "vid": "loppen",
+   "ikon": "🎸",
+   "navn": "Loppen: LORD FINESSE",
+   "venue": "Loppen · Christiania",
+   "lat": 55.674,
+   "lon": 12.5973,
+   "kapacitet": 350,
+   "start": "21:00",
+   "slut": "23:00",
+   "vindue": "23:00 – 00:00",
+   "type": "koncert",
+   "type_label": "🎸 Koncert",
+   "score": 25,
+   "kurve": "concert",
+   "spot": "Hovedindgangen · Christiania",
+   "ventetid": "5–10 min",
+   "boostere": [
+    [
+     "🎸",
+     "Koncert · let-out"
+    ],
+    [
+     "🚕",
+     "Få taxier i nærheden"
+    ],
+    [
+     "🎟️",
+     "Koncert på Loppen, Christiania"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Christiania",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–10 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra gæster",
+     "ventetid": "8–12 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "10–15 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Loppen/Rust",
+   "note": "Koncert på Loppen, Christiania",
+   "dato": "2026-09-19"
   }
  ],
  "venues": [
