@@ -1,0 +1,1852 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spot the Fare · København</title>
+<link rel="stylesheet" href="vendor/leaflet.css">
+<style>
+  :root{
+    --bg:#0b0f17; --surface:#131a26; --surface2:#1a2332; --border:#243147;
+    --text:#e8edf5; --muted:#8fa0b8; --faint:#5b6f8d;
+    --yellow:#ffc62b; --hot:#ff5c5c; --orange:#ff9f43; --amber:#ffc62b;
+    --blue:#58b7ff; --green:#3ddc84;
+    --bg-glow:#101a2c; --appbg:rgba(11,15,23,.6); --mapbg:#0d2745;
+  }
+  :root[data-theme="light"]{
+    --bg:#eef1f6; --surface:#ffffff; --surface2:#e7ecf4; --border:#ccd6e3;
+    --text:#15202e; --muted:#4d5e77; --faint:#75849b;
+    --yellow:#c98f00; --hot:#d62b2b; --orange:#de6d14; --amber:#b57f00;
+    --blue:#1668d4; --green:#0d9d55;
+    --bg-glow:#dfe6f2; --appbg:rgba(255,255,255,.72); --mapbg:#d9e4f0;
+  }
+  *{box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent;}
+  html,body{height:100%;}
+  body{
+    background:radial-gradient(1200px 600px at 70% -10%, var(--bg-glow) 0%, var(--bg) 55%);
+    color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:15px; line-height:1.45;
+  }
+  .app{max-width:540px; margin:0 auto; min-height:100vh; display:flex; flex-direction:column;
+       border-left:1px solid var(--border); border-right:1px solid var(--border); background:var(--appbg);}
+  /* ---------- header ---------- */
+  header{display:flex; align-items:center; gap:9px; padding:14px 14px 10px;}
+  .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--yellow),#f59f00);
+        display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:0 2px 10px rgba(255,198,43,.25);}
+  .brand b{display:block;font-size:16.5px;letter-spacing:.2px;white-space:nowrap;}
+  .brand small{color:var(--muted);font-size:12px;white-space:nowrap;}
+  .spacer{flex:1;}
+  .lang{display:flex;background:var(--surface2);border:1px solid var(--border);border-radius:16px;padding:2px;flex:0 0 auto;}
+  .lang button{border:0;background:transparent;color:var(--muted);font-size:11.5px;font-weight:800;padding:4px 9px;border-radius:13px;cursor:pointer;font-family:inherit;}
+  .lang button.on{background:var(--yellow);color:#1a1200;}
+  .clock{display:flex;align-items:center;gap:6px;background:var(--surface2);border:1px solid var(--border);
+         padding:5px 9px;border-radius:18px;font-variant-numeric:tabular-nums;font-size:13px;flex:0 0 auto;}
+  .pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:blink 1.6s infinite;}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+  .bell{position:relative;width:38px;height:38px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);
+        display:flex;align-items:center;justify-content:center;cursor:pointer;flex:0 0 auto;}
+  .bell svg{width:17px;height:17px;}
+  #refreshBtn{border:1px solid var(--border);font-family:inherit;color:var(--muted);}
+  #themeBtn{font-size:17px;line-height:1;}
+  .bell .badge{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;border-radius:9px;background:var(--hot);
+        color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 4px;}
+  /* ---------- tabs ---------- */
+  nav{display:flex;margin:4px 16px 0;gap:4px;background:var(--surface);border:1px solid var(--border);
+      border-radius:14px;padding:4px;}
+  nav button{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:9px 4px;border:0;border-radius:10px;
+      background:transparent;color:var(--muted);font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit;}
+  nav button svg{width:16px;height:16px;}
+  nav button.on{background:linear-gradient(135deg,rgba(255,198,43,.18),rgba(255,159,67,.10));color:var(--yellow);}
+  main{flex:1;overflow-y:auto;padding:14px 16px 110px;}
+  /* ---------- chips ---------- */
+  .chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;scrollbar-width:none;}
+  .chips::-webkit-scrollbar{display:none;}
+  .chip{flex:0 0 auto;padding:6px 13px;border-radius:20px;background:var(--surface2);border:1px solid var(--border);
+        color:var(--muted);font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit;}
+  .chip.on{background:var(--yellow);color:#1a1200;border-color:var(--yellow);}
+  #sortChip.on{background:var(--surface2);color:var(--blue);border-color:rgba(88,183,255,.5);}
+  .dayseg{display:flex;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:12px;
+          padding:4px;margin:0 0 10px;overflow-x:auto;max-width:100%;}
+  .wcell{display:flex;flex-direction:column;align-items:center;gap:1px;border:0;background:transparent;
+         color:var(--muted);font-size:10.5px;font-weight:700;padding:4px 11px;border-radius:10px;cursor:pointer;
+         font-family:inherit;min-width:46px;flex:1;}
+  .wcell .wd{font-size:10px;text-transform:uppercase;letter-spacing:.4px;}
+  .wcell .ws{font-size:13.5px;font-weight:800;color:var(--faint);}
+  .wcell.on{background:var(--yellow);color:#1a1200;}
+  .wcell.on .ws{color:#1a1200;}
+  .wcell.hot .ws{color:var(--hot);}
+  .wcell.on.hot .ws{color:#1a1200;}
+  .fab{position:fixed;right:20px;bottom:90px;width:54px;height:54px;border-radius:50%;
+       background:linear-gradient(135deg,var(--yellow),#f59f00);color:#1a1200;font-size:26px;font-weight:800;
+       border:0;box-shadow:0 6px 20px rgba(0,0,0,.35);cursor:pointer;z-index:35;
+       display:flex;align-items:center;justify-content:center;font-family:inherit;}
+  .frm label{display:block;font-size:11px;color:var(--faint);margin:12px 0 4px;text-transform:uppercase;letter-spacing:.8px;}
+  .frm input,.frm select{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--border);
+        background:var(--surface2);color:var(--text);font-size:14px;font-family:inherit;}
+  .frm .row2{display:flex;gap:8px;} .frm .row2 > div{flex:1;min-width:0;}
+  /* ---------- cards ---------- */
+  .card{width:100%;display:flex;align-items:center;gap:12px;padding:13px 14px;margin-bottom:10px;border-radius:16px;
+        background:var(--surface);border:1px solid var(--border);cursor:pointer;text-align:left;color:var(--text);
+        font-family:inherit;transition:border-color .15s, transform .05s;}
+  .card:active{transform:scale(.985);}
+  .card.live{border-color:rgba(255,92,92,.55);box-shadow:0 0 0 1px rgba(255,92,92,.15), 0 6px 24px rgba(255,92,92,.08);}
+  .ring{flex:0 0 auto;position:relative;width:52px;height:52px;}
+  .ring .num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;}
+  .ring svg{transform:rotate(-90deg);}
+  .cbody{flex:1;min-width:0;}
+  .t1{display:flex;align-items:center;gap:7px;font-weight:700;font-size:14.5px;}
+  .t1 .ic{font-size:15px;}
+  .t2{color:var(--muted);font-size:12.5px;margin-top:1px;}
+  .t3{display:flex;align-items:center;gap:6px;color:var(--faint);font-size:12px;margin-top:4px;font-variant-numeric:tabular-nums;}
+  .stat{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;flex:0 0 auto;}
+  .stat.live{background:rgba(255,92,92,.15);color:var(--hot);}
+  .stat.on{background:rgba(255,159,67,.15);color:var(--orange);}
+  .stat.next{background:rgba(255,198,43,.14);color:var(--amber);}
+  .stat.late{background:var(--surface2);color:var(--faint);border:1px solid var(--border);}
+  .stat.done{background:var(--surface2);color:var(--faint);border:1px solid var(--border);}
+  .spotline{display:flex;align-items:center;gap:5px;margin-top:6px;font-size:12px;color:var(--blue);}
+  .arrow{color:var(--faint);font-size:16px;}
+  /* ---------- upcoming ---------- */
+  .up-head{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--faint);margin:20px 2px 9px;}
+  .up-row{display:flex;align-items:center;gap:10px;padding:9px 12px;background:var(--surface);border:1px solid var(--border);
+          border-radius:12px;margin-bottom:6px;cursor:pointer;font-family:inherit;color:var(--text);text-align:left;width:100%;}
+  .up-row:active{transform:scale(.985);}
+  .up-date{flex:0 0 auto;background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:4px 8px;
+           font-size:11px;color:var(--amber);font-weight:700;text-align:center;line-height:1.25;}
+  .up-name{font-size:13px;font-weight:600;}
+  .up-ven{color:var(--muted);font-size:11.5px;}
+  .up-time{margin-left:auto;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  /* ---------- map ---------- */
+  .mapcard{background:var(--surface);border:1px solid var(--border);border-radius:18px;overflow:hidden;}
+  .maphead{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid var(--border);}
+  .maphead b{font-size:14px;}
+  .maphead span{color:var(--faint);font-size:12px;}
+  .mapwrap{height:min(78vh,780px);overflow:auto;background:var(--mapbg);}
+  svg.map{display:block;width:100%;height:auto;}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:10px 14px;border-top:1px solid var(--border);color:var(--muted);font-size:11.5px;}
+  .legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:-1px;}
+  .mk{cursor:pointer;}
+  .mk .pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out infinite;}
+  @keyframes pulse{0%{transform:scale(.7);opacity:.55}70%{transform:scale(1.7);opacity:0}100%{transform:scale(1.7);opacity:0}}
+  /* ---------- planner ---------- */
+  .plan-intro{color:var(--muted);font-size:13px;margin-bottom:14px;}
+  .leg{display:flex;gap:12px;position:relative;}
+  .leg .rail{flex:0 0 34px;display:flex;flex-direction:column;align-items:center;}
+  .leg .dot{width:30px;height:30px;border-radius:50%;background:var(--surface2);border:2px solid var(--yellow);
+            display:flex;align-items:center;justify-content:center;font-size:13px;z-index:1;}
+  .leg .line{flex:1;width:2px;background:linear-gradient(var(--border),var(--surface2));margin:2px 0;}
+  .leg .body{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px 13px;margin-bottom:0;}
+  .drive{display:flex;align-items:center;gap:8px;color:var(--faint);font-size:11.5px;padding:6px 0 6px 46px;}
+  .drive svg{width:13px;height:13px;flex:0 0 auto;}
+  .drive b{color:var(--muted);}
+  .leg .row1{display:flex;justify-content:space-between;align-items:center;}
+  .leg .row1 b{font-size:14px;}
+  .leg .earn{font-size:13px;font-weight:800;color:var(--green);white-space:nowrap;}
+  .leg .row2{color:var(--muted);font-size:12.5px;margin-top:2px;}
+  .leg .row3{margin-top:7px;font-size:12px;color:var(--blue);}
+  .summ{margin-top:16px;background:linear-gradient(135deg,rgba(255,198,43,.12),rgba(255,159,67,.06));
+        border:1px solid rgba(255,198,43,.35);border-radius:16px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;}
+  .summ b{font-size:19px;color:var(--yellow);}
+  .summ small{color:var(--muted);font-size:12px;display:block;}
+  .planbar{display:flex;gap:8px;margin-bottom:12px;}
+  .btn{width:100%;margin-top:14px;padding:13px;border-radius:14px;border:0;cursor:pointer;font-family:inherit;
+       font-size:14.5px;font-weight:700;background:var(--surface2);color:var(--text);border:1px solid var(--border);}
+  .btn.small{width:auto;margin-top:0;padding:9px 14px;font-size:13px;border-radius:12px;}
+  .btn.yellow{background:linear-gradient(135deg,var(--yellow),#f59f00);color:#1a1200;border:0;}
+  .leg.now .body{border-color:rgba(255,92,92,.6);box-shadow:0 0 0 1px rgba(255,92,92,.18);}
+  .leg .skip{flex:0 0 auto;width:34px;height:34px;border-radius:50%;border:1px solid var(--border);background:var(--surface2);
+        color:var(--green);font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;align-self:center;}
+  .leg .skip:hover{background:rgba(61,220,132,.15);border-color:var(--green);}
+  .leg .earn small{display:block;font-size:10px;color:var(--faint);font-weight:600;text-align:right;}
+  .leaveby{margin-top:6px;font-size:12px;font-weight:700;color:var(--blue);}
+  .leaveby.warn{color:var(--hot);}
+  .posline{margin-top:6px;font-size:11.5px;color:var(--muted);border-top:1px dashed var(--border);padding-top:5px;}
+  /* ---------- sheet ---------- */
+  .backdrop{position:fixed;inset:0;background:rgba(4,7,12,.6);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:opacity .25s;z-index:40;}
+  .backdrop.show{opacity:1;pointer-events:auto;}
+  #sheet{position:fixed;left:50%;transform:translate(-50%,105%);bottom:0;width:100%;max-width:540px;background:var(--surface);
+         border:1px solid var(--border);border-bottom:0;border-radius:22px 22px 0 0;z-index:50;transition:transform .3s cubic-bezier(.2,.9,.25,1);
+         max-height:88vh;overflow-y:auto;box-shadow:0 -10px 50px rgba(0,0,0,.5);}
+  #sheet.open{transform:translate(-50%,0);}
+  .sheet-in{padding:16px 18px 26px;}
+  .grab{width:44px;height:4px;border-radius:2px;background:var(--border);margin:10px auto 0;}
+  .s-top{display:flex;align-items:flex-start;gap:12px;margin-top:10px;}
+  .s-top .ring{width:64px;height:64px;}
+  .s-top .ring .num{font-size:17px;}
+  .s-title{font-size:17.5px;font-weight:800;}
+  .s-ven{color:var(--muted);font-size:13px;margin-top:2px;}
+  .s-time{color:var(--faint);font-size:12.5px;margin-top:4px;}
+  .sect{margin-top:18px;}
+  .sect h4{font-size:12px;text-transform:uppercase;letter-spacing:1.2px;color:var(--faint);margin-bottom:9px;}
+  .curve{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:12px 12px 6px;}
+  .curve svg{width:100%;height:auto;display:block;}
+  .curve-note{font-size:11.5px;color:var(--faint);margin-top:6px;}
+  .spotrow{display:flex;align-items:center;gap:11px;padding:11px 12px;border:1px solid var(--border);border-radius:13px;margin-bottom:8px;background:var(--surface2);}
+  .spotrow.best{border-color:rgba(255,198,43,.5);background:linear-gradient(135deg,rgba(255,198,43,.08),rgba(255,198,43,.02));}
+  .spotrow .pin{width:34px;height:34px;border-radius:10px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:15px;flex:0 0 auto;}
+  .spotrow b{font-size:13.5px;display:block;}
+  .spotrow small{color:var(--muted);font-size:11.5px;}
+  .spotrow .r{flex:1;text-align:right;white-space:nowrap;}
+  .spotrow .r b{color:var(--green);font-size:12.5px;}
+  .besttag{font-size:10px;font-weight:800;color:#1a1200;background:var(--yellow);padding:2px 7px;border-radius:8px;margin-left:6px;vertical-align:1px;}
+  .boosters{display:flex;flex-wrap:wrap;gap:8px;}
+  .bo{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:7px 11px;font-size:12px;}
+  .bo b{color:var(--amber);}
+  .bo i{font-style:normal;color:var(--muted);}
+  .checkin{display:flex;gap:8px;}
+  .checkin button{flex:1;padding:10px 4px;border-radius:12px;border:1px solid var(--border);background:var(--surface2);
+        color:var(--text);font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit;}
+  .checkin button.hot:hover{background:rgba(255,92,92,.2);border-color:var(--hot);}
+  .checkin button.ok:hover{background:rgba(61,220,132,.15);border-color:var(--green);}
+  .checkin button.dead:hover{background:rgba(143,160,184,.15);border-color:var(--muted);}
+  /* ---------- alerts panel ---------- */
+  #alerts{position:absolute;top:62px;right:14px;left:14px;max-width:520px;margin:0 auto;background:var(--surface);border:1px solid var(--border);
+          border-radius:16px;z-index:60;display:none;box-shadow:0 18px 50px rgba(0,0,0,.55);}
+  #alerts.show{display:block;}
+  #alerts .al{padding:12px 14px;border-bottom:1px solid var(--border);display:flex;gap:10px;font-size:13px;}
+  #alerts .al:last-child{border-bottom:0;}
+  #alerts .al .ic{flex:0 0 auto;width:30px;height:30px;border-radius:9px;background:var(--surface2);border:1px solid var(--border);
+        display:flex;align-items:center;justify-content:center;font-size:14px;}
+  #alerts .al small{color:var(--faint);display:block;margin-top:2px;}
+  #alerts .head{padding:12px 14px;font-weight:700;font-size:13.5px;border-bottom:1px solid var(--border);
+        display:flex;justify-content:space-between;align-items:center;}
+  #alerts .head button{background:none;border:0;color:var(--muted);font-size:12px;cursor:pointer;font-family:inherit;}
+  /* ---------- toast ---------- */
+  #toast{position:fixed;bottom:96px;left:50%;transform:translateX(-50%) translateY(16px);background:#e9f3ff;color:#0b1626;
+         font-size:13.5px;font-weight:700;padding:11px 18px;border-radius:14px;opacity:0;pointer-events:none;
+         transition:all .25s;z-index:80;box-shadow:0 10px 30px rgba(0,0,0,.4);white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis;}
+  #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+  .demo-note{color:var(--faint);font-size:11px;text-align:center;padding:18px 10px 6px;}
+  .demo-note b{color:var(--muted);}
+  footer{color:var(--faint);font-size:11px;text-align:center;padding:4px 16px 18px;}
+  /* ---------- kort (Leaflet) ---------- */
+  .layers{display:flex;gap:6px;padding:8px 14px;border-bottom:1px solid var(--border);}
+  .lyr{display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border-radius:14px;border:1px solid var(--border);
+       background:var(--surface2);color:var(--muted);font-size:11.5px;font-weight:700;cursor:pointer;font-family:inherit;}
+  .lyr.on{background:rgba(255,198,43,.14);border-color:rgba(255,198,43,.45);color:var(--yellow);}
+  .lmeta{width:18px;height:18px;border-radius:50%;background:#58b7ff;color:#0b1626;font-size:10px;font-weight:800;
+         display:flex;align-items:center;justify-content:center;border:2px solid #fff;
+         box-shadow:0 1px 5px rgba(0,0,0,.55);}
+  .ltaxi{width:22px;height:22px;border-radius:50%;background:#111a29;border:2px solid #ffc62b;
+         display:flex;align-items:center;justify-content:center;font-size:11px;
+         box-shadow:0 1px 5px rgba(0,0,0,.55);}
+  .leaflet-container{background:var(--mapbg);font-family:inherit;}
+  .leaflet-control-zoom a{background:var(--surface);color:var(--text);border:1px solid var(--border);}
+  .leaflet-control-zoom a:hover{background:var(--surface2);color:var(--yellow);}
+  .leaflet-control-attribution{background:var(--surface);color:var(--faint);font-size:9px;}
+  .leaflet-control-attribution a{color:var(--muted);}
+  .lmk{position:relative;width:38px;height:38px;display:flex;align-items:center;justify-content:center;}
+  .lmk-emoji{position:relative;z-index:2;font-size:17px;background:#111a29;border:2px solid var(--c,#ffc62b);
+    border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.55);}
+  .lmk-pulse{position:absolute;inset:0;border-radius:50%;background:var(--c,#ffc62b);opacity:.45;animation:lmpulse 2.2s ease-out infinite;}
+  @keyframes lmpulse{0%{transform:scale(.6);opacity:.5}70%{transform:scale(1.9);opacity:0}100%{transform:scale(1.9);opacity:0}}
+  .lmk-dim{width:12px;height:12px;border-radius:50%;background:#33415c;border:2px solid #243147;}
+  .lmk-tip{background:var(--surface) !important;border:1px solid var(--border);color:var(--text) !important;font-size:12px;
+    border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,.35);}
+  .lmk-tip::before{display:none;}
+  body.osm-dark .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(.88) contrast(.92) saturate(.35);}
+  .mapwrap{position:relative;}
+  @media(min-width:900px){
+    .app{max-width:1120px;flex-direction:row;align-items:stretch;}
+    .left{flex:1;border-right:1px solid var(--border);display:flex;flex-direction:column;min-width:0;}
+    .right{flex:1.15;display:flex;flex-direction:column;}
+    main{max-height:calc(100vh - 74px);}
+    .right .mapcard{flex:1;display:flex;flex-direction:column;margin:14px 16px;border-radius:18px;}
+    .right .mapwrap{flex:1;height:auto;}
+    #sheet{max-width:560px;}
+  }
+  @media(max-width:420px){
+    .brand small{display:none;}
+    .clock{padding:5px 7px;}
+    .t1{font-size:13.5px;}
+  }
+</style>
+<script src="vendor/leaflet.js"></script>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("stf_theme")||"light"}catch(e){document.documentElement.dataset.theme="light"}</script>
+</head>
+<body>
+<div class="app">
+
+  <div class="left">
+    <header>
+      <div class="logo">🚕</div>
+      <div class="brand"><b>Spot the Fare</b><small id="brandSub">København · i dag</small></div>
+      <div class="spacer"></div>
+      <div class="lang" id="langSel">
+        <button data-l="da" class="on">DA</button><button data-l="en">EN</button>
+      </div>
+      <div class="clock"><span class="pulse-dot"></span><span id="clock">21:15</span></div>
+      <div class="bell" id="themeBtn" title="Lys / Mørk">☀️</div>
+      <div class="bell" id="refreshBtn" title="Opdater / Refresh">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#8fa0b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+      </div>
+      <div class="bell" id="bellBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#8fa0b8" stroke-width="2" stroke-linecap="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        <span class="badge">3</span>
+      </div>
+    </header>
+
+    <div id="fetchStatus" style="display:none;margin:0 16px 4px;padding:8px 12px;border-radius:10px;font-size:12px;border:1px solid rgba(61,220,132,.35);background:rgba(61,220,132,.10);color:var(--green)"></div>
+    <nav id="tabs">
+      <button data-tab="tonight" class="on">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <span data-t="tabTonight">I nat</span>
+      </button>
+      <button data-tab="map">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-t="tabMap">Kort</span>
+      </button>
+      <button data-tab="plan">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <span data-t="tabPlan">Plan</span>
+      </button>
+    </nav>
+
+    <main>
+      <section id="tab-tonight">
+        <div id="stale" style="display:none;background:rgba(255,159,67,.12);border:1px solid rgba(255,159,67,.4);color:var(--orange);border-radius:12px;padding:10px 12px;font-size:12.5px;margin-bottom:10px"></div>
+        <div class="dayseg" id="daySel"></div>
+        <div class="chips" id="filters">
+          <button class="chip on" data-f="all" data-t="fAll">Alle</button>
+          <button class="chip" data-f="sport" data-t="fSport">Sport</button>
+          <button class="chip" data-f="musik" data-t="fMusik">Musik</button>
+          <button class="chip" data-f="fest" data-t="fFest">Fest</button>
+          <button class="chip" data-f="business" data-t="fBusiness">Business</button>
+          <button class="chip" data-f="kultur" data-t="fKultur">Kultur</button>
+          <button class="chip" data-f="natklub" data-t="fNatklub">Natklub</button>
+          <button class="chip" id="sortChip">🔥 Score</button>
+        </div>
+        <div id="list"></div>
+        <div id="upcoming"></div>
+      </section>
+
+      <section id="tab-map" style="display:none">
+        <div class="mapcard">
+          <div class="maphead"><b data-t="mapHead">København · i dag</b><span id="mapSub">lør 15. aug · 21:15</span></div>
+          <div class="layers">
+            <button id="lnMetro" class="lyr on">🚇 <span data-t="lyrMetro">Metro</span></button>
+            <button id="lnTaxi" class="lyr on">🚕 <span data-t="lyrTaxi">Taxi-stande</span></button>
+          </div>
+          <div class="mapwrap">
+            <div id="leafmap" style="height:min(76vh,760px)"></div>
+            <div id="mapFallback" style="display:none;padding:36px 20px;text-align:center;color:var(--faint);font-size:13px">
+              🗺️ Kortet kræver internetforbindelse.<br>Åbn appen via serveren eller live-preview'et for at se kort med zoom.
+            </div>
+          </div>
+          <div class="legend">
+            <span><i style="background:#ff5c5c"></i><span data-t="leg1">Score ≥ 85</span></span>
+            <span><i style="background:#ff9f43"></i><span data-t="leg2">Score 75–84</span></span>
+            <span><i style="background:#ffc62b"></i><span data-t="leg3">Score 65–74</span></span>
+            <span><i style="background:#33415c"></i><span data-t="leg4">Venue uden event i dag</span></span>
+          </div>
+        </div>
+      </section>
+
+      <section id="tab-plan" style="display:none">
+        <p class="plan-intro" data-t="planIntro"></p>
+        <div class="planbar">
+          <button id="posBtn" class="btn small">📍 <span data-t="planPosBtn">Min position</span></button>
+        </div>
+        <div id="planner"></div>
+      </section>
+    </main>
+
+    <div class="demo-note" id="demoNote" data-t="demoNote"></div>
+    <footer data-t="footer"></footer>
+  </div>
+
+  <div class="right"></div>
+</div>
+
+<button id="fabAdd" class="fab" title="Tilføj event">＋</button>
+
+<div class="backdrop" id="backdrop"></div>
+
+<div id="sheet"><div class="grab"></div><div class="sheet-in" id="sheetBody"></div></div>
+
+<div id="alerts">
+  <div class="head"><span data-t="alertsTitle">⚠️ Advarsler & tips</span> <button id="alertsClose" data-t="alertsClose">luk ✕</button></div>
+  <div id="alertsList"></div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+/* ============ I18N ============ */
+const T = {
+  da:{
+    brandSub:"København · i dag",
+    tabTonight:"I dag", tabMap:"Kort", tabPlan:"Plan",
+    dayToday:"I dag", dayTomorrow:"I morgen", statTomorrow:"I MORGEN",
+    sortScore:"🔥 Score", sortTime:"🕐 Tid",
+    lyrMetro:"Metro", lyrTaxi:"Taxi-stande",
+    fAll:"Alle", fSport:"Sport", fMusik:"Musik", fFest:"Fest", fBusiness:"Business", fKultur:"Kultur", fNatklub:"Natklub",
+    statLive:"LIVE NU", statOn:"I GANG", statNext:"Snart", statLate:"Senere", statDone:"OVRE",
+    planEmpty:"Ingen events i dag — prøv igen i morgen",
+    cap:"kap.", letout:"let-out", wait:"ventetid",
+    mapHead:"København · i dag", mapSub:"lør 15. aug · 21:15",
+    leg1:"Score ≥ 85", leg2:"Score 75–84", leg3:"Score 65–74", leg4:"Venue uden event i dag",
+    planIntro:"Din rute i dag — bygget omkring let-out-tidspunkterne (hvornår folk strømmer ud). Tid = hvornår du skal være der. Tryk ✓ på et stop, når du er færdig — planen lægger sig om.",
+    upHead:"📅 Kommende dage · næste store spots",
+    upToast:"📅 Kommende event — kommer snart i prognosen (demo)",
+    noEventsCat:"Ingen events i dag",
+    noEventMap:"Ingen event i dag her 😐",
+    sheetDemand:"Forventet efterspørgsel",
+    sheetScoreNote:"Demand-score {s}/100 · kapacitet × timing × transport-gab × kontekst",
+    sheetSpots:"Bedste pickup-steder",
+    setRoute:"🧭 Sæt rute til {spot}",
+    routeSet:"Rute sat til {spot} (demo)",
+    best:"BEST", taxisNow:"taxier nu",
+    sheetContext:"Kontekst",
+    sheetFeedback:"Var der travlt? (feedback)",
+    hotDone:"🔥 Tak! Megatravlt registreret (demo)",
+    okDone:"👍 Tak! Godt spot registreret (demo)",
+    deadDone:"👎 Tak! Dødt registreret (demo)",
+    alertsTitle:"⚠️ Advarsler & tips", alertsClose:"luk ✕",
+    planLeg:"ca.", planDrive:"fra", planReopt:"♻️ Omoptimer rute", planReoptDone:"Rute optimeret — ingen ændringer fundet (demo)",
+    planTotLabel:"Estimeret i dag", planTrips:"ture", planPerH:"/t",
+    planPosBtn:"Min position", planPosBusy:"📍 Finder din position…", planPosFail:"Kunne ikke få din position",
+    planPosOK:"📍 Position fundet — ETA opdateret", planLeave:"Forlad senest", planTight:"Tæt planlægning!",
+    planSkip:"Færdig her — fjern stop", planReset:"↺ Nulstil plan", planFromYou:"fra din position",
+    planNow:"NU",
+    estTag:"estimat", sheetEstNote:"Ventetider er skøn ud fra transport-forhold — ikke live-data",
+    addTitle:"Tilføj dit eget event", evName:"Navn", evVenue:"Venue", evDate:"Dato", evType:"Type",
+    evStart:"Start", evEnd:"Slut", evNote:"Note (valgfrit)", evSave:"💾 Gem event", evCancel:"Annuller",
+    evSaved:"✅ Event gemt — vist i planen", reqName:"Skriv et navn først", reqTime:"Ugyldige tidspunkter",
+    evDelete:"🗑️ Slet dit event", evDeleted:"Event slettet", myTag:"DIN", otherPlace:"Andet sted",
+    dayShort:["man","tir","ons","tor","fre","lør","søn"],
+    demoNote:"Prototype · demo — rigtige events fra august 2026, prognoser er eksempler",
+    footer:"Spot the Fare · concept demo — bygget til taxi-chauffører"
+  },
+  en:{
+    brandSub:"Copenhagen · today",
+    tabTonight:"Today", tabMap:"Map", tabPlan:"Plan",
+    dayToday:"Today", dayTomorrow:"Tomorrow", statTomorrow:"TOMORROW",
+    sortScore:"🔥 Score", sortTime:"🕐 Time",
+    lyrMetro:"Metro", lyrTaxi:"Taxi stands",
+    fAll:"All", fSport:"Sport", fMusik:"Music", fFest:"Festival", fBusiness:"Business", fKultur:"Culture", fNatklub:"Nightlife",
+    statLive:"LIVE NOW", statOn:"ON NOW", statNext:"Soon", statLate:"Later", statDone:"PAST",
+    planEmpty:"No events today — try again tomorrow",
+    cap:"cap.", letout:"let-out", wait:"wait",
+    mapHead:"Copenhagen · today", mapSub:"Sat 15 Aug · 21:15",
+    leg1:"Score ≥ 85", leg2:"Score 75–84", leg3:"Score 65–74", leg4:"Venue, no event today",
+    planIntro:"Your route today — built around let-out times (when crowds pour out). Time = when to be there. Tap ✓ on a stop when done — the plan rebuilds.",
+    upHead:"📅 Coming days · next big spots",
+    upToast:"📅 Upcoming event — forecast coming soon (demo)",
+    noEventsCat:"No events today",
+    noEventMap:"No event here today 😐",
+    sheetDemand:"Expected demand",
+    sheetScoreNote:"Demand score {s}/100 · capacity × timing × transport gap × context",
+    sheetSpots:"Best pickup spots",
+    setRoute:"🧭 Set route to {spot}",
+    routeSet:"Route set to {spot} (demo)",
+    best:"BEST", taxisNow:"taxis now",
+    sheetContext:"Context",
+    sheetFeedback:"Was it busy? (feedback)",
+    hotDone:"🔥 Thanks! Super busy recorded (demo)",
+    okDone:"👍 Thanks! Good spot recorded (demo)",
+    deadDone:"👎 Thanks! Dead spot recorded (demo)",
+    alertsTitle:"⚠️ Alerts & tips", alertsClose:"close ✕",
+    planLeg:"~", planDrive:"from", planReopt:"♻️ Re-optimize route", planReoptDone:"Route optimized — no changes found (demo)",
+    planTotLabel:"Estimated today", planTrips:"trips", planPerH:"/h",
+    planPosBtn:"My position", planPosBusy:"📍 Finding your position…", planPosFail:"Could not get your position",
+    planPosOK:"📍 Position found — ETA updated", planLeave:"Leave by", planTight:"Tight schedule!",
+    planSkip:"Done here — remove stop", planReset:"↺ Reset plan", planFromYou:"from your position",
+    planNow:"NOW",
+    estTag:"estimate", sheetEstNote:"Wait times are estimates from transit conditions — not live data",
+    addTitle:"Add your own event", evName:"Name", evVenue:"Venue", evDate:"Date", evType:"Type",
+    evStart:"Start", evEnd:"End", evNote:"Note (optional)", evSave:"💾 Save event", evCancel:"Cancel",
+    evSaved:"✅ Event saved — shown in plan", reqName:"Write a name first", reqTime:"Invalid times",
+    evDelete:"🗑️ Delete your event", evDeleted:"Event deleted", myTag:"YOURS", otherPlace:"Other place",
+    dayShort:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+    demoNote:"Prototype · demo — real August 2026 events, forecasts are examples",
+    footer:"Spot the Fare · concept demo — built for taxi drivers"
+  }
+};
+let lang = "da";
+try{ lang = localStorage.getItem("stf_lang") || "da"; }catch(e){}
+let L = T[lang];
+const tr = o => (o && typeof o === "object") ? (o[lang] || o.da || o.en || "") : (o || "");
+
+/* Live-data — app_data.json hentes og erstatter demo-data.
+   Hvis filen ikke findes (fx offline-preview), falder appen tilbage på demo. */
+let LIVE = null;
+const wrap = s => ({da: s, en: s});
+const fmtCap = n => n ? n.toLocaleString("da-DK") : "—";
+const fmtDate = iso => iso ? iso.slice(8,10)+"."+iso.slice(5,7)+"."+iso.slice(0,4) : "";
+
+/* ============ DATA (real Aug 2026 events, demo forecasts) ============ */
+const NOW = "21:15"; // fixed demo clock, Sat 15 Aug 2026
+const DATE_TXT = {da:"lør 15. aug · 21:15", en:"Sat 15 Aug · 21:15"};
+
+const CURVES = {
+  match:   {peak:2, v:[10,32,100,78,48,28,14], labels:{da:["-60m","Slut","+60m","+120m"], en:["-60m","End","+60m","+120m"]}},
+  concert: {peak:2, v:[12,38,100,72,44,26,12], labels:{da:["-60m","Slut","+60m","+120m"], en:["-60m","End","+60m","+120m"]}},
+  dinner:  {peak:3, v:[28,55,85,100,78,52,30], labels:{da:["-60m","Slut","+60m","+120m"], en:["-60m","End","+60m","+120m"]}},
+  fest:    {peak:2, v:[18,50,100,66,38,22,10], labels:{da:["-60m","Slut","+60m","+120m"], en:["-60m","End","+60m","+120m"]}},
+  gala:    {peak:2, v:[22,45,88,80,52,30,16], labels:{da:["-60m","Slut","+60m","+120m"], en:["-60m","End","+60m","+120m"]}},
+  spike:   {peak:3, v:[2,2,2,30,100,45,15],   labels:{da:["23:00","23:45","+15m","+45m"], en:["23:00","23:45","+15m","+45m"]}},
+  clubs:   {peak:6, v:[6,8,14,30,60,88,100],  labels:{da:["00:00","00:30","01:00","01:30"], en:["00:00","00:30","01:00","01:30"]}},
+  cruise:  {peak:0, v:[20,60,100,50,20,10,5], labels:{da:["-3t","Start","+3t","+6t"], en:["-3t","Start","+3t","+6t"]}}
+};
+
+let EVENTS = [
+  {id:"sydsolen", icon:"🎪", cat:"fest",
+   name:{da:"Syd For Solen · finaleaften", en:"Syd For Solen · final night"},
+   venue:{da:"Valbyparken", en:"Valbyparken"}, cap:"~12.000", score:88,
+   start:"15:00", end:"23:00", window:"23:00 – 00:30", curve:"fest",
+   spot:{da:"Sydporten · Vestre Kirkegårdsvej", en:"South gate · Vestre Kirkegårdsvej"}, wait:"2–4 min",
+   boosters:[
+     {i:"🎪", da:"Sidste af 3 dage · 30+ artister", en:"Last of 3 days · 30+ acts"},
+     {i:"🚇", da:"Ingen metro i nærheden", en:"No metro nearby"},
+     {i:"🌧️", da:"Regn +20% efterspørgsel", en:"Rain +20% demand"}],
+   spots:[
+     {name:{da:"Sydporten · Vestre Kirkegårdsvej", en:"South gate · Vestre Kirkegårdsvej"}, note:{da:"Hovedudgang mod byen", en:"Main exit towards the city"}, wait:"2–4 min", supply:7, best:true},
+     {name:{da:"Ålholm Plads · bus 4A", en:"Ålholm Plads · bus 4A"}, note:{da:"Spill-over fra stoppestedet", en:"Spill-over from the bus stop"}, wait:"5–8 min", supply:4, best:false},
+     {name:{da:"Sjælør St. · nordside", en:"Sjælør St. · north side"}, note:{da:"God til Valby- og Vesterbro-ture", en:"Good for Valby/Vesterbro trips"}, wait:"8–12 min", supply:2, best:false}]},
+
+  {id:"pride", icon:"🏳️‍🌈", cat:"fest",
+   name:{da:"Copenhagen Pride · Pride Square", en:"Copenhagen Pride · Pride Square"},
+   venue:{da:"Rådhuspladsen", en:"City Hall Square"}, cap:"~20.000", score:86,
+   start:"12:00", end:"22:00", window:"22:00 – 23:30", curve:"fest",
+   spot:{da:"Taxaholdeplads Vester Voldgade", en:"Taxi stand Vester Voldgade"}, wait:"3–5 min",
+   boosters:[
+     {i:"🏳️‍🌈", da:"Pride Week 10.–16. aug", en:"Pride Week Aug 10–16"},
+     {i:"🍻", da:"Publikum trækker mod barer", en:"Crowd heads to the bars"},
+     {i:"🌧️", da:"Regn +20% efterspørgsel", en:"Rain +20% demand"}],
+   spots:[
+     {name:{da:"Taxaholdeplads Vester Voldgade", en:"Taxi stand Vester Voldgade"}, note:{da:"Tættest på pladsen", en:"Closest to the square"}, wait:"3–5 min", supply:11, best:true},
+     {name:{da:"H.C. Andersens Blvd · Tivoli-siden", en:"H.C. Andersens Blvd · Tivoli side"}, note:{da:"Mod strømmen mod bar-kvarteret", en:"Towards the bar district flow"}, wait:"4–7 min", supply:7, best:false},
+     {name:{da:"Lurblæserne · Strøget-enden", en:"Lurblæserne · Strøget end"}, note:{da:"God til store grupper", en:"Good for large groups"}, wait:"6–9 min", supply:5, best:false}]},
+
+  {id:"opera", icon:"🎭", cat:"kultur",
+   name:{da:"Opera Festival · aftenforestilling", en:"Opera Festival · evening performance"},
+   venue:{da:"Operaen · Holmen", en:"The Opera House · Holmen"}, cap:"1.600", score:73,
+   start:"19:00", end:"21:00", window:"21:00 – 22:00", curve:"gala",
+   spot:{da:"Operaen forplads", en:"Opera House forecourt"}, wait:"6–10 min",
+   boosters:[
+     {i:"🎭", da:"Festival 14.–23. aug", en:"Festival Aug 14–23"},
+     {i:"💶", da:"Høj gennemsnitsfart", en:"High average fare"},
+     {i:"🚕", da:"Få taxier på Holmen", en:"Few taxis on Holmen"}],
+   spots:[
+     {name:{da:"Operaen forplads", en:"Opera House forecourt"}, note:{da:"Direkte udgang", en:"Direct exit"}, wait:"6–10 min", supply:3, best:true},
+     {name:{da:"Christianshavn St. · metro", en:"Christianshavn St. · metro"}, note:{da:"Spill-over, kortere ture", en:"Spill-over, shorter trips"}, wait:"8–12 min", supply:4, best:false},
+     {name:{da:"Knippelsbro-siden", en:"Knippelsbro side"}, note:{da:"God til Indre By", en:"Good for the city centre"}, wait:"10–14 min", supply:2, best:false}]},
+
+  {id:"kødbyen", icon:"🍸", cat:"natklub",
+   name:{da:"Kødbyen · club let-out", en:"Kødbyen · club let-out"},
+   venue:{da:"DGI Byen / Halmtorvet", en:"DGI Byen / Halmtorvet"}, cap:"—", score:76,
+   start:"23:30", end:"01:45", window:"00:15 – 01:45", curve:"clubs",
+   spot:{da:"DGI Byen hovedindgang", en:"DGI Byen main entrance"}, wait:"3–6 min",
+   boosters:[
+     {i:"🎛️", da:"Flere venues samtidig", en:"Several venues at once"},
+     {i:"🚕", da:"Få taxier efter 00:00", en:"Few taxis after 00:00"},
+     {i:"🌧️", da:"Regn holder folk inde → taxa", en:"Rain keeps people indoors → taxi"}],
+   spots:[
+     {name:{da:"DGI Byen hovedindgang", en:"DGI Byen main entrance"}, note:{da:"Største strøm ud", en:"Largest flow out"}, wait:"3–6 min", supply:6, best:true},
+     {name:{da:"Flæsketorvet · Kødbyen", en:"Flæsketorvet · Kødbyen"}, note:{da:"Klubber lukker samtidig", en:"Clubs close at the same time"}, wait:"4–7 min", supply:4, best:false},
+     {name:{da:"Halmtorvet · stand", en:"Halmtorvet · stand"}, note:{da:"To-vejs trafik, god position", en:"Two-way traffic, good position"}, wait:"5–8 min", supply:3, best:false}]},
+
+  {id:"tivoli", icon:"🎆", cat:"kultur",
+   name:{da:"Tivoli · lørdagsfyrværkeri", en:"Tivoli · Saturday fireworks"},
+   venue:{da:"Tivoli", en:"Tivoli"}, cap:"~25.000", score:70,
+   start:"23:45", end:"00:15", window:"23:45 – 00:45", curve:"spike",
+   spot:{da:"Bernstorffsgade · hovedindgang", en:"Bernstorffsgade · main entrance"}, wait:"4–7 min",
+   boosters:[
+     {i:"🎆", da:"Fyrværkeri hver lørdag kl. 23:45", en:"Fireworks every Sat 23:45"},
+     {i:"👨‍👩‍👧", da:"Familier → hjem-ture", en:"Families → home trips"},
+     {i:"🚇", da:"Metro tæt på (Nørreport)", en:"Metro close (Nørreport)"}],
+   spots:[
+     {name:{da:"Bernstorffsgade · hovedindgang", en:"Bernstorffsgade · main entrance"}, note:{da:"Største strøm ud efter fyrværkeri", en:"Largest flow out after fireworks"}, wait:"4–7 min", supply:8, best:true},
+     {name:{da:"Vesterbrogade · Plæne-siden", en:"Vesterbrogade · Plænen side"}, note:{da:"Tæt på Plænen", en:"Close to the Plænen stage"}, wait:"5–8 min", supply:5, best:false},
+     {name:{da:"H.C. Andersens Blvd · Nimb", en:"H.C. Andersens Blvd · Nimb"}, note:{da:"Mod Nørreport/metro", en:"Towards Nørreport/metro"}, wait:"6–10 min", supply:6, best:false}]}
+];
+
+const UPCOMING = [
+  {date:{da:"fre 14. aug", en:"Fri 14 Aug"}, icon:"🎤", name:{da:"Pil · Fredagsrock", en:"Pil · Friday Rock"}, venue:{da:"Tivoli · Plænen", en:"Tivoli · Plænen"}, time:"22:00"},
+  {date:{da:"fre 21. aug", en:"Fri 21 Aug"}, icon:"🎤", name:{da:"Joji: SOLARIS", en:"Joji: SOLARIS"}, venue:{da:"Royal Arena", en:"Royal Arena"}, time:"20:00"},
+  {date:{da:"fre 21. aug", en:"Fri 21 Aug"}, icon:"🎤", name:{da:"Burhan G · Fredagsrock", en:"Burhan G · Friday Rock"}, venue:{da:"Tivoli · Plænen", en:"Tivoli · Plænen"}, time:"22:00"},
+  {date:{da:"tor 27. aug", en:"Thu 27 Aug"}, icon:"🎤", name:{da:"The Neighbourhood · The Wourld Tour", en:"The Neighbourhood · The Wourld Tour"}, venue:{da:"Royal Arena", en:"Royal Arena"}, time:"19:00"},
+  {date:{da:"fre 28. aug", en:"Fri 28 Aug"}, icon:"🎸", name:{da:"TV-2 · Fredagsrock", en:"TV-2 · Friday Rock"}, venue:{da:"Tivoli · Plænen", en:"Tivoli · Plænen"}, time:"22:00"},
+  {date:{da:"man 31. aug", en:"Mon 31 Aug"}, icon:"⚽", name:{da:"FCK – Sønderjyske · Superliga", en:"FCK – Sønderjyske · Superliga"}, venue:{da:"Parken", en:"Parken"}, time:"19:00"}
+];
+
+let VENUES = [
+  {id:"parken",   lon:12.572, lat:55.702, label:{dx:14, dy:-2, an:"start"}, sn:"Parken"},
+  {id:"royal",    lon:12.573, lat:55.625, label:{dx:14, dy:2,  an:"start"}, sn:"Royal Arena"},
+  {id:"pride",    lon:12.568, lat:55.676, label:{dx:0,  dy:-28,an:"middle"},sn:"Pride Sq."},
+  {id:"dgi",      lon:12.559, lat:55.6715,label:{dx:14, dy:2,  an:"start"}, sn:"DGI Byen"},
+  {id:"oksh",     lon:12.553, lat:55.667, label:{dx:-14,dy:2,  an:"end"},   sn:"Øksnehallen"},
+  {id:"opera",    lon:12.600, lat:55.682, label:{dx:-14,dy:-2, an:"end"},   sn:"Operaen"},
+  {id:"tivoli",   lon:12.564, lat:55.674, label:{dx:14, dy:2,  an:"start"}, sn:"Tivoli"},
+  {id:"valby",    lon:12.5205,lat:55.6419,label:{dx:12, dy:0,  an:"start"}, sn:"Valbyparken"},
+  {id:"kbhallen", lon:12.498, lat:55.671, label:{dx:10, dy:-10, an:"start"},sn:"KB Hallen"},
+  {id:"vega",     lon:12.539, lat:55.666, label:{dx:-10,dy:-10, an:"end"},  sn:"Vega"},
+  {id:"refshale", lon:12.612, lat:55.691, label:{dx:-10,dy:-6,  an:"end"},  sn:"Refshaleøen"},
+  {id:"langelinie",lon:12.596, lat:55.696, label:{dx:12, dy:-10, an:"start"},sn:"Langelinie"}
+];
+const EVMAP = {sydsolen:"valby", pride:"pride", opera:"opera", kødbyen:"dgi", tivoli:"tivoli"};
+
+let PLANNER = [
+  {t:"21:15", icon:"🎭", title:{da:"Operaen · let-out", en:"Opera House · let-out"},
+   sub:{da:"Opera Festival-forestilling slutter 21:00", en:"Opera Festival show ends 21:00"},
+   dur:{da:"ca. 45 min", en:"~45 min"}, earn:280, spot:{da:"Operaen forplads", en:"Opera House forecourt"}},
+  {t:"22:00", icon:"🏳️‍🌈", title:{da:"Pride Square · let-out", en:"Pride Square · let-out"},
+   sub:{da:"Slutter 22:00 · Rådhuspladsen", en:"Ends 22:00 · City Hall Square"},
+   dur:{da:"ca. 1 time", en:"~1 hour"}, earn:380, spot:{da:"Taxaholdeplads Vester Voldgade", en:"Taxi stand Vester Voldgade"}},
+  {t:"23:00", icon:"🎪", title:{da:"Syd For Solen · finale-let-out", en:"Syd For Solen · final let-out"},
+   sub:{da:"Lukker 23:00 · Valbyparken", en:"Gates close 23:00 · Valbyparken"},
+   dur:{da:"ca. 1 t 30 m", en:"~1h 30m"}, earn:680, spot:{da:"Sydporten · Vestre Kirkegårdsvej", en:"South gate · Vestre Kirkegårdsvej"}},
+  {t:"00:15", icon:"🍸", title:{da:"Kødbyen · club let-out", en:"Kødbyen · club let-out"},
+   sub:{da:"Topper 00:30–01:30", en:"Peaks 00:30–01:30"},
+   dur:{da:"ca. 1 t 30 m", en:"~1h 30m"}, earn:610, spot:{da:"DGI Byen hovedindgang", en:"DGI Byen main entrance"}}
+];
+let DRIVES = [
+  {from:{da:"Operaen", en:"The Opera House"}, to:{da:"Rådhuspladsen", en:"City Hall Sq."}, t:"7 min", km:"2,1 km"},
+  {from:{da:"Rådhuspladsen", en:"City Hall Sq."}, to:{da:"Valbyparken", en:"Valbyparken"}, t:"12 min", km:"4,4 km"},
+  {from:{da:"Valbyparken", en:"Valbyparken"}, to:{da:"Kødbyen", en:"Kødbyen"}, t:"12 min", km:"3,5 km"}
+];
+let PLAN_TOTAL = 1950, PLAN_TIME = {da:"~14+ ture · ca. 4 t 45 m", en:"~14+ trips · ~4h 45m"}, PLAN_PERH = 410, PLAN_TRIPS = "14+";
+let PLAN_SOURCE = [], PLAN_BASE = [], MY_POS = null, MY_POS_TXT = "";
+
+let ALERTS = [
+  {ic:"🎪", title:{da:"Syd For Solen: sidste aften — lukker 23:00", en:"Syd For Solen: final night — gates close 23:00"},
+   sub:{da:"Sydporten ved Vestre Kirkegårdsvej — vær der 15 min før lukketid.", en:"South gate at Vestre Kirkegårdsvej — be there 15 min before closing."},
+   time:{da:"20:40 · for 35 min siden", en:"20:40 · 35 min ago"}},
+  {ic:"🌧️", title:{da:"Regnbyger i aften (60%)", en:"Rain showers tonight (60%)"},
+   sub:{da:"+20% efterspørgselsboost i Vesterbro & Kødbyen efter 23:00.", en:"+20% demand boost in Vesterbro & Kødbyen after 23:00."},
+   time:{da:"20:30 · for 45 min siden", en:"20:30 · 45 min ago"}},
+  {ic:"🏳️‍🌈", title:{da:"Pride Square slutter 22:00", en:"Pride Square ends 22:00"},
+   sub:{da:"Vester Voldgade-standen er tættest på pladsen.", en:"Vester Voldgade stand is closest to the square."},
+   time:{da:"20:15 · for 1 time siden", en:"20:15 · 1 hour ago"}}
+];
+
+/* ============ MAP PROJECTION ============ */
+const PROJ = {lon0:12.44, lat0:55.728, k:7800, c:Math.cos(55.66*Math.PI/180)};
+const P = (lon,lat)=>[(lon-PROJ.lon0)*PROJ.c*PROJ.k, (PROJ.lat0-lat)*PROJ.k];
+
+const ZEALAND = [[12.44,55.728],[12.465,55.723],[12.50,55.726],[12.535,55.723],[12.555,55.717],[12.565,55.712],
+ [12.575,55.706],[12.583,55.700],[12.590,55.696],[12.596,55.694],[12.598,55.6925],[12.594,55.6903],[12.591,55.687],
+ [12.588,55.684],[12.585,55.681],[12.581,55.6776],[12.577,55.6753],[12.572,55.672],[12.566,55.669],[12.560,55.6655],
+ [12.554,55.6618],[12.548,55.6575],[12.544,55.653],[12.538,55.648],[12.531,55.641],[12.524,55.634],[12.515,55.626],
+ [12.507,55.618],[12.50,55.612],[12.49,55.618],[12.482,55.628],[12.474,55.638],[12.469,55.648],[12.467,55.658],
+ [12.468,55.668],[12.472,55.678],[12.478,55.688],[12.484,55.698],[12.49,55.708],[12.496,55.716],[12.44,55.72]];
+const AMAGER = [[12.614,55.699],[12.615,55.702],[12.612,55.695],[12.608,55.692],[12.603,55.689],[12.598,55.687],
+ [12.592,55.685],[12.585,55.683],[12.577,55.680],[12.570,55.676],[12.565,55.671],[12.562,55.664],[12.563,55.657],
+ [12.565,55.650],[12.568,55.643],[12.573,55.636],[12.580,55.629],[12.588,55.622],[12.598,55.615],[12.610,55.608],
+ [12.622,55.602],[12.635,55.598],[12.648,55.596],[12.660,55.598],[12.669,55.602],[12.668,55.609],[12.665,55.616],
+ [12.660,55.623],[12.655,55.630],[12.652,55.637],[12.650,55.644],[12.648,55.651],[12.645,55.658],[12.642,55.665],
+ [12.640,55.671],[12.638,55.677],[12.636,55.683],[12.632,55.688],[12.625,55.693]];
+const LAKES = [
+  {c:[12.5698,55.6858], h:0.0085, w:0.0018},
+  {c:[12.5643,55.6778], h:0.0082, w:0.0017},
+  {c:[12.5613,55.6713], h:0.0048, w:0.0017}
+];
+const STREETS = [
+  [[12.566,55.6685],[12.545,55.665],[12.52,55.668],[12.51,55.678],[12.515,55.69],[12.535,55.70],[12.555,55.702]],
+  [[12.573,55.635],[12.578,55.622]],
+  [[12.568,55.664],[12.585,55.645]],
+  [[12.566,55.6745],[12.555,55.6675]],
+  [[12.565,55.652],[12.585,55.652]]
+];
+const LABELS = [
+  {t:"ØRESUND",  lon:12.628, lat:55.708, s:11, c:"#33567e", an:"start"},
+  {t:"INDRE HAVN", lon:12.581, lat:55.687, s:10, c:"#33567e", an:"middle", rot:-90},
+  {t:"KØGE BUGT", lon:12.462, lat:55.605, s:10, c:"#2c4a6e", an:"start"},
+  {t:"ØSTERBRO",   lon:12.574, lat:55.702, s:9, c:"#41597a", an:"middle"},
+  {t:"NØRREBRO",   lon:12.543, lat:55.707, s:9, c:"#41597a", an:"middle"},
+  {t:"FREDERIKSBERG", lon:12.517, lat:55.678, s:9, c:"#41597a", an:"middle"},
+  {t:"VESTERBRO",  lon:12.544, lat:55.666, s:9, c:"#41597a", an:"middle"},
+  {t:"CITY",       lon:12.569, lat:55.679, s:9, c:"#41597a", an:"middle"},
+  {t:"CHRISTIANSHAVN", lon:12.597, lat:55.672, s:9, c:"#41597a", an:"middle"},
+  {t:"AMAGER",     lon:12.607, lat:55.647, s:10, c:"#41597a", an:"middle"},
+  {t:"ØRESTAD",    lon:12.573, lat:55.629, s:9, c:"#41597a", an:"middle"},
+  {t:"CPH",        lon:12.651, lat:55.620, s:9, c:"#3d5373", an:"middle"}
+];
+
+/* ============ HELPERS ============ */
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const fmt = n => lang==="da" ? n.toLocaleString("da-DK") : n.toLocaleString("en-GB");
+const kr = n => lang==="da" ? `~${fmt(n)} kr` : `~DKK ${fmt(n)}`;
+const scoreColor = s => s>=85 ? "#ff5c5c" : s>=75 ? "#ff9f43" : s>=65 ? "#ffc62b" : "#5b7a9d";
+const toM = t => { const [h,m]=t.split(":").map(Number); return h*60+m; };
+function nowClock(){
+  try{
+    const p = new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Copenhagen",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+    return (p.find(x=>x.type==="hour").value)+":"+(p.find(x=>x.type==="minute").value);
+  }catch(e){
+    const d = new Date();
+    return String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0");
+  }
+}
+function nowMin(){
+  const c = nowClock().split(":");
+  return (+c[0])*60 + (+c[1]);
+}
+function todayStr(){
+  return new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Copenhagen"}).format(new Date());
+}
+function dataToday(){ return LIVE ? LIVE.dato : todayStr(); }
+function addDaysStr(iso, n){
+  const d = new Date(iso.slice(0,4), +iso.slice(5,7)-1, +iso.slice(8,10));
+  d.setDate(d.getDate()+n);
+  return isoDate(d);
+}
+function isoDate(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function status(e){
+  if(LIVE && e.dato){
+    if(e.dato < dataToday()) return {k:"done", t:L.statDone};
+    if(e.dato > dataToday()) return {k:"late", t:e.dato===addDaysStr(dataToday(),1) ? L.statTomorrow : L.statLate};
+  }
+  const startM = toM(e.start), endM = toM(e.end) + (toM(e.end)<startM ? 1440 : 0);
+  const n = nowMin();
+  if(n>=startM && n<endM) return {k:"on", t:L.statOn};
+  if(n>=endM && n<=endM+90) return {k:"live", t:L.statLive};
+  if(n>=endM-120 && n<endM) return {k:"next", t:L.statNext};
+  if(n > endM+90) return {k:"done", t:L.statDone};  // overstået i dag → nederst i listen
+  return {k:"late", t:L.statLate};
+}
+function tickClock(){
+  $("clock").textContent = nowClock();
+  $("mapSub").textContent = fmtDate(LIVE ? LIVE.dato : todayStr()) + " · " + nowClock();
+}
+function ring(s, size, lw){
+  const r = (size-lw)/2, C = 2*Math.PI*r, off = C*(1-s/100);
+  return `<svg width="${size}" height="${size}"><circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" style="stroke:var(--border)" stroke-width="${lw}"/>
+  <circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke="${scoreColor(s)}" stroke-width="${lw}" stroke-linecap="round"
+    stroke-dasharray="${C}" stroke-dashoffset="${off}" style="transition:stroke-dashoffset .6s"/></svg>`;
+}
+function toast(msg){ const t=$("toast"); t.textContent=msg; t.classList.add("show");
+  clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("show"),2400); }
+
+/* ============ TONIGHT LIST ============ */
+let curFilter = "all";
+let curDay = 0;      // 0 = i dag, 1 = i morgen
+let curSort = "time"; // "score" eller "time" — tidligst først som standard
+function renderList(){
+  renderWeek();
+  const el = $("list"); el.innerHTML = "";
+  const prio = {live:0, on:1, next:2, late:3};
+  const dayStr = addDaysStr(dataToday(), curDay);
+  let list = EVENTS.filter(e => (curFilter==="all"||e.cat===curFilter) && (!LIVE || e.dato===dayStr));
+  list.sort((a,b)=>{
+    if(curSort==="time"){
+      // tidligst først — overståede events til sidst
+      const da = status(a).k==="done" ? 1 : 0, db = status(b).k==="done" ? 1 : 0;
+      if(da!==db) return da-db;
+      return (a.start+a.end).localeCompare(b.start+b.end) || (b.score-a.score);
+    }
+    const pa = prio[status(a).k] ?? 9, pb = prio[status(b).k] ?? 9;
+    if(pa!==pb) return pa-pb;
+    return (b.score-a.score) || (a.start+a.end).localeCompare(b.start+b.end);
+  });
+  if(!list.length){ el.innerHTML = `<div style="color:var(--faint);text-align:center;padding:30px 0">${L.noEventsCat}</div>`; }
+  list.forEach(e=>{
+    const st = status(e);
+    el.insertAdjacentHTML("beforeend", `
+    <button class="card ${st.k==="live"?"live":""}" data-id="${e.id}">
+      <div class="ring">${ring(e.score,52,4)}<div class="num" style="color:${scoreColor(e.score)}">${e.score}</div></div>
+      <div class="cbody">
+        <div class="t1"><span class="ic">${e.icon}</span>${esc(tr(e.name))}${e.my?` <span class="stat next">${L.myTag}</span>`:""} <span class="stat ${st.k}">${st.t}</span></div>
+        <div class="t2">${esc(tr(e.venue))}${e.cap?` · ${L.cap} ${e.cap}`:""}</div>
+        <div class="t3"><span>${e.start}–${e.end}</span><span>·</span><span>${L.letout} ${e.window}</span></div>
+        <div class="spotline">📍 ${esc(tr(e.spot))} <span style="color:var(--faint)">· ${L.wait} ${e.wait}</span></div>
+      </div>
+      <div class="arrow">›</div>
+    </button>`);
+  });
+  el.querySelectorAll(".card").forEach(c=>c.addEventListener("click",()=>openSheet(c.dataset.id)));
+}
+function renderUpcoming(){
+  const el = $("upcoming");
+  let rows = "";
+  if(LIVE){
+    const ups = EVENTS.filter(e=>e.dato>LIVE.dato)
+      .sort((a,b)=>(a.dato+a.start).localeCompare(b.dato+b.start)).slice(0,6);
+    rows = ups.map(u=>`
+      <button class="up-row" onclick="toast('${L.upToast}')">
+        <div class="up-date">${u.dato.slice(8,10)}.${u.dato.slice(5,7)}.</div>
+        <div><div class="up-name">${u.icon} ${esc(tr(u.name))}</div><div class="up-ven">${esc(tr(u.venue))}</div></div>
+        <div class="up-time">${u.start}</div>
+      </button>`).join("");
+  } else {
+    rows = UPCOMING.map(u=>`
+      <button class="up-row" onclick="toast('${L.upToast}')">
+        <div class="up-date">${esc(tr(u.date))}</div>
+        <div><div class="up-name">${u.icon} ${esc(tr(u.name))}</div><div class="up-ven">${esc(tr(u.venue))}</div></div>
+        <div class="up-time">${u.time}</div>
+      </button>`).join("");
+  }
+  el.innerHTML = rows ? `<div class="up-head">${L.upHead}</div>` + rows : "";
+}
+
+/* ============ MAP (Leaflet — rigtigt kort med zoom) ============ */
+/* Bemærk: appen bruger selv "L" som sprog-objekt — derfor hedder Leaflet "Lf" her. */
+const Lf = window.L;
+let MAP = null, TILE = null, MARKERS = null;
+let METRO_LAYER = null, TAXI_LAYER = null, METRO_ON = true, TAXI_ON = true;
+function renderBaseLayers(){
+  if(!MAP) return;
+  try{
+    if(METRO_LAYER) MAP.removeLayer(METRO_LAYER);
+    if(TAXI_LAYER) MAP.removeLayer(TAXI_LAYER);
+    METRO_LAYER = Lf.layerGroup(METRO_STATIONS.map(s=>{
+      const m = Lf.marker([s[1],s[2]], {icon: Lf.divIcon({className:"", html:'<div class="lmeta">M</div>', iconSize:[18,18], iconAnchor:[9,9]})});
+      m.bindTooltip("🚇 " + esc(s[0]), {direction:"top", offset:[0,-5], className:"lmk-tip"});
+      return m;
+    }));
+    TAXI_LAYER = Lf.layerGroup(TAXI_STANDS.map(s=>{
+      const m = Lf.marker([s[1],s[2]], {icon: Lf.divIcon({className:"", html:'<div class="ltaxi">🚕</div>', iconSize:[22,22], iconAnchor:[11,11]})});
+      m.bindTooltip(esc(s[0]), {direction:"top", offset:[0,-6], className:"lmk-tip"});
+      return m;
+    }));
+    if(METRO_ON) METRO_LAYER.addTo(MAP);
+    if(TAXI_ON) TAXI_LAYER.addTo(MAP);
+  }catch(e){ console.warn("lag-fejl:", e); }
+}
+function tileLayerFor(theme){
+  if(theme==="light") return Lf.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    subdomains:'abcd', maxZoom:19,
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'});
+  return Lf.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    subdomains:'abcd', maxZoom:19,
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'});
+}
+function tileLayerOSM(){
+  return Lf.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom:19, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'});
+}
+function setTheme(t){
+  document.documentElement.dataset.theme = t;
+  try{ localStorage.setItem("stf_theme", t); }catch(e){}
+  if($("themeBtn")) $("themeBtn").textContent = t==="light" ? "☀️" : "🌙";
+  document.body.classList.toggle("osm-dark", t==="dark");
+  if(MAP && TILE){
+    try{ MAP.removeLayer(TILE); }catch(e){}
+    TILE = tileLayerFor(t).addTo(MAP);
+  }
+}
+function initMap(){
+  if(!$("leafmap")) return;
+  if(!Lf){ $("leafmap").style.display="none"; $("mapFallback").style.display="block"; return; }
+  try{
+    if(MAP){ MAP.invalidateSize(); renderMarkers(); return; }
+    MAP = Lf.map("leafmap", {scrollWheelZoom:true, zoomControl:true}).setView([55.676,12.566], 12);
+    TILE = tileLayerFor(document.documentElement.dataset.theme||"light").addTo(MAP);
+    TILE.on("tileerror", ()=>{
+      if(TILE._fb) return; TILE._fb = true;
+      try{ MAP.removeLayer(TILE); }catch(e){}
+      TILE = tileLayerOSM().addTo(MAP);
+      document.body.classList.add("osm-dark");
+    });
+    renderMarkers();
+    renderBaseLayers();
+    setTimeout(()=>{ try{ MAP.invalidateSize(); }catch(e){} }, 80);
+  }catch(e){
+    console.warn("kort fejl:", e);
+    $("leafmap").style.display="none"; $("mapFallback").style.display="block";
+  }
+}
+function renderMarkers(){
+  if(!MAP) return;
+  try{
+    if(MARKERS) MAP.removeLayer(MARKERS);
+    MARKERS = Lf.layerGroup().addTo(MAP);
+    const pts = [];
+    const list = LIVE
+      ? EVENTS.filter(e=>e.dato===LIVE.dato && e.lat!=null && e.lon!=null)
+      : EVENTS.filter(e=>EVMAP[e.id]).map(e=>{ const v=VENUES.find(x=>x.id===EVMAP[e.id]); return v? Object.assign({},e,{lat:v.lat,lon:v.lon}) : null; }).filter(Boolean);
+    const seenVenues = new Set();
+    list.forEach(e=>{
+      const c = scoreColor(e.score);
+      const icon = Lf.divIcon({className:"", html:
+        `<div class="lmk" style="--c:${c}"><span class="lmk-emoji">${e.icon}</span><span class="lmk-pulse"></span></div>`,
+        iconSize:[38,38], iconAnchor:[19,19]});
+      const m = Lf.marker([e.lat, e.lon], {icon});
+      m.bindTooltip(`${e.icon} ${esc(tr(e.name)||"")} · ${e.score}/100`, {direction:"top", offset:[0,-14], className:"lmk-tip"});
+      m.on("click", ()=>openSheet(e.id));
+      m.addTo(MARKERS);
+      pts.push([e.lat, e.lon]);
+      if(e.vid) seenVenues.add(e.vid);
+    });
+    if(LIVE){
+      VENUES.filter(v=>!seenVenues.has(v.id)).forEach(v=>{
+        const m = Lf.marker([v.lat, v.lon], {icon: Lf.divIcon({className:"", html:'<div class="lmk-dim"></div>', iconSize:[14,14], iconAnchor:[7,7]})});
+        m.bindTooltip(`${esc(v.navn)} — ${L.noEventMap}`, {direction:"top", offset:[0,-6], className:"lmk-tip"});
+        m.on("click", ()=>toast(L.noEventMap));
+        m.addTo(MARKERS);
+      });
+    }
+    if(pts.length){
+      try{ MAP.fitBounds(Lf.latLngBounds(pts), {padding:[46,46], maxZoom:13}); }catch(e){}
+    }
+  }catch(e){ console.warn("markør-fejl:", e); }
+}
+
+/* ============ SHEET ============ */
+let openId = null;
+function curveSVG(e){
+  const cv = CURVES[e.curve], W=300, H=96, pad=8;
+  const xs = i => pad + i*(W-2*pad)/6;
+  const ys = v => H-pad - (v/100)*(H-2*pad-8);
+  const lbl = cv.labels[lang];
+  let pts = cv.v.map((v,i)=>`${xs(i).toFixed(1)},${ys(v).toFixed(1)}`).join(" ");
+  let area = `M${xs(0).toFixed(1)},${(H-pad-4).toFixed(1)} ` + cv.v.map((v,i)=>`L${xs(i).toFixed(1)},${ys(v).toFixed(1)}`).join(" ") + ` L${xs(6).toFixed(1)},${(H-pad-4).toFixed(1)} Z`;
+  let band = `<rect x="${xs(2)}" y="${pad}" width="${xs(4)-xs(2)}" height="${H-2*pad-8}" fill="#ffc62b" opacity="0.07"/>`;
+  let labels = [0,2,4,6].map((i,k)=>`<text x="${xs(i)}" y="${H-2}" font-size="8.5" style="fill:var(--faint)" text-anchor="middle">${lbl[k]}</text>`).join("");
+  let ticks = [0,2,4,6].map(i=>`<line x1="${xs(i)}" y1="${pad}" x2="${xs(i)}" y2="${H-pad-8}" style="stroke:var(--border)" stroke-width="1"/>`).join("");
+  return `<svg viewBox="0 0 ${W} ${H}">${band}${ticks}<path d="${area}" fill="url(#grad${e.id})"/>
+    <defs><linearGradient id="grad${e.id}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${scoreColor(e.score)}" stop-opacity="0.55"/><stop offset="100%" stop-color="${scoreColor(e.score)}" stop-opacity="0.04"/>
+    </linearGradient></defs>
+    <polyline points="${pts}" fill="none" stroke="${scoreColor(e.score)}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="${xs(2)}" cy="${ys(cv.v[2])}" r="3.5" fill="${scoreColor(e.score)}"/>
+    ${labels}</svg>`;
+}
+function renderSheet(){
+  const e = EVENTS.find(x=>x.id===openId); if(!e) return;
+  const st = status(e);
+  $("sheetBody").innerHTML = `
+    <div class="s-top">
+      <div class="ring">${ring(e.score,64,5)}<div class="num" style="color:${scoreColor(e.score)}">${e.score}</div></div>
+      <div>
+        <div class="s-title">${e.icon} ${esc(tr(e.name))}${e.my?` <span class="stat next">${L.myTag}</span>`:""} <span class="stat ${st.k}" style="vertical-align:2px">${st.t}</span></div>
+        <div class="s-ven">${esc(tr(e.venue))}${e.cap?` · ${L.cap} ${e.cap}`:""}</div>
+        <div class="s-time">${e.start} – ${e.end} · ${L.letout} ${e.window}</div>
+      </div>
+    </div>
+    <div class="sect"><h4>${L.sheetDemand}</h4><div class="curve">${curveSVG(e)}</div>
+      <p class="curve-note">${L.sheetScoreNote.replace("{s}",e.score)}</p></div>
+    <div class="sect"><h4>${L.sheetSpots}</h4>
+      ${e.spots.map(s=>`<div class="spotrow ${s.best?"best":""}">
+        <div class="pin">📍</div>
+        <div style="flex:1;min-width:0"><b>${esc(tr(s.name))}${s.best?'<span class="besttag">'+L.best+'</span>':""}</b><small>${esc(tr(s.note))}</small></div>
+        <div class="r"><b>${s.wait}</b><small>${L.estTag}</small></div>
+      </div>`).join("")}
+      <p class="curve-note">${L.sheetEstNote}</p>
+      <button class="btn yellow" onclick="toast('${L.routeSet.replace("{spot}", esc(tr(e.spot)))}')">${L.setRoute.replace("{spot}", esc(tr(e.spot)))}</button>
+    </div>
+    <div class="sect"><h4>${L.sheetContext}</h4><div class="boosters">
+      ${e.boosters.map(b=>`<div class="bo"><b>${b.i}</b> <i>${esc(tr(b))}</i></div>`).join("")}
+    </div></div>
+    <div class="sect"><h4>${L.sheetFeedback}</h4>
+      <div class="checkin">
+        <button class="hot" onclick="toast('${L.hotDone}')">🔥 ${lang==="da"?"Megatravlt":"Super busy"}</button>
+        <button class="ok" onclick="toast('${L.okDone}')">👍 ${lang==="da"?"Godt":"Good"}</button>
+        <button class="dead" onclick="toast('${L.deadDone}')">👎 ${lang==="da"?"Dødt":"Dead"}</button>
+      </div>
+    </div>
+    ${e.my? `<div class="sect"><button class="btn" id="delMy">${L.evDelete}</button></div>`:""}`;
+  if($("delMy")) $("delMy").addEventListener("click", ()=>deleteMyEvent(openId));
+}
+function openSheet(id){ openId = id; renderSheet();
+  $("sheet").classList.add("open"); $("backdrop").classList.add("show"); }
+function closeSheet(){ $("sheet").classList.remove("open"); $("backdrop").classList.remove("show"); }
+
+/* ============ PLANNER ============ */
+function hhmm2plan(mins){
+  if(mins<0) mins=0;
+  return String(Math.floor(mins/60)%24).padStart(2,"0")+":"+String(mins%60).padStart(2,"0");
+}
+function renderPlanner(){
+  const el = $("planner");
+  if(!PLANNER.length){
+    el.innerHTML = `<div style="color:var(--faint);text-align:center;padding:24px 0">${L.planEmpty}</div>
+      <button class="btn" onclick="resetPlanner()">${L.planReset}</button>`;
+    return;
+  }
+  let s = "";
+  const now = nowMin();
+  PLANNER.forEach((leg,i)=>{
+    const drv = DRIVES[i];
+    const next = PLANNER[i+1];
+    const endM = leg.end ? toM(leg.end) : toM(leg.t)+150;
+    const trips = leg.trips || 3;
+    let leaveBy = null, tight = false;
+    if(next && drv){ const tm = drv.tMin || 12; leaveBy = toM(next.t) - tm; tight = leaveBy < endM; }
+    const isNow = now>=toM(leg.t) && now<=endM+90;
+    s += `<div class="leg ${isNow?"now":""}">
+      <div class="rail"><div class="dot">${leg.icon}</div>${next?'<div class="line"></div>':""}</div>
+      <div class="body" style="margin-bottom:0">
+        <div class="row1"><b>${leg.t} · ${esc(tr(leg.title))}${isNow?` <span class="stat live">${L.planNow}</span>`:""}</b>
+          <span class="earn">${kr(leg.earn)}<small>≈ ${trips} ${L.planTrips}</small></span></div>
+        <div class="row2">${esc(tr(leg.sub))}</div>
+        <div class="row3">📍 ${esc(tr(leg.spot))} · ${L.planLeg} ${tr(leg.dur)}</div>
+        ${leaveBy!==null?`<div class="leaveby ${tight?"warn":""}">⏰ ${L.planLeave} ${hhmm2plan(leaveBy)}${tight?" · ⚠️ "+L.planTight:""}</div>`:""}
+        ${i===0 && MY_POS?`<div class="posline">📍 ${MY_POS_TXT}</div>`:""}
+      </div>
+      <button class="skip" title="${L.planSkip}" onclick="skipLeg(${i})">✓</button>
+    </div>`;
+    if(drv) s += `<div class="drive">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14"/><path d="M5 17l4-4"/><path d="M5 17l4 4"/></svg>
+      <span><b>${drv.t}</b> · ${drv.km} · ${L.planDrive} ${esc(tr(drv.from))}${i===0&&MY_POS?` · ${L.planFromYou}`:""}</span></div>`;
+  });
+  s += `<div class="summ">
+    <div><small>${L.planTotLabel}</small><b>${kr(PLAN_TOTAL)}</b></div>
+    <div style="text-align:right"><small>${tr(PLAN_TIME)}</small><b style="color:var(--text);font-size:15px">${kr(PLAN_PERH)}${L.planPerH}</b></div>
+  </div>
+  <button class="btn" onclick="optimizePlan()">${L.planReopt}</button>`;
+  el.innerHTML = s;
+}
+function skipLeg(i){
+  if(PLAN_SOURCE.length<=1){ PLAN_SOURCE = []; rebuildPlanner(); return; }
+  PLAN_SOURCE.splice(i,1);
+  rebuildPlanner();
+  toast("✓ " + (lang==="da"?"Stop fjernet — planen er lagt om":"Stop removed — plan rebuilt"));
+}
+function resetPlanner(){
+  PLAN_SOURCE = (PLAN_BASE||[]).slice(0,5);
+  rebuildPlanner();
+}
+function optimizePlan(){
+  rebuildPlanner();
+  toast(L.planReoptDone);
+}
+function rebuildPlanner(){
+  const legs = PLAN_SOURCE||[];
+  if(!legs.length){ PLANNER=[]; DRIVES=[]; PLAN_TOTAL=0; PLAN_PERH=0;
+    PLAN_TIME = {da:"ingen events i dag", en:"no events today"}; renderPlanner(); return; }
+  let totalMin = 0;
+  PLANNER = legs.map(e=>{
+    const endM = toM(e.end);
+    totalMin += 90; // let-out-vinduet
+    return {t:hhmm2plan(endM-15), icon:e.icon, title:{da:tr(e.name),en:tr(e.name)},
+      sub:{da:`${tr(e.venue)} · ${L.letout} ${e.window}`, en:`${tr(e.venue)} · ${L.letout} ${e.window}`},
+      dur:{da:"ca. 1 t 30 m", en:"~1h 30m"},
+      earn:earnOf(e), trips:Math.max(2, Math.round(earnOf(e)/120)),
+      spot:{da:tr(e.spot),en:tr(e.spot)}, end:e.end, vid:e.vid};
+  });
+  DRIVES = [];
+  for(let i=0;i<legs.length-1;i++){
+    const a=legs[i], b=legs[i+1];
+    const av=VENUES.find(v=>v.id===a.vid), bv=VENUES.find(v=>v.id===b.vid);
+    if(av && bv){
+      const km = distKm(av,bv);
+      const tMin = Math.max(3, Math.round(km/28*60+4));
+      totalMin += tMin;
+      DRIVES.push({from:{da:tr(a.venue),en:tr(a.venue)}, to:{da:tr(b.venue),en:tr(b.venue)},
+        t: tMin+" min", km: km.toFixed(1).replace(".",",")+" km", tMin});
+    } else DRIVES.push(null);
+  }
+  if(MY_POS && legs.length){
+    const v0 = VENUES.find(v=>v.id===legs[0].vid);
+    if(v0){
+      const km0 = distKm(MY_POS,v0);
+      const t0 = Math.max(2, Math.round(km0/28*60+4));
+      MY_POS_TXT = (lang==="da"?`${km0.toFixed(1).replace(".",",")} km · ${t0} min til ${tr(legs[0].venue)}`:
+                    `${km0.toFixed(1)} km · ${t0} min to ${tr(legs[0].venue)}`);
+    }
+  }
+  PLAN_TOTAL = legs.reduce((s,e)=>s+earnOf(e),0);
+  PLAN_TRIPS = legs.reduce((s,e)=>s+Math.max(2,Math.round(earnOf(e)/120)),0)+"+";
+  PLAN_TIME = wrap(`~${PLAN_TRIPS} ture · ca. ${Math.floor(totalMin/60)} t ${totalMin%60} m`);
+  PLAN_PERH = Math.round(PLAN_TOTAL/Math.max(1,totalMin/60));
+  renderPlanner();
+}
+function earnOf(e){
+  let v = Math.round((e.score*7+160)/10)*10;
+  if(e.type==="business"||e.type==="cruise") v = Math.round(v*1.2/10)*10;
+  if(e.type==="festival") v = Math.round(v*1.05/10)*10;
+  return v;
+}
+function useMyPos(){
+  if(!navigator.geolocation){ toast(L.planPosFail); return; }
+  setStatus(L.planPosBusy);
+  navigator.geolocation.getCurrentPosition(pos=>{
+    MY_POS = {lat:pos.coords.latitude, lon:pos.coords.longitude};
+    setStatus("");
+    rebuildPlanner();
+    toast(L.planPosOK);
+  }, err=>{
+    setStatus(L.planPosFail, true);
+    setTimeout(()=>setStatus(""),4000);
+  }, {timeout:10000, maximumAge:60000});
+}
+
+/* ============ ALERTS ============ */
+function renderAlerts(){
+  $("alertsList").innerHTML = ALERTS.map(a=>`
+    <div class="al"><div class="ic">${a.ic}</div><div><b>${esc(tr(a.title))}</b>${esc(tr(a.sub)) ? `<br><span style="color:var(--muted);font-size:12px">${esc(tr(a.sub))}</span>` : ""}<small>${esc(tr(a.time))}</small></div></div>`).join("");
+}
+
+/* ============ BROWSER-LIVE — henter data direkte i browseren ============
+   Appen henter selv live-data direkte i browseren via gratis proxyer.
+   Rækkefølge: 1) data/app_data.json (hvis filen findes) 2) live via proxyer
+   3) gemt cache 4) demo-data. */
+const LS = (()=>{ try{ return window.localStorage; }catch(e){ return {getItem:()=>null,setItem(){}}; } })();
+const TYPE_LABEL_BR = {sport:"⚽ Sport", koncert:"🎤 Koncert", festival:"🎪 Festival", kultur:"🎭 Kultur", natklub:"🍸 Natklub", business:"💼 Business", cruise:"🚢 Krydstogt", fly:"✈️ Lufthavn"};
+const TYPE_ICON = {sport:"⚽", koncert:"🎤", festival:"🎪", kultur:"🎭", natklub:"🍸", business:"💼", cruise:"🚢", fly:"✈️"};
+const KURVE = {sport:"match", koncert:"concert", festival:"fest", kultur:"gala", natklub:"clubs", business:"dinner", cruise:"cruise", fly:"cruise"};
+const TYPE_MULT = {sport:0.80, koncert:1.00, festival:1.00, kultur:0.65, natklub:0.80, business:0.85, cruise:0.90, fly:0.90};
+const VENUE_TABLE = [
+  {id:"parken",navn:"Parken",lat:55.702,lon:12.572,kapacitet:38000,gab:0.55,type:"sport",spot:"Øster Allé · Trianglen-siden"},
+  {id:"royal_arena",navn:"Royal Arena",lat:55.6257,lon:12.5737,kapacitet:17000,gab:0.45,type:"koncert",spot:"Sydpladsen · Ørestads Blvd"},
+  {id:"tivoli",navn:"Tivoli",lat:55.674,lon:12.564,kapacitet:25000,gab:0.40,type:"kultur",spot:"Bernstorffsgade · hovedindgang"},
+  {id:"valbyparken",navn:"Valbyparken",lat:55.6419,lon:12.5205,kapacitet:12000,gab:0.75,type:"festival",spot:"Sydporten · Vestre Kirkegårdsvej"},
+  {id:"operaen",navn:"Operaen",lat:55.682,lon:12.600,kapacitet:1600,gab:0.65,type:"kultur",spot:"Operaen forplads"},
+  {id:"raadhuspladsen",navn:"Rådhuspladsen",lat:55.676,lon:12.568,kapacitet:20000,gab:0.35,type:"festival",spot:"Taxaholdeplads Vester Voldgade"},
+  {id:"bella_center",navn:"Bella Center",lat:55.6381,lon:12.5769,kapacitet:6000,gab:0.45,type:"business",spot:"Center Boulevard · hovedindgang"},
+  {id:"forum",navn:"Forum København",lat:55.6803,lon:12.5534,kapacitet:8000,gab:0.50,type:"kultur",spot:"Julius Thomsens Plads"},
+  {id:"kb_hallen",navn:"KB Hallen",lat:55.671,lon:12.498,kapacitet:3500,gab:0.75,type:"koncert",spot:"Peter Bangsvej-udgangen"},
+  {id:"vega",navn:"Store VEGA",lat:55.666,lon:12.539,kapacitet:1500,gab:0.50,type:"koncert",spot:"Enghavevej-udgangen"},
+  {id:"lille_vega",navn:"Lille VEGA",lat:55.666,lon:12.539,kapacitet:500,gab:0.50,type:"koncert",spot:"Enghavevej-udgangen"},
+  {id:"ideal_bar",navn:"Ideal Bar - VEGA",lat:55.666,lon:12.539,kapacitet:300,gab:0.50,type:"koncert",spot:"Enghavevej-udgangen"},
+  {id:"pumpehuset",navn:"Pumpehuset",lat:55.6792,lon:12.5604,kapacitet:800,gab:0.60,type:"koncert",spot:"Studiestræde-udgangen"},
+  {id:"amager_bio",navn:"Amager Bio",lat:55.6573,lon:12.6028,kapacitet:1000,gab:0.50,type:"koncert",spot:"Sundholmsvej-udgangen"},
+  {id:"drk",navn:"DR Koncerthuset",lat:55.6583,lon:12.5903,kapacitet:1800,gab:0.50,type:"koncert",spot:"Emil Holms Kanal · hovedindgang"},
+  {id:"tap1",navn:"TAP1",lat:55.6666,lon:12.5175,kapacitet:1500,gab:0.65,type:"koncert",spot:"Carl Jacobsens Vej · hovedindgang"},
+  {id:"okshnehallen",navn:"Øksnehallen",lat:55.667,lon:12.553,kapacitet:2500,gab:0.60,type:"business",spot:"Halmtorvet-udgangen"},
+  {id:"dgi_byen",navn:"DGI Byen",lat:55.6715,lon:12.559,kapacitet:1500,gab:0.60,type:"natklub",spot:"DGI Byen hovedindgang"},
+  {id:"refshaleoen",navn:"Refshaleøen",lat:55.691,lon:12.612,kapacitet:8000,gab:0.85,type:"festival",spot:"Broen ved havnebusstoppet"},
+  {id:"langelinie",navn:"Langelinie",lat:55.696,lon:12.596,kapacitet:3000,gab:0.70,type:"kultur",spot:"Langelinie-kajen"},
+  {id:"krydstogtkaj",navn:"Krydstogtkaj · Langelinie/Oceankaj",lat:55.701,lon:12.604,kapacitet:6000,gab:0.60,type:"cruise",spot:"Krydstogtkajen · ved terminalbygningen"},
+  {id:"faelledparken",navn:"Fælledparken",lat:55.7009,lon:12.5733,kapacitet:30000,gab:0.45,type:"sport",spot:"Hovedindgangen · mod Øster Allé"},
+  {id:"tivoli_hotel",navn:"Tivoli Hotel & Congress Center",lat:55.6653,lon:12.5549,kapacitet:1500,gab:0.45,type:"business",spot:"Hovedindgangen · Arni Magnussons Gade"},
+  {id:"radisson_scand",navn:"Radisson Blu Scandinavia",lat:55.6684,lon:12.5775,kapacitet:1200,gab:0.40,type:"business",spot:"Hovedindgangen · Amager Blvd"},
+  {id:"crowne_plaza",navn:"Crowne Plaza Copenhagen Towers",lat:55.6312,lon:12.5855,kapacitet:1200,gab:0.50,type:"business",spot:"Hovedindgangen · Ørestads Blvd"},
+  {id:"comwell_portside",navn:"Comwell Copenhagen Portside",lat:55.7080,lon:12.5874,kapacitet:800,gab:0.55,type:"business",spot:"Hovedindgangen · Alfred Nobels Vej"},
+  {id:"falkoner",navn:"Falkoner Center",lat:55.6808,lon:12.5348,kapacitet:600,gab:0.40,type:"business",spot:"Hovedindgangen · Falkoner Allé"},
+  {id:"odd_fellow",navn:"Odd Fellow Palæet",lat:55.6802,lon:12.5908,kapacitet:400,gab:0.35,type:"business",spot:"Hovedindgangen · Bredgade"},
+  {id:"lufthavnen",navn:"Københavns Lufthavn (CPH)",lat:55.618,lon:12.6508,kapacitet:30000,gab:0.35,type:"business",spot:"Taxirækken · Terminal 3"}
+];
+const LN_SLUGS = [
+  ["royal-arena-tickets-vdp845782","royal_arena"],
+  ["store-vega-tickets-vdp4624","vega"],
+  ["lille-vega-tickets-vdp4628","lille_vega"],
+  ["ideal-bar-vega-tickets-vdp4712","ideal_bar"],
+  ["k-b-hallen-tickets-vdp4622","kb_hallen"],
+  ["forum-copenhagen-tickets-vdp12067","forum"],
+  ["pumpehuset-stor-sal-tickets-vdp245512","pumpehuset"],
+  ["amager-bio-tickets-vdp4703","amager_bio"],
+  ["dr-koncerthuset-koncertsalen-tickets-vdp25938","drk"],
+  ["tap1-tickets-vdp1470474","tap1"]
+];
+/* Kendte sæson-events (fast indbygget kalender — opdatér evt. årstal) */
+const SEASON_EVENTS = [
+  {navn:"TechBBQ 2026",vid:"bella_center",dato:"2026-08-26",start:"09:00",slut:"18:00",type:"business",note:"5.000+ deltagere · Nordens største tech-konference"},
+  {navn:"TechBBQ 2026",vid:"bella_center",dato:"2026-08-27",start:"09:00",slut:"18:00",type:"business",note:"5.000+ deltagere · efter-pub i Carlsberg Byen"},
+  {navn:"Pil · Fredagsrock",vid:"tivoli",dato:"2026-08-14",start:"20:00",slut:"22:00",type:"koncert",note:"Fredagsrock på Plænen"},
+  {navn:"Burhan G · Fredagsrock",vid:"tivoli",dato:"2026-08-21",start:"20:00",slut:"22:00",type:"koncert",note:"Fredagsrock på Plænen"},
+  {navn:"TV-2 · Fredagsrock",vid:"tivoli",dato:"2026-08-28",start:"20:00",slut:"22:00",type:"koncert",note:"Fredagsrock på Plænen"},
+  {navn:"Blæst · Fredagsrock",vid:"tivoli",dato:"2026-09-04",start:"20:00",slut:"22:00",type:"koncert",note:"Fredagsrock på Plænen"},
+/* Konferencer & messer i Bella Center 2026 (bellacenter.dk) */
+  {navn:"NUAS Forum 2026",vid:"bella_center",dato:"2026-08-15",start:"09:00",slut:"17:00",type:"business",note:"~600 ledere fra nordiske universitetsadministrationer"},
+  {navn:"Space for Inspiration 2026",vid:"bella_center",dato:"2026-08-26",start:"09:00",slut:"17:00",type:"business",note:"Årlig konference om kommerciel rumfart"},
+  {navn:"Space for Inspiration 2026",vid:"bella_center",dato:"2026-08-27",start:"09:00",slut:"17:00",type:"business",note:"Årlig konference om kommerciel rumfart"},
+  {navn:"CIRSE 2026",vid:"bella_center",dato:"2026-09-05",start:"09:00",slut:"17:00",type:"business",note:"Verdens førende kongres i minimal-invasiv medicin"},
+  {navn:"CIRSE 2026",vid:"bella_center",dato:"2026-09-06",start:"09:00",slut:"17:00",type:"business",note:"Verdens førende kongres i minimal-invasiv medicin"},
+  {navn:"CIRSE 2026",vid:"bella_center",dato:"2026-09-07",start:"09:00",slut:"17:00",type:"business",note:"Verdens førende kongres i minimal-invasiv medicin"},
+  {navn:"CIRSE 2026",vid:"bella_center",dato:"2026-09-08",start:"09:00",slut:"17:00",type:"business",note:"Verdens førende kongres i minimal-invasiv medicin"},
+  {navn:"CIRSE 2026",vid:"bella_center",dato:"2026-09-09",start:"09:00",slut:"17:00",type:"business",note:"Verdens førende kongres i minimal-invasiv medicin"},
+  {navn:"ISTAT EMEA 2026",vid:"bella_center",dato:"2026-09-13",start:"09:00",slut:"17:00",type:"business",note:"1.500+ luftfartsprofessionelle"},
+  {navn:"ISTAT EMEA 2026",vid:"bella_center",dato:"2026-09-14",start:"09:00",slut:"17:00",type:"business",note:"1.500+ luftfartsprofessionelle"},
+  {navn:"ISTAT EMEA 2026",vid:"bella_center",dato:"2026-09-15",start:"09:00",slut:"17:00",type:"business",note:"1.500+ luftfartsprofessionelle"},
+  {navn:"ECOC 2026",vid:"bella_center",dato:"2026-09-21",start:"09:00",slut:"17:00",type:"business",note:"Europas største konference om optisk kommunikation"},
+  {navn:"ECOC 2026",vid:"bella_center",dato:"2026-09-22",start:"09:00",slut:"17:00",type:"business",note:"Europas største konference om optisk kommunikation"},
+  {navn:"ECOC 2026",vid:"bella_center",dato:"2026-09-23",start:"09:00",slut:"17:00",type:"business",note:"Europas største konference om optisk kommunikation"},
+  {navn:"IBA Annual Conference 2026",vid:"bella_center",dato:"2026-10-04",start:"09:00",slut:"17:00",type:"business",note:"Verdens største advokatkonference (~6.000)"},
+  {navn:"IBA Annual Conference 2026",vid:"bella_center",dato:"2026-10-05",start:"09:00",slut:"17:00",type:"business",note:"Verdens største advokatkonference (~6.000)"},
+  {navn:"IBA Annual Conference 2026",vid:"bella_center",dato:"2026-10-06",start:"09:00",slut:"17:00",type:"business",note:"Verdens største advokatkonference (~6.000)"},
+  {navn:"IBA Annual Conference 2026",vid:"bella_center",dato:"2026-10-07",start:"09:00",slut:"17:00",type:"business",note:"Verdens største advokatkonference (~6.000)"},
+  {navn:"IBA Annual Conference 2026",vid:"bella_center",dato:"2026-10-08",start:"09:00",slut:"17:00",type:"business",note:"Verdens største advokatkonference (~6.000)"},
+  {navn:"IBA Annual Conference 2026",vid:"bella_center",dato:"2026-10-09",start:"09:00",slut:"17:00",type:"business",note:"Verdens største advokatkonference (~6.000)"},
+  {navn:"An Evening with Eckhart Tolle",vid:"bella_center",dato:"2026-10-08",start:"19:00",slut:"22:00",type:"kultur",note:"Foredrag · stort publikum"},
+  {navn:"Pax8 Beyond EMEA 2026",vid:"bella_center",dato:"2026-10-18",start:"09:00",slut:"17:00",type:"business",note:"Global IT-leverandørkonference"},
+  {navn:"Pax8 Beyond EMEA 2026",vid:"bella_center",dato:"2026-10-19",start:"09:00",slut:"17:00",type:"business",note:"Global IT-leverandørkonference"},
+  {navn:"Pax8 Beyond EMEA 2026",vid:"bella_center",dato:"2026-10-20",start:"09:00",slut:"17:00",type:"business",note:"Global IT-leverandørkonference"},
+  {navn:"Bogforum 2026",vid:"bella_center",dato:"2026-10-30",start:"10:00",slut:"17:00",type:"kultur",note:"Danmarks største bogmesse — familier"},
+  {navn:"Bogforum 2026",vid:"bella_center",dato:"2026-10-31",start:"10:00",slut:"17:00",type:"kultur",note:"Danmarks største bogmesse — familier"},
+  {navn:"Bogforum 2026",vid:"bella_center",dato:"2026-11-01",start:"10:00",slut:"17:00",type:"kultur",note:"Danmarks største bogmesse — familier"},
+  /* DHL Stafetten — Københavns største firmaløb, ~120.000 deltagere over 5 aftener */
+  {navn:"DHL Stafetten 2026",vid:"faelledparken",dato:"2026-08-24",start:"16:00",slut:"22:00",type:"festival",note:"Firmaløb · fest og aftensol i Fælledparken"},
+  {navn:"DHL Stafetten 2026",vid:"faelledparken",dato:"2026-08-25",start:"16:00",slut:"22:00",type:"festival",note:"Firmaløb · fest og aftensol i Fælledparken"},
+  {navn:"DHL Stafetten 2026",vid:"faelledparken",dato:"2026-08-26",start:"16:00",slut:"22:00",type:"festival",note:"Firmaløb · fest og aftensol i Fælledparken"},
+  {navn:"DHL Stafetten 2026",vid:"faelledparken",dato:"2026-08-27",start:"16:00",slut:"22:00",type:"festival",note:"Firmaløb · fest og aftensol i Fælledparken"},
+  {navn:"DHL Stafetten 2026",vid:"faelledparken",dato:"2026-08-28",start:"16:00",slut:"22:00",type:"festival",note:"Firmaløb · fest og aftensol i Fælledparken"},
+  /* Copenhagen Cooking & Food Festival — Nordeuropas største madfestival */
+  {navn:"Copenhagen Cooking 2026",vid:"refshaleoen",dato:"2026-08-21",start:"12:00",slut:"21:00",type:"festival",note:"Madfestival i hele byen"},
+  {navn:"Copenhagen Cooking 2026",vid:"refshaleoen",dato:"2026-08-22",start:"12:00",slut:"21:00",type:"festival",note:"Madfestival i hele byen"},
+  {navn:"Copenhagen Cooking 2026",vid:"refshaleoen",dato:"2026-08-23",start:"12:00",slut:"21:00",type:"festival",note:"Madfestival i hele byen"},
+  {navn:"Copenhagen Cooking 2026",vid:"refshaleoen",dato:"2026-08-24",start:"12:00",slut:"21:00",type:"festival",note:"Madfestival i hele byen"},
+  {navn:"Copenhagen Cooking 2026",vid:"refshaleoen",dato:"2026-08-25",start:"12:00",slut:"21:00",type:"festival",note:"Madfestival i hele byen"},
+  {navn:"Copenhagen Cooking 2026",vid:"refshaleoen",dato:"2026-08-26",start:"12:00",slut:"21:00",type:"festival",note:"Madfestival i hele byen"},
+  {navn:"Copenhagen Cooking 2026",vid:"refshaleoen",dato:"2026-08-27",start:"12:00",slut:"21:00",type:"festival",note:"Madfestival i hele byen"},
+  {navn:"Copenhagen Cooking 2026",vid:"refshaleoen",dato:"2026-08-28",start:"12:00",slut:"21:00",type:"festival",note:"Madfestival i hele byen"},
+  {navn:"Copenhagen Cooking 2026",vid:"refshaleoen",dato:"2026-08-29",start:"12:00",slut:"21:00",type:"festival",note:"Madfestival i hele byen"},
+  {navn:"Copenhagen Cooking 2026",vid:"refshaleoen",dato:"2026-08-30",start:"12:00",slut:"21:00",type:"festival",note:"Madfestival i hele byen"},
+  /* Digital Tech Summit — Bella Center */
+  {navn:"Digital Tech Summit 2026",vid:"bella_center",dato:"2026-11-04",start:"08:30",slut:"18:00",type:"business",note:"Danmarks største tech-konference"},
+  {navn:"Digital Tech Summit 2026",vid:"bella_center",dato:"2026-11-05",start:"08:30",slut:"18:00",type:"business",note:"Danmarks største tech-konference"},
+  /* J-dag — Tuborg Julebryg: første fredag i november (6. nov 2026) */
+  {navn:"J-dag · Tuborg Julebryg",vid:"dgi_byen",dato:"2026-11-06",start:"18:00",slut:"02:00",type:"natklub",note:"Hele byens barer — årets største bar-aften"},
+  /* Nytårsaften */
+  {navn:"Nytårsaften",vid:"raadhuspladsen",dato:"2026-12-31",start:"22:00",slut:"01:30",type:"festival",note:"Hele byen · fyrværkeri kl. 24"}
+];
+/* Gentagende mønstre (fast indbygget mønster) */
+const RECURRING = [
+  {navn:"Tivoli · lørdagsfyrværkeri",vid:"tivoli",ugedage:[6],start:"23:45",slut:"00:15",sstart:"2026-04-03",sslut:"2026-09-26",type:"kultur",note:"Fyrværkeri hver lørdag kl. 23:45"},
+  {navn:"Kødbyen · club let-out",vid:"dgi_byen",ugedage:[6,7],start:"00:15",slut:"02:00",sstart:"2026-01-01",sslut:"2026-12-31",type:"natklub",note:"Weekendmønster · klubber lukker samtidig"},
+  /* Jul i Tivoli — julemarked + forlystelser hver dag i julesæsonen */
+  {navn:"Jul i Tivoli",vid:"tivoli",ugedage:[1,2,3,4,5,6,7],start:"16:00",slut:"22:00",sstart:"2026-11-14",sslut:"2026-12-30",type:"kultur",note:"Julemarked · lys · forlystelser — stort aftenpublikum"},
+  /* Lufthavnen — typiske mønstre (rigtige ankomster fås kun for i dag fra den frie kilde) */
+  {navn:"Lufthavnen · morgenbølge (typisk)",vid:"lufthavnen",ugedage:[1,2,3,4,5,6,7],start:"07:00",slut:"09:00",sstart:"2026-01-01",sslut:"2026-12-31",type:"fly",note:"Typisk mønster (estimat) — rigtige ankomster kun for i dag"},
+  {navn:"Lufthavnen · aftenbølger (typisk)",vid:"lufthavnen",ugedage:[1,2,3,4,5,6,7],start:"16:30",slut:"20:30",sstart:"2026-01-01",sslut:"2026-12-31",type:"fly",note:"Typisk mønster (estimat) — rigtige ankomster kun for i dag"}
+];
+/* Metro-stationer (Københavns Metro, fra OpenStreetMap) — [navn, lat, lon] */
+const METRO_STATIONS = [
+  ["Vanløse",55.6871,12.4925],["Flintholm",55.6859,12.4995],["Lindevang",55.6834,12.5132],
+  ["Fasanvej",55.6816,12.5236],["Frederiksberg",55.6812,12.5322],["Forum",55.6818,12.5525],
+  ["Nørreport",55.6834,12.5713],["Kongens Nytorv",55.6796,12.5851],["Christianshavn",55.6721,12.5914],
+  ["Islands Brygge",55.6634,12.5852],["DR Byen",55.6558,12.589],["Sundby",55.6453,12.5857],
+  ["Bella Center",55.6381,12.5829],["Ørestad",55.629,12.5794],["Vestamager",55.6194,12.5756],
+  ["Amagerbro",55.6634,12.6029],["Lergravsparken",55.6622,12.617],["Øresund",55.6614,12.6287],
+  ["Amager Strand",55.6561,12.6319],["Femøren",55.6452,12.6383],["Kastrup",55.6357,12.647],
+  ["Lufthavnen",55.6309,12.6492],["København H",55.6714,12.5639],["Rådhuspladsen",55.6764,12.5682],
+  ["Gammel Strand",55.6776,12.5789],["Marmorkirken",55.6851,12.589],["Østerport",55.6929,12.5859],
+  ["Trianglen",55.6993,12.5756],["Poul Henningsens Plads",55.7095,12.5761],["Vibenhus Runddel",55.7064,12.5648],
+  ["Skjolds Plads",55.7035,12.5488],["Nørrebro",55.7,12.538],["Nørrebros Runddel",55.6935,12.5489],
+  ["Nuuks Plads",55.6885,12.5425],["Aksel Møllers Have",55.6861,12.5329],["Enghave Plads",55.6672,12.5468],
+  ["Frederiksberg Allé",55.6735,12.5406],["Havneholmen",55.661,12.5593],["Enghave Brygge",55.6541,12.5565],
+  ["Sluseholmen",55.6458,12.5444],["Mozarts Plads",55.649,12.5343],["København Syd",55.653,12.516],
+  ["Nordhavn",55.7074,12.5916],["Orientkaj",55.7118,12.5952]
+];
+/* Taxaholdepladser — fra OpenStreetMap + de vigtigste centrale (navngivne) */
+const TAXI_STANDS = [
+  ["Rådhuspladsen · Vester Voldgade",55.6758,12.5694],
+  ["Hovedbanegården · Bernstorffsgade",55.6727,12.5646],
+  ["Kongens Nytorv",55.6796,12.5851],
+  ["Nørreport St.",55.6834,12.5713],
+  ["Østerport St.",55.6934,12.5874],
+  ["Halmtorvet · Kødbyen",55.6695,12.559],
+  ["Langelinie · krydstogtkaj",55.6955,12.595],
+  ["Amager Strand",55.6561,12.6319],
+  ["Ørestad St.",55.6285,12.5785],
+  ["Islands Brygge",55.6634,12.5852],
+  ["Taxaholdeplads",55.6576,12.588],["Taxaholdeplads",55.6628,12.5621],
+  ["Taxaholdeplads",55.6213,12.5874],["Taxaholdeplads",55.6689,12.5739],
+  ["Taxaholdeplads",55.6814,12.5236],["Taxaholdeplads",55.6609,12.5087],
+  ["Taxaholdeplads",55.6817,12.5119],["Taxaholdeplads",55.673,12.5815],
+  ["Taxaholdeplads",55.6998,12.5535],["Taxaholdeplads",55.7121,12.5421],
+  ["Taxaholdeplads",55.6804,12.4575],["Taxaholdeplads",55.6252,12.4551],
+  ["Taxaholdeplads",55.6683,12.5971],["Taxaholdeplads",55.6534,12.4746],
+  ["Taxaholdeplads",55.6786,12.5796],["Taxaholdeplads",55.6805,12.585],
+  ["Taxaholdeplads",55.6793,12.5852]
+];
+const PROXIES = ["https://api.cors.lol/?url=", "https://api.allorigins.win/raw?url=", "https://corsproxy.io/?url="];
+
+function normS(s){ return String(s||"").toLowerCase().replace(/[^a-z0-9æøå]/g,""); }
+function unesc(s){ return String(s||"").replace(/&quot;/g,'"').replace(/&amp;/g,"&").replace(/&#39;|&apos;/g,"'").replace(/&nbsp;/g," "); }
+function parseISOlocal(s){
+  const m = String(s).match(/(\d{4}-\d{2}-\d{2})T(\d{2}):(\d{2})/);
+  if(!m) return null;
+  const d = new Date(+m[1].slice(0,4), +m[1].slice(5,7)-1, +m[1].slice(8,10), +m[2], +m[3]);
+  return isNaN(d)? null : d;
+}
+function hhmm(d){ return String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0"); }
+function hhmm2(mins){ return String(Math.floor(mins/60)%24).padStart(2,"0")+":"+String(mins%60).padStart(2,"0"); }
+function winStr(sl){ return sl+" – "+hhmm2(toM(sl)+90); }
+function isoDate(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function addDays(d,n){ const x=new Date(d); x.setDate(x.getDate()+n); return x; }
+function monIdx(s){ return {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11}[String(s).slice(0,3).toLowerCase()]; }
+function baseEv(navn,type,dato,start,slut,kilde,note,kap){
+  return {navn,type,dato,start,slut,kilde,note:note||"",kapacitet:kap||null,vindue:winStr(slut)};
+}
+function cleanKK(t){
+  t = t.replace(/\s+/g," ").trim().replace(/^[-–\s]+/,"").replace(/[-–\s]+$/,"");
+  const i = t.indexOf("Copenhagen");
+  if(i>=0) t = t.slice(i);
+  let parts = t.split(" ");
+  while(parts.length>1 && parts[0]==="Copenhagen" && parts[1]==="Copenhagen") parts = parts.slice(1);
+  t = parts.join(" ").trim();
+  ["d tours and museum tours","tours and museum tours","other dates"].forEach(j=>{
+    if(t.toLowerCase().startsWith(j)) t = t.slice(j.length).trim();
+  });
+  return t;
+}
+function guessType(t){
+  const s = String(t).toLowerCase();
+  if(/festival|pride|marked|jule/.test(s)) return "festival";
+  if(/koncert|rock|band|dj|musik|opera|symfoni/.test(s)) return "koncert";
+  if(/konference|summit|møde|topmøde|kongres|dinner/.test(s)) return "business";
+  if(/klub|bar|nat|after|party/.test(s)) return "natklub";
+  if(/fodbold|kamp|match|håndbold|cup|løb/.test(s)) return "sport";
+  return "kultur";
+}
+function findVenue(t, venuesById){
+  const n = normS(t);
+  for(const v of Object.values(venuesById)){ if(normS(v.navn) && n.includes(normS(v.navn))) return v.id; }
+  return null;
+}
+function guessVenue(t, venuesById){
+  const v = findVenue(t, venuesById);
+  if(v) return v;
+  const s = String(t).toLowerCase();
+  const map = [["raadhuspladsen",["pride","rådhuspladsen","city hall"]],["valbyparken",["valbyparken","syd for solen"]],
+    ["tivoli",["tivoli"]],["operaen",["opera"]],["parken",["parken","fck","fc københavn"]],["refshaleoen",["refshale"]]];
+  for(const [vid,keys] of map){ if(keys.some(k=>s.includes(k))) return vid; }
+  return null;
+}
+function parseCityHTML(doc, dayStr, venuesById){
+  const out=[], seen=new Set();
+  let txt = doc.replace(/<[^>]+>/g," ").replace(/\s+/g," ").replace(/&amp;/g,"&");
+  txt = txt.replace(/&[a-zA-Z#0-9]+;/g," ");
+  const re = /([A-Za-zÆØÅæøå][A-Za-zÆØÅæøå0-9 .'\-]{2,70}?)\s+(\d{2})\.(\d{2})\.(\d{4})\s*[-–]\s*(\d{2})\.(\d{2})\.(\d{4})/g;
+  const today = new Date(dayStr+"T12:00:00");
+  let m;
+  while((m=re.exec(txt))){
+    let title = cleanKK(m[1]);
+    if(title.length<6 || /next time/i.test(title)) continue;
+    if(["festival","copenhagen festival","walk","market"].includes(title.toLowerCase())) continue;
+    const d1 = new Date(+m[4], +m[3]-1, +m[2]), d2 = new Date(+m[7], +m[6]-1, +m[5]);
+    if((d2-d1)/86400000 > 60) continue;
+    if(!(d1<=today && today<=d2) && !(today<d1 && d1<=addDays(today,14))) continue;
+    const key = normS(title)+isoDate(d1);
+    if(seen.has(key)) continue;
+    seen.add(key);
+    const ev = baseEv(title, guessType(title), (d1<=today&&today<=d2)? dayStr : isoDate(d1),
+      "18:00","22:00","Københavns Kommune", `${String(d1.getDate()).padStart(2,"0")}.${String(d1.getMonth()+1).padStart(2,"0")} – ${String(d2.getDate()).padStart(2,"0")}.${String(d2.getMonth()+1).padStart(2,"0")}`, null);
+    ev.vid = guessVenue(title, venuesById);
+    if(!ev.vid) continue;  // kun events med kendt venue (fx Louisiana i Humlebæk springes over)
+    out.push(ev);
+  }
+  return out;
+}
+function evFromStart(navn, vid, start, kilde, note){
+  const slut = new Date(start.getTime()+150*60000);
+  return baseEv(navn,"koncert",isoDate(start),hhmm(start),hhmm(slut),kilde,note,null) && {
+    navn, vid, type:"koncert", dato:isoDate(start), start:hhmm(start), slut:hhmm(slut),
+    vindue:winStr(hhmm(slut)), kilde, note:note||"", kapacitet:null };
+}
+function parseLNDoortime(doc, vid, venuesById){
+  const out=[]; const vname = venuesById[vid].navn;
+  const re = /doorTimeDate\\":\\"([\dT:.Z-]+)/g; let m;
+  while((m=re.exec(doc))){
+    const seg = doc.slice(Math.max(0, m.index-5000), m.index);
+    if(!normS(seg).includes(normS(vname))) continue;
+    const names=[]; const nr=/name\\":\\"([^\\"]{2,70})/g; let nm;
+    while((nm=nr.exec(seg))) names.push(nm[1]);
+    if(!names.length) continue;
+    let name=null;
+    for(let k=names.length-1;k>=0;k--){
+      const n=names[k], nn=normS(n);
+      if(nn!==normS(vname) && !nn.includes("kransalen") && !nn.includes("stor sal") && !nn.includes(normS(vname))
+         && n.trim().length>1 && !["ROYAL ARENA","LIVE NATION"].includes(n.trim().toUpperCase())){ name=n.trim(); break; }
+    }
+    if(!name) continue;
+    const doors = parseISOlocal(m[1]);
+    if(!doors || doors < new Date(Date.now()-86400000)) continue;
+    let start = new Date(doors.getTime()+2*3600000);
+    if(doors.getHours()<16) start = new Date(doors.getTime()+3600000);
+    out.push(evFromStart(unesc(name), vid, start, "Live Nation", "start = døre + 2t (estimat)"));
+  }
+  return out;
+}
+function parseLNAedp(doc, vid, venuesById){
+  const out=[]; const vname = venuesById[vid].navn;
+  const re = /data-testid="aedp-event"[\s\S]*?<\/li>/g; let m;
+  while((m=re.exec(doc))){
+    const blk = m[0];
+    const dm = blk.match(/dateTime="([^"]+)"/), nm = blk.match(/information-block-venuedetails">([^<]+)<\/h4>/);
+    if(!dm||!nm) continue;
+    const name = nm[1].trim();
+    if(normS(name)===normS(vname) || name.length<2) continue;
+    const d = parseISOlocal(dm[1]); if(!d) continue;
+    let start=null;
+    const tm = blk.match(/information-block-times">([^<]+)</);
+    if(tm){ const t = tm[1].match(/(\d{1,2}):(\d{2})\s*([AP]M)/); if(t){ const h=((+t[1])%12)+((t[3]==="PM")?12:0); start=new Date(d.getFullYear(),d.getMonth(),d.getDate(),h,+t[2]); } }
+    if(!start) start = new Date(d.getFullYear(),d.getMonth(),d.getDate(),20);
+    if(start < new Date(Date.now()-86400000)) continue;
+    out.push(evFromStart(unesc(name), vid, start, "Live Nation", "show-tid fra livenation (estimat)"));
+  }
+  return out;
+}
+function dedupeLN(a,b){
+  const map = new Map();
+  [...a,...b].forEach(ev=>{
+    const key = normS(ev.navn)+"|"+ev.dato;
+    const old = map.get(key);
+    if(!old || (ev.note.includes("show-tid") && !old.note.includes("show-tid"))) map.set(key,ev);
+  });
+  return [...map.values()];
+}
+function parseFCKHTML(doc){
+  const out=[]; const tre = /<time datetime="([^"]+)"[^>]*>([\s\S]*?)<\/time>/g; let m;
+  while((m=tre.exec(doc))){
+    const d = parseISOlocal(m[1]); if(!d) continue;
+    const seg = doc.slice(m.index, m.index+2500);
+    const home = seg.match(/match__home-team[\s\S]*?match__hero__teams__name[\s\S]*?field__item">\s*([^<]{2,50})/);
+    const away = seg.match(/match__away-team[\s\S]*?match__hero__teams__name[\s\S]*?field__item">\s*([^<]{2,50})/);
+    const hn = home? home[1].trim():"", an = away? away[1].trim():"";
+    if(!/københavn|copenhagen/i.test(hn)) continue;
+    if(d.getHours()<=3 && d.getMinutes()===0) continue;
+    const slut = new Date(d.getTime()+135*60000);
+    out.push({navn: an? "FCK – "+an : "FCK hjemmekamp", vid:"parken", type:"sport",
+      dato:isoDate(d), start:hhmm(d), slut:hhmm(slut), vindue:winStr(hhmm(slut)),
+      kilde:"fck.dk", note:"", kapacitet:null});
+  }
+  return out;
+}
+function parseCruiseHTML(doc, dayStr){
+  const out=[]; const today=new Date(dayStr+"T12:00:00"); const horizon = addDays(today,14);
+  [["port-arrivals","ankomst"],["port-departures","afgang"]].forEach(([sec,kind])=>{
+    const i = doc.indexOf('id="'+sec+'"'); if(i<0) return;
+    const j = doc.indexOf("</ul>", i); const seg = doc.slice(i, j>0?j:i+60000);
+    const re = /<div class="name"><a[^>]*>([^<]+)<\/a><\/div>[\s\S]*?<div class="occupancy">([\d.,]+) passengers<\/div>[\s\S]*?<span data-time="(\d{2}:\d{2})">/g;
+    let m;
+    while((m=re.exec(seg))){
+      const ship=m[1].trim(), pax=m[2], tid=m[3];
+      const dm = m[0].match(/(\d{1,2}) (\w+) (\d{4}) - /); if(!dm) continue;
+      const dd = new Date(+dm[3], monIdx(dm[2]), +dm[1]); if(isNaN(dd)) continue;
+      if(dd<today || dd>horizon) continue;
+      const [hh,mm] = tid.split(":").map(Number);
+      if(hh===23 && mm===59) continue;
+      const antal = parseInt(pax.replace(/[.,]/g,""),10)||0;
+      let start, navn, note;
+      if(kind==="ankomst"){
+        start = new Date(dd.getFullYear(),dd.getMonth(),dd.getDate(),hh,mm);
+        navn = "Krydstogt: "+ship+" · ankomst";
+        note = antal? antal.toLocaleString("da-DK")+" passagerer" : "krydstogt";
+      }else{
+        start = new Date(dd.getFullYear(),dd.getMonth(),dd.getDate(),hh,mm);
+        start = new Date(start.getTime()-3*3600000);
+        navn = "Krydstogt: "+ship+" · afgang";
+        note = "afgang "+tid+(antal? " · "+antal.toLocaleString("da-DK")+" passagerer" : "");
+      }
+      const slut = new Date(start.getTime()+3*3600000);
+      out.push({navn, vid:"krydstogtkaj", type:"cruise", dato:isoDate(start), start:hhmm(start),
+        slut:hhmm(slut), vindue:winStr(hhmm(slut)), kilde:"cruisedig.com", note, kapacitet:antal||null});
+    }
+  });
+  return out;
+}
+/* Lufthavnsankomster (CPH) — best-effort: FlightRadar24 API via proxyerne.
+   Returnerer ankomstbølge-events (score sættes her, overskrives ikke siden). */
+const CPH_LONGHAUL = ["JFK","EWR","ORD","LAX","SFO","YYZ","PEK","PVG","HKG","SIN","BKK","DXB","DOH","AUH","IST","ICN","NRT","HND"];
+async function fetchCPHArrivals(){
+  const url = "https://api.flightradar24.com/common/v1/airport.json?code=CPH&plugin%5B%5D=schedule&plugin-setting%5Bschedule%5D%5Bmode%5D=arrivals&plugin-setting%5Bschedule%5D%5Blimit%5D=100";
+  const txt = await proxyFetch(url, 30000);
+  const d = JSON.parse(txt);
+  const arr = (d.result?.response?.airport?.pluginData?.schedule?.arrivals?.data) || [];
+  if(!arr.length) return [];
+  const dayStr = todayStr();
+  const tz = "Europe/Copenhagen";
+  const buckets = new Map();
+  arr.forEach(f=>{
+    const t = f?.flight?.time?.scheduled?.arrival;
+    if(!t) return;
+    const dt = new Date(t*1000);
+    const key = new Intl.DateTimeFormat("en-CA",{timeZone:tz}).format(dt);
+    if(key !== dayStr) return; // kun i dag
+    const iso = dt.toISOString();
+    const h = +new Intl.DateTimeFormat("en-GB",{timeZone:tz,hour:"2-digit",hour12:false}).format(dt);
+    const m = +new Intl.DateTimeFormat("en-GB",{timeZone:tz,minute:"2-digit"}).format(dt);
+    const b = (m>=30? h+0.5 : h);
+    if(!buckets.has(b)) buckets.set(b, []);
+    buckets.get(b).push({origin:(f?.flight?.airport?.origin?.code?.iata)||""});
+  });
+  const out = [];
+  [...buckets.entries()].sort((a,b)=>a[0]-b[0]).forEach(([b,fl])=>{
+    if(fl.length<4) return;
+    const h0 = Math.floor(b), m0 = (b%1)? 30 : 0;
+    const start = String(h0%24).padStart(2,"0")+":"+String(m0).padStart(2,"0");
+    const h1 = (h0+1)%24;
+    const slut = String(h1).padStart(2,"0")+":"+String(m0).padStart(2,"0");
+    const lh = fl.filter(x=>CPH_LONGHAUL.includes(x.origin)).length;
+    const score = Math.min(100, 18 + fl.length*4 + (lh?4:0));
+    out.push({navn:"Lufthavnen · ankomstbølge "+start, vid:"lufthavnen", type:"fly",
+      dato:dayStr, start, slut, vindue:start+" – "+slut,
+      kilde:"FlightRadar24", note:fl.length+" ankomster pr. 30 min"+(lh?" · langdistance":""),
+      kapacitet:fl.length*130, score});
+  });
+  return out;
+}
+
+async function fetchWeatherBrowser(){  const r = await fetch("https://api.open-meteo.com/v1/forecast?latitude=55.6761&longitude=12.5683&hourly=temperature_2m,precipitation&timezone=Europe/Copenhagen&forecast_days=2");
+  const d = await r.json();
+  let rain=false, t21=null;
+  (d.hourly.time||[]).forEach((t,i)=>{
+    const dt = new Date(t), h = dt.getHours();
+    if(h>=18||h<3){ if((d.hourly.precipitation[i]||0)>0.1) rain=true; }
+    if(h===21 && t21===null) t21 = Math.round(d.hourly.temperature_2m[i]);
+  });
+  return {regn:rain, temp:t21, tekst:(rain?"🌧️ Regn i aften":"🌤️ Tørt i aften")+(t21!==null? " · "+t21+"°C":"")};
+}
+async function proxyFetch(url, ms){
+  let lastErr=null;
+  for(const p of PROXIES){
+    try{
+      const c=new AbortController(); const t=setTimeout(()=>c.abort(),ms);
+      const r = await fetch(p+encodeURIComponent(url), {signal:c.signal, cache:"no-store"});
+      clearTimeout(t);
+      if(r.ok){ const txt = await r.text(); if(txt && txt.length>500) return txt; }
+    }catch(e){ lastErr=e; }
+  }
+  throw lastErr||new Error("proxy fejl: "+url);
+}
+function seasonAndRecurring(dayStr){
+  const out=[]; const today = new Date(dayStr+"T12:00:00"); const horizon = addDays(today,14);
+  SEASON_EVENTS.forEach(s=>{
+    const d = new Date(s.dato+"T12:00:00");
+    if(d>=today && d<=horizon) out.push(baseEv(s.navn,s.type,s.dato,s.start,s.slut,"sæsonkalender",s.note,null) && {
+      navn:s.navn, vid:s.vid, type:s.type, dato:s.dato, start:s.start, slut:s.slut, vindue:winStr(s.slut),
+      kilde:"sæsonkalender", note:s.note||"", kapacitet:null });
+  });
+  RECURRING.forEach(r=>{
+    let d = today;
+    while(d<=horizon){
+      if(r.ugedage.includes(d.getDay()===0?7:d.getDay())){
+        const d1 = new Date(r.sstart+"T12:00:00"), d2 = new Date(r.sslut+"T12:00:00");
+        if(d>=d1 && d<=d2) out.push({navn:r.navn, vid:r.vid, type:r.type, dato:isoDate(d),
+          start:r.start, slut:r.slut, vindue:winStr(r.slut), kilde:"mønster", note:r.note||"", kapacitet:null});
+      }
+      d = addDays(d,1);
+    }
+  });
+  return out;
+}
+function computeScoreJS(ev, venuesById, weather){
+  const v = venuesById[ev.vid];
+  const cap = ev.kapacitet || (v? v.kapacitet:1000);
+  const mult = TYPE_MULT[ev.type]||0.7;
+  const mass = 100*(1-Math.exp(-cap/9000))*mult;
+  const gap = v? v.gab : 0.5;
+  let s = mass*(0.55+0.45*gap);
+  if(weather && weather.regn) s*=1.15;
+  return Math.min(100, Math.round(s));
+}
+function waitFor(gab){ if(gab>=0.75) return "2–4 min"; if(gab>=0.55) return "3–6 min"; if(gab>=0.4) return "5–8 min"; return "7–12 min"; }
+function bumpWait(w,mins){ const m = w.match(/(\d+)–(\d+) min/); return m? (+m[1]+mins)+"–"+(+m[2]+mins)+" min" : w; }
+function boostersFor(ev, v, weather){
+  const out=[];
+  if(weather && weather.regn) out.push(["🌧️","Regn i aften (+15%)"]);
+  if(v){ if(v.gab>=0.7) out.push(["🚌","Svag offentlig transport → taxa-kunder"]); else if(v.gab<=0.4) out.push(["🚇","God metro → kun del af publikum"]); }
+  const lbl = (TYPE_LABEL_BR[ev.type]||ev.type).split(" ").pop();
+  out.push([TYPE_ICON[ev.type]||"📌", lbl+"-publikum"]);
+  return out.slice(0,3);
+}
+function dedupeJS(events){
+  const order = {"sæsonkalender":0, "mønster":1, "fck.dk":2, "Live Nation":2, "cruisedig.com":2, "Københavns Kommune":3};
+  const merged = new Map();
+  events.forEach(ev=>{
+    const base = ev.navn.replace(/\s*(SOLARIS|tour|world tour|the wourld tour).*$/i,"");
+    const key = normS(base)+"|"+ev.dato;
+    const old = merged.get(key);
+    if(!old || (order[ev.kilde]??9) < (order[old.kilde]??9)) merged.set(key, ev);
+  });
+  return [...merged.values()];
+}
+async function buildBrowserData(){
+  const venuesById = Object.fromEntries(VENUE_TABLE.map(v=>[v.id,v]));
+  const dayStr = todayStr();
+  let done=0;
+  const tick = n => { done+=n; setStatus("⏳ Henter live-data… "+done+"/14 kilder"); };
+  let weather=null;
+  try{ weather = await fetchWeatherBrowser(); }catch(e){ console.warn("vejr",e); }
+  tick(1);
+  const jobs = [];
+  const push = (url, parser) => jobs.push({url, parser});
+  push("https://visitorservice.kk.dk/en/events", txt=>parseCityHTML(txt, dayStr, venuesById));
+  LN_SLUGS.forEach(([slug,vid])=> push("https://www.livenation.dk/en/"+slug,
+    txt=>dedupeLN(parseLNDoortime(txt,vid,venuesById), parseLNAedp(txt,vid,venuesById))));
+  push("https://www.fck.dk/kamp", parseFCKHTML);
+  push("https://cruisedig.com/node/285", txt=>parseCruiseHTML(txt, dayStr));
+  push("https://api.flightradar24.com/common/v1/airport.json?code=CPH&plugin%5B%5D=schedule&plugin-setting%5Bschedule%5D%5Bmode%5D=arrivals&plugin-setting%5Bschedule%5D%5Blimit%5D=100", fetchCPHArrivals);
+  const groups = new Array(jobs.length);
+  let idx=0;
+  const worker = async()=>{
+    while(idx<jobs.length){
+      const i = idx++;
+      const job = jobs[i];
+      await new Promise(r=>setTimeout(r, i*350)); // spred kaldene (rate-limits)
+      try{ groups[i] = await proxyFetch(job.url, 25000).then(job.parser); }
+      catch(e){ groups[i]=[]; }
+      tick(1);
+    }
+  };
+  await Promise.all(Array.from({length:3}, worker));
+  let events = dedupeJS(groups.flat().concat(seasonAndRecurring(dayStr)));
+  events.forEach(ev=>{ if(ev.score==null) ev.score = computeScoreJS(ev, venuesById, weather); });
+  const appEvents = events.map((e,i)=>{
+    const v = venuesById[e.vid]; const gab = v? v.gab:0.5; const wm = waitFor(gab);
+    const steder = [];
+    if(v) steder.push({navn:v.spot, note:"Hovedudgang · bedste position", ventetid:wm, taxier:7, best:true});
+    steder.push({navn:"Taxaholdeplads · nærmeste station", note:"Spill-over fra offentlig transport", ventetid:bumpWait(wm,2), taxier:5, best:false});
+    steder.push({navn:"Mod byen · hovedvej", note:"Fanger biler på vej ud af byen", ventetid:bumpWait(wm,5), taxier:3, best:false});
+    return { id:"ev"+i, vid:e.vid, ikon:TYPE_ICON[e.type]||"📌", navn:e.navn, venue:v? v.navn:"?",
+      lat:v? v.lat:null, lon:v? v.lon:null, kapacitet:e.kapacitet||(v? v.kapacitet:null),
+      start:e.start, slut:e.slut, vindue:e.vindue, type:e.type, type_label:TYPE_LABEL_BR[e.type]||e.type,
+      score:e.score, kurve:KURVE[e.type]||"concert", spot:v? v.spot:"—", ventetid:wm,
+      boostere:boostersFor(e,v,weather), steder, kilde:e.kilde, note:e.note, dato:e.dato };
+  });
+  return { genereret:new Date().toISOString().slice(0,16), dato:dayStr,
+    vejr:{regn: weather?weather.regn:false, temp: weather?weather.temp:null, tekst: weather?weather.tekst:"—"},
+    kilder:{}, events:appEvents,
+    venues: VENUE_TABLE.map(v=>({id:v.id, navn:v.navn, lat:v.lat, lon:v.lon})) };
+}
+function setStatus(msg, warn){
+  const el = $("fetchStatus"); if(!el) return;
+  el.textContent = msg||"";
+  el.style.display = msg? "block":"none";
+  el.style.background = warn? "rgba(255,92,92,.12)" : "rgba(61,220,132,.10)";
+  el.style.borderColor = warn? "rgba(255,92,92,.4)" : "rgba(61,220,132,.35)";
+  el.style.color = warn? "var(--hot)" : "var(--green)";
+}
+function applyLive(d, mode){
+  LIVE = d; LIVE._mode = mode;
+  buildLive(); mergeMyEvents(); renderAll(); tickClock();
+}
+async function loadLive(){
+  // 1) data-fil hvis tilgængelig (hurtigste)
+  try{
+    const r = await fetch("data/app_data.json?t="+Date.now(), {cache:"no-store"});
+    if(r.ok){ const d = await r.json(); if(d && d.events){ applyLive(d,"data"); setStatus(""); return; } }
+  }catch(e){}
+  // 2) hent live direkte i browseren
+  setStatus("⏳ Henter live-data fra kilderne…");
+  try{
+    const d = await buildBrowserData();
+    if(d && d.events.length){
+      try{ LS.setItem("stf_cache", JSON.stringify(d)); }catch(e){}
+      applyLive(d,"live"); setStatus("");
+      return;
+    }
+  }catch(e){ console.warn(e); }
+  // 3) cache i browseren
+  try{
+    const c = JSON.parse(LS.getItem("stf_cache"));
+    if(c && c.dato){ applyLive(c,"cache"); setStatus("⚠️ Kunne ikke hente live — viser gemte data fra "+fmtDate(c.dato), true); return; }
+  }catch(e){}
+  setStatus("⚠️ Kunne ikke hente live-data — viser demo (tryk ↻ for at prøve igen)", true);
+}
+
+/* ============ DINE EGNE EVENTS ============ */
+let MY_EVENTS = [];
+try{ MY_EVENTS = JSON.parse(LS.getItem("stf_myevents")||"[]"); }catch(e){ MY_EVENTS = []; }
+function saveMy(){ try{ LS.setItem("stf_myevents", JSON.stringify(MY_EVENTS)); }catch(e){} }
+function myEventObj(m){
+  const v = VENUES.find(x=>x.id===m.vid);
+  return {id:m.id, vid:m.vid||null, icon:"📌", cat:CATOF[m.type]||"kultur",
+    name:wrap(m.navn), venue:wrap(v? v.navn : L.otherPlace), cap:null,
+    start:m.start, end:m.slut, window:hhmm2plan(toM(m.slut))+" – "+hhmm2plan(toM(m.slut)+90),
+    score:60, curve:"dinner", spot:wrap(v? v.spot : "—"), wait:"—",
+    boosters:[{i:"📌",da:"Dit event",en:"Your event"}], spots:[],
+    src:"dit event", note:m.note||"", dato:m.dato, my:true,
+    lat:v? v.lat:null, lon:v? v.lon:null};
+}
+function mergeMyEvents(){
+  EVENTS = EVENTS.filter(e=>!String(e.id||"").startsWith("my"));
+  MY_EVENTS.forEach(m=>EVENTS.push(myEventObj(m)));
+}
+function openAddForm(){
+  const types = ["koncert","sport","festival","kultur","natklub","business"];
+  const venueOpts = VENUES.map(v=>`<option value="${esc(v.id)}">${esc(v.navn)}</option>`).join("");
+  $("sheetBody").innerHTML = `
+    <div class="s-title">＋ ${L.addTitle}</div>
+    <div class="frm">
+      <label>${L.evName}</label><input id="fName" placeholder="fx Stor koncert på Refshaleøen">
+      <label>${L.evVenue}</label><select id="fVenue"><option value="">— ${L.evVenue} —</option>${venueOpts}</select>
+      <div class="row2"><div><label>${L.evDate}</label><input id="fDate" type="date"></div>
+      <div><label>${L.evType}</label><select id="fType">${types.map(t=>`<option value="${t}">${TYPE_LABEL_BR[t]||t}</option>`).join("")}</select></div></div>
+      <div class="row2"><div><label>${L.evStart}</label><input id="fStart" type="time" value="18:00"></div>
+      <div><label>${L.evEnd}</label><input id="fEnd" type="time" value="22:00"></div></div>
+      <label>${L.evNote}</label><input id="fNote" placeholder="...">
+      <button class="btn yellow" id="fSave">${L.evSave}</button>
+      <button class="btn" id="fCancel">${L.evCancel}</button>
+    </div>`;
+  $("fDate").value = addDaysStr(dataToday(), curDay);
+  $("fSave").addEventListener("click", saveMyEvent);
+  $("fCancel").addEventListener("click", closeSheet);
+  $("sheet").classList.add("open"); $("backdrop").classList.add("show");
+}
+function saveMyEvent(){
+  const navn = $("fName").value.trim();
+  if(!navn){ toast(L.reqName); return; }
+  const vid = $("fVenue").value, type = $("fType").value;
+  const dato = $("fDate").value, start = $("fStart").value, slut = $("fEnd").value;
+  if(!dato || !start || !slut || start===slut){ toast(L.reqTime); return; } // nat-events (23-02) er tilladt
+  const id = "my"+Date.now();
+  MY_EVENTS.push({id, navn, vid, dato, start, slut, type, note:$("fNote").value.trim()||""});
+  saveMy();
+  mergeMyEvents(); renderAll(); closeSheet(); toast(L.evSaved);
+}
+function deleteMyEvent(id){
+  MY_EVENTS = MY_EVENTS.filter(m=>m.id!==id);
+  saveMy();
+  mergeMyEvents(); renderAll(); closeSheet(); toast(L.evDeleted);
+}
+
+/* ============ UGE-OVERSIGT ============ */
+function renderWeek(){
+  const el = $("daySel"); if(!el) return;
+  const base = new Date(dataToday()+"T12:00:00");
+  let h = "";
+  for(let off=0; off<7; off++){
+    const d = addDays(base, off);
+    const ds = isoDate(d);
+    const scores = EVENTS.filter(e=>e.dato===ds).map(e=>e.score||0);
+    const top = scores.length? Math.max(...scores) : null;
+    const wl = off===0 ? L.dayToday : L.dayShort[(d.getDay()+6)%7];
+    h += `<button class="wcell ${curDay===off?"on":""} ${top!=null&&top>=70?"hot":""}" data-day="${off}">
+      <span class="wd">${wl}</span><span class="ws">${top!=null? top : "·"}</span></button>`;
+  }
+  el.innerHTML = h;
+  el.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+    curDay = +b.dataset.day; renderWeek(); renderList();
+  }));
+}
+
+/* ============ LIVE DATA ============ */
+const CATOF = {sport:"sport", koncert:"musik", festival:"fest", kultur:"kultur",
+               natklub:"natklub", business:"business", cruise:"kultur", fly:"business"};
+function distKm(a,b){
+  const R=6371, dLat=(b.lat-a.lat)*Math.PI/180, dLon=(b.lon-a.lon)*Math.PI/180;
+  const h=Math.sin(dLat/2)**2 + Math.cos(a.lat*Math.PI/180)*Math.cos(b.lat*Math.PI/180)*Math.sin(dLon/2)**2;
+  return 2*R*Math.asin(Math.sqrt(h));
+}
+function durStr(start,end){
+  let m = toM(end)-toM(start)+90;
+  const h = Math.floor(m/60); m %= 60;
+  return h ? `${h} t ${m} m` : `${m} min`;
+}
+/* earnOf flyttet til plan-sektionen (tager nu event-objekt — type-justeret) */
+
+function buildLive(){
+  const d = LIVE;
+  EVENTS = d.events.map(e=>({
+    id:e.id, vid:e.vid, icon:e.ikon, cat:CATOF[e.type]||"kultur",
+    name:wrap(e.navn), venue:wrap(e.venue), cap:fmtCap(e.kapacitet),
+    start:e.start, end:e.slut, window:e.vindue, score:e.score, curve:e.kurve,
+    spot:wrap(e.spot), wait:e.ventetid,
+    lat:e.lat!=null? e.lat:null, lon:e.lon!=null? e.lon:null,
+    boosters:(e.boostere||[]).map(b=>({i:b[0], da:b[1], en:b[1]})),
+    spots:(e.steder||[]).map(s=>({name:wrap(s.navn), note:wrap(s.note),
+      wait:s.ventetid, supply:s.taxier, best:s.best})),
+    src:e.kilde, note:e.note||"", dato:e.dato
+  }));
+  // venues med unikke koordinater (VEGA-hallerne deler adresse → forskyd)
+  const used = new Set();
+  VENUES = d.venues.map(v=>{
+    let lat=v.lat, lon=v.lon;
+    while(used.has(lat.toFixed(4)+","+lon.toFixed(4))) lon += 0.0012;
+    used.add(lat.toFixed(4)+","+lon.toFixed(4));
+    return {id:v.id, lat, lon, sn:v.navn, label:{dx:12, dy:0, an:"start"}};
+  });
+  // planlægger fra dagens events (hele døgnet: krydstogter, konferencer, aften — score ≥ 25)
+  // Sorteret efter LET-OUT (sluttid) — det er dér folk strømmer ud og taxa-kunderne er
+  PLAN_BASE = EVENTS.filter(e=>e.dato===LIVE.dato && e.score>=25)
+    .sort((a,b)=>toM(a.end)-toM(b.end));
+  PLAN_SOURCE = PLAN_BASE.slice(0,5);
+  rebuildPlanner();
+  // alerts
+  ALERTS = [];
+  const tonightAll = EVENTS.filter(e=>e.dato===LIVE.dato);
+  const top = tonightAll.slice().sort((a,b)=>b.score-a.score)[0];
+  if(top) ALERTS.push({ic:"🚕",
+    title:wrap(`${tonightAll.length} events i aften — top: ${tr(top.name)} (${top.score})`),
+    sub:wrap(tr(top.spot)), time:{da:"live", en:"live"}});
+  if(d.vejr && d.vejr.regn) ALERTS.push({ic:"🌧️",
+    title:wrap(lang==="da"?"Regn i aften (+15%)":"Rain tonight (+15%)"),
+    sub:wrap(lang==="da"?"Højere efterspørgsel — vær tidligt på plads":"Higher demand — arrive early"),
+    time:{da:"live", en:"live"}});
+  tonightAll.forEach(e=>{
+    const endM = toM(e.end)+(toM(e.end)<toM(e.start)?1440:0), n = nowMin();
+    if(n>=endM-120 && n<=endM+90) ALERTS.push({ic:e.icon,
+      title:wrap(`${tr(e.name)} — ${n<endM ? (lang==="da"?`slutter om ${endM-n} min`:`ends in ${endM-n} min`) : (lang==="da"?"let-out i gang":"let-out now")}`),
+      sub:wrap(`${tr(e.spot)} · ${e.window}`), time:{da:"live", en:"live"}});
+  });
+  ALERTS = ALERTS.slice(0,4);
+}
+
+// loadLive findes i browser-laget (henter live via proxyer + cache)
+
+/* ============ UI / INIT ============ */
+function liveNoteText(){
+  const d = fmtDate(LIVE.dato);
+  return lang==="da" ? `LIVE · data fra ${d}` : `LIVE · data from ${d}`;
+}
+function renderStatic(){
+  document.querySelectorAll("[data-t]").forEach(el=>{
+    const k = el.dataset.t;
+    if(T[lang][k] !== undefined) el.textContent = T[lang][k];
+  });
+  $("brandSub").textContent = L.brandSub;
+  $("mapSub").textContent = fmtDate(LIVE ? LIVE.dato : todayStr()) + " · " + nowClock();
+  $("demoNote").textContent = LIVE ? liveNoteText() : L.demoNote;
+  $("daySel").style.display = LIVE ? "flex" : "none";
+  $("sortChip").textContent = curSort==="score" ? L.sortScore : L.sortTime;
+  $("sortChip").classList.toggle("on", curSort==="time");
+  const st = $("stale");
+  if(LIVE && LIVE.dato !== todayStr()){
+    st.style.display = "block";
+    st.textContent = lang==="da"
+      ? `⚠️ Rapport fra ${fmtDate(LIVE.dato)} — kør "python3 spotthefare.py" for at opdatere`
+      : `⚠️ Report from ${fmtDate(LIVE.dato)} — run "python3 spotthefare.py" to update`;
+  } else st.style.display = "none";
+}
+function renderAll(){
+  renderStatic();
+  renderList();
+  renderUpcoming();
+  renderPlanner();
+  renderAlerts();
+  if(MAP) renderMarkers();
+  if(openId) renderSheet();
+}
+function setLang(l){
+  lang = l; L = T[l];
+  try{ localStorage.setItem("stf_lang", l); }catch(e){}
+  $("langSel").querySelectorAll("button").forEach(b=>b.classList.toggle("on", b.dataset.l===l));
+  renderAll();
+}
+function init(){
+  mergeMyEvents();
+  renderAll();
+  $("langSel").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.l)));
+  setLang(lang);
+  $("clock").textContent = nowClock();
+  tickClock();
+  setInterval(()=>{ tickClock(); if(LIVE) renderList(); }, 30000);
+  loadLive();
+  $("tabs").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+    $("tabs").querySelectorAll("button").forEach(x=>x.classList.remove("on"));
+    b.classList.add("on");
+    ["tonight","map","plan"].forEach(t=>{ $("tab-"+t).style.display = t===b.dataset.tab ? "block" : "none"; });
+    if(b.dataset.tab==="map") initMap();
+  }));
+  $("filters").querySelectorAll(".chip[data-f]").forEach(c=>c.addEventListener("click",()=>{
+    $("filters").querySelectorAll(".chip[data-f]").forEach(x=>x.classList.remove("on"));
+    c.classList.add("on"); curFilter = c.dataset.f; renderList();
+  }));
+  $("fabAdd").addEventListener("click",openAddForm);
+  $("sortChip").addEventListener("click",()=>{
+    curSort = curSort==="score" ? "time" : "score";
+    const el = $("sortChip");
+    el.textContent = curSort==="score" ? L.sortScore : L.sortTime;
+    el.classList.toggle("on", curSort==="time");
+    renderList();
+  });
+  $("bellBtn").addEventListener("click",e=>{ e.stopPropagation(); $("alerts").classList.toggle("show"); });
+  $("refreshBtn").addEventListener("click",loadLive);
+  $("themeBtn").addEventListener("click",()=>{
+    setTheme(document.documentElement.dataset.theme==="light" ? "dark" : "light");
+  });
+  $("posBtn").addEventListener("click",useMyPos);
+  setTheme(document.documentElement.dataset.theme==="light" ? "light" : "dark");
+  $("lnMetro").addEventListener("click",()=>{
+    METRO_ON = !METRO_ON; $("lnMetro").classList.toggle("on", METRO_ON);
+    if(MAP && METRO_LAYER){ METRO_ON ? METRO_LAYER.addTo(MAP) : MAP.removeLayer(METRO_LAYER); }
+  });
+  $("lnTaxi").addEventListener("click",()=>{
+    TAXI_ON = !TAXI_ON; $("lnTaxi").classList.toggle("on", TAXI_ON);
+    if(MAP && TAXI_LAYER){ TAXI_ON ? TAXI_LAYER.addTo(MAP) : MAP.removeLayer(TAXI_LAYER); }
+  });
+  $("alertsClose").addEventListener("click",()=>$("alerts").classList.remove("show"));
+  document.addEventListener("click",e=>{ if(!e.target.closest("#alerts") && !e.target.closest("#bellBtn")) $("alerts").classList.remove("show"); });
+  $("backdrop").addEventListener("click",closeSheet);
+}
+document.addEventListener("DOMContentLoaded",init);
+</script>
+</body>
+</html>
