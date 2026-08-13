@@ -19271,6 +19271,1953 @@
    "kilde": "Loppen/Rust",
    "note": "Koncert på Loppen, Christiania",
    "dato": "2026-09-19"
+  },
+  {
+   "id": "hhfre0826",
+   "vid": "frederiksberg_hallerne",
+   "ikon": "🤾",
+   "navn": "København Håndbold – Sønderjyske Kvindehåndbold",
+   "venue": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "start": "18:30",
+   "slut": "19:30",
+   "vindue": "19:30 – 20:30",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · C.F. Richs Vej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "Bambuni Kvindeligaen"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · C.F. Richs Vej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "Bambuni Kvindeligaen",
+   "dato": "2026-08-26"
+  },
+  {
+   "id": "hhfre0911",
+   "vid": "frederiksberg_hallerne",
+   "ikon": "🤾",
+   "navn": "København Håndbold – Horsens Håndbold Elite",
+   "venue": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "start": "19:00",
+   "slut": "20:00",
+   "vindue": "20:00 – 21:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · C.F. Richs Vej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "Bambuni Kvindeligaen"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · C.F. Richs Vej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "Bambuni Kvindeligaen",
+   "dato": "2026-09-11"
+  },
+  {
+   "id": "hhfre1009",
+   "vid": "frederiksberg_hallerne",
+   "ikon": "🤾",
+   "navn": "København Håndbold – Ikast Håndbold",
+   "venue": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "start": "19:00",
+   "slut": "20:00",
+   "vindue": "20:00 – 21:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · C.F. Richs Vej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "Bambuni Kvindeligaen"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · C.F. Richs Vej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "Bambuni Kvindeligaen",
+   "dato": "2026-10-09"
+  },
+  {
+   "id": "hhfre1101",
+   "vid": "frederiksberg_hallerne",
+   "ikon": "🤾",
+   "navn": "København Håndbold – Ringkøbing Håndbold",
+   "venue": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "start": "14:00",
+   "slut": "15:00",
+   "vindue": "15:00 – 16:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · C.F. Richs Vej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "Bambuni Kvindeligaen"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · C.F. Richs Vej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "Bambuni Kvindeligaen",
+   "dato": "2026-11-01"
+  },
+  {
+   "id": "hhfre1111",
+   "vid": "frederiksberg_hallerne",
+   "ikon": "🤾",
+   "navn": "København Håndbold – Odense Håndbold",
+   "venue": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "start": "18:30",
+   "slut": "19:30",
+   "vindue": "19:30 – 20:30",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · C.F. Richs Vej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "Bambuni Kvindeligaen"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · C.F. Richs Vej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "Bambuni Kvindeligaen",
+   "dato": "2026-11-11"
+  },
+  {
+   "id": "hhfre1121",
+   "vid": "frederiksberg_hallerne",
+   "ikon": "🤾",
+   "navn": "København Håndbold – Viborg HK",
+   "venue": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "start": "19:00",
+   "slut": "20:00",
+   "vindue": "20:00 – 21:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · C.F. Richs Vej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "Bambuni Kvindeligaen"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · C.F. Richs Vej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "Bambuni Kvindeligaen",
+   "dato": "2026-11-21"
+  },
+  {
+   "id": "hhfre0113",
+   "vid": "frederiksberg_hallerne",
+   "ikon": "🤾",
+   "navn": "København Håndbold – Team Esbjerg",
+   "venue": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "start": "18:30",
+   "slut": "19:30",
+   "vindue": "19:30 – 20:30",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · C.F. Richs Vej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "Bambuni Kvindeligaen"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · C.F. Richs Vej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "Bambuni Kvindeligaen",
+   "dato": "2027-01-13"
+  },
+  {
+   "id": "hhfre0122",
+   "vid": "frederiksberg_hallerne",
+   "ikon": "🤾",
+   "navn": "København Håndbold – EH Aalborg",
+   "venue": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "start": "19:00",
+   "slut": "20:00",
+   "vindue": "20:00 – 21:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · C.F. Richs Vej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "Bambuni Kvindeligaen"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · C.F. Richs Vej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "Bambuni Kvindeligaen",
+   "dato": "2027-01-22"
+  },
+  {
+   "id": "hhfre0130",
+   "vid": "frederiksberg_hallerne",
+   "ikon": "🤾",
+   "navn": "København Håndbold – Silkeborg-Voel KFUM",
+   "venue": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "start": "14:00",
+   "slut": "15:00",
+   "vindue": "15:00 – 16:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · C.F. Richs Vej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "Bambuni Kvindeligaen"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · C.F. Richs Vej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "Bambuni Kvindeligaen",
+   "dato": "2027-01-30"
+  },
+  {
+   "id": "hhfre0212",
+   "vid": "frederiksberg_hallerne",
+   "ikon": "🤾",
+   "navn": "København Håndbold – Skanderborg Håndbold",
+   "venue": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "start": "19:00",
+   "slut": "20:00",
+   "vindue": "20:00 – 21:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · C.F. Richs Vej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "Bambuni Kvindeligaen"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · C.F. Richs Vej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "Bambuni Kvindeligaen",
+   "dato": "2027-02-12"
+  },
+  {
+   "id": "hhfre0224",
+   "vid": "frederiksberg_hallerne",
+   "ikon": "🤾",
+   "navn": "København Håndbold – Nykøbing F. Håndboldklub",
+   "venue": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "start": "18:30",
+   "slut": "19:30",
+   "vindue": "19:30 – 20:30",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · C.F. Richs Vej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "Bambuni Kvindeligaen"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · C.F. Richs Vej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "Bambuni Kvindeligaen",
+   "dato": "2027-02-24"
+  },
+  {
+   "id": "hhfre0310",
+   "vid": "frederiksberg_hallerne",
+   "ikon": "🤾",
+   "navn": "København Håndbold – HØJ Elite Kvinder",
+   "venue": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "start": "18:30",
+   "slut": "19:30",
+   "vindue": "19:30 – 20:30",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · C.F. Richs Vej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "Bambuni Kvindeligaen"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · C.F. Richs Vej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "Bambuni Kvindeligaen",
+   "dato": "2027-03-10"
+  },
+  {
+   "id": "hhfre0317",
+   "vid": "frederiksberg_hallerne",
+   "ikon": "🤾",
+   "navn": "København Håndbold – NordVestjysk Elite",
+   "venue": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "start": "20:00",
+   "slut": "21:00",
+   "vindue": "21:00 – 22:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · C.F. Richs Vej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "Bambuni Kvindeligaen"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · C.F. Richs Vej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "Bambuni Kvindeligaen",
+   "dato": "2027-03-17"
+  },
+  {
+   "id": "hhbav0905",
+   "vid": "bavnehoej_hallen",
+   "ikon": "🤾",
+   "navn": "Ajax København – SIK Viborg",
+   "venue": "Bavnehøj-Hallen",
+   "lat": 55.6596,
+   "lon": 12.5386,
+   "kapacitet": 1000,
+   "start": "14:00",
+   "slut": "15:00",
+   "vindue": "15:00 – 16:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 7,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Bavnehøj Allé",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Bavnehøj Allé",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2026-09-05"
+  },
+  {
+   "id": "hhbav0919",
+   "vid": "bavnehoej_hallen",
+   "ikon": "🤾",
+   "navn": "Ajax København – AGF Håndbold",
+   "venue": "Bavnehøj-Hallen",
+   "lat": 55.6596,
+   "lon": 12.5386,
+   "kapacitet": 1000,
+   "start": "14:00",
+   "slut": "15:00",
+   "vindue": "15:00 – 16:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 7,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Bavnehøj Allé",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Bavnehøj Allé",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2026-09-19"
+  },
+  {
+   "id": "hhbav1009",
+   "vid": "bavnehoej_hallen",
+   "ikon": "🤾",
+   "navn": "Ajax København – Rødovre HK",
+   "venue": "Bavnehøj-Hallen",
+   "lat": 55.6596,
+   "lon": 12.5386,
+   "kapacitet": 1000,
+   "start": "19:00",
+   "slut": "20:00",
+   "vindue": "20:00 – 21:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 7,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Bavnehøj Allé",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Bavnehøj Allé",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2026-10-09"
+  },
+  {
+   "id": "hhbav1114",
+   "vid": "bavnehoej_hallen",
+   "ikon": "🤾",
+   "navn": "Ajax København – GOG Dame Elite",
+   "venue": "Bavnehøj-Hallen",
+   "lat": 55.6596,
+   "lon": 12.5386,
+   "kapacitet": 1000,
+   "start": "14:00",
+   "slut": "15:00",
+   "vindue": "15:00 – 16:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 7,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Bavnehøj Allé",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Bavnehøj Allé",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2026-11-14"
+  },
+  {
+   "id": "hhbav0116",
+   "vid": "bavnehoej_hallen",
+   "ikon": "🤾",
+   "navn": "Ajax København – DHG Håndbold",
+   "venue": "Bavnehøj-Hallen",
+   "lat": 55.6596,
+   "lon": 12.5386,
+   "kapacitet": 1000,
+   "start": "14:00",
+   "slut": "15:00",
+   "vindue": "15:00 – 16:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 7,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Bavnehøj Allé",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Bavnehøj Allé",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2027-01-16"
+  },
+  {
+   "id": "hhbav0130",
+   "vid": "bavnehoej_hallen",
+   "ikon": "🤾",
+   "navn": "Ajax København – Fredericia Håndboldklub Kvinder",
+   "venue": "Bavnehøj-Hallen",
+   "lat": 55.6596,
+   "lon": 12.5386,
+   "kapacitet": 1000,
+   "start": "14:00",
+   "slut": "15:00",
+   "vindue": "15:00 – 16:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 7,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Bavnehøj Allé",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Bavnehøj Allé",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2027-01-30"
+  },
+  {
+   "id": "hhbav0212",
+   "vid": "bavnehoej_hallen",
+   "ikon": "🤾",
+   "navn": "Ajax København – Roskilde Håndbold Kvinder",
+   "venue": "Bavnehøj-Hallen",
+   "lat": 55.6596,
+   "lon": 12.5386,
+   "kapacitet": 1000,
+   "start": "19:00",
+   "slut": "20:00",
+   "vindue": "20:00 – 21:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 7,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Bavnehøj Allé",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Bavnehøj Allé",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2027-02-12"
+  },
+  {
+   "id": "hhbav0220",
+   "vid": "bavnehoej_hallen",
+   "ikon": "🤾",
+   "navn": "Ajax København – Hadsten Håndbold",
+   "venue": "Bavnehøj-Hallen",
+   "lat": 55.6596,
+   "lon": 12.5386,
+   "kapacitet": 1000,
+   "start": "14:00",
+   "slut": "15:00",
+   "vindue": "15:00 – 16:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 7,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Bavnehøj Allé",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Bavnehøj Allé",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2027-02-20"
+  },
+  {
+   "id": "hhbav0313",
+   "vid": "bavnehoej_hallen",
+   "ikon": "🤾",
+   "navn": "Ajax København – Bjerringbro FH",
+   "venue": "Bavnehøj-Hallen",
+   "lat": 55.6596,
+   "lon": 12.5386,
+   "kapacitet": 1000,
+   "start": "14:00",
+   "slut": "15:00",
+   "vindue": "15:00 – 16:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 7,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Bavnehøj Allé",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Bavnehøj Allé",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2027-03-13"
+  },
+  {
+   "id": "hhbav0320",
+   "vid": "bavnehoej_hallen",
+   "ikon": "🤾",
+   "navn": "Ajax København – Aarhus Håndbold Kvinder",
+   "venue": "Bavnehøj-Hallen",
+   "lat": 55.6596,
+   "lon": 12.5386,
+   "kapacitet": 1000,
+   "start": "14:00",
+   "slut": "15:00",
+   "vindue": "15:00 – 16:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 7,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Bavnehøj Allé",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Bavnehøj Allé",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2027-03-20"
+  },
+  {
+   "id": "hhroe0905",
+   "vid": "roedovrehallen",
+   "ikon": "🤾",
+   "navn": "Rødovre HK – Roskilde Håndbold Kvinder",
+   "venue": "Rødovrehallen",
+   "lat": 55.68,
+   "lon": 12.4415,
+   "kapacitet": 1500,
+   "start": "15:30",
+   "slut": "16:30",
+   "vindue": "16:30 – 17:30",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 10,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2026-09-05"
+  },
+  {
+   "id": "hhroe1003",
+   "vid": "roedovrehallen",
+   "ikon": "🤾",
+   "navn": "Rødovre HK – Aarhus Håndbold Kvinder",
+   "venue": "Rødovrehallen",
+   "lat": 55.68,
+   "lon": 12.4415,
+   "kapacitet": 1500,
+   "start": "16:00",
+   "slut": "17:00",
+   "vindue": "17:00 – 18:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 10,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2026-10-03"
+  },
+  {
+   "id": "hhroe1017",
+   "vid": "roedovrehallen",
+   "ikon": "🤾",
+   "navn": "Rødovre HK – AGF Håndbold",
+   "venue": "Rødovrehallen",
+   "lat": 55.68,
+   "lon": 12.4415,
+   "kapacitet": 1500,
+   "start": "15:00",
+   "slut": "16:00",
+   "vindue": "16:00 – 17:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 10,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2026-10-17"
+  },
+  {
+   "id": "hhroe1107",
+   "vid": "roedovrehallen",
+   "ikon": "🤾",
+   "navn": "Rødovre HK – Bjerringbro FH",
+   "venue": "Rødovrehallen",
+   "lat": 55.68,
+   "lon": 12.4415,
+   "kapacitet": 1500,
+   "start": "14:30",
+   "slut": "15:30",
+   "vindue": "15:30 – 16:30",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 10,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2026-11-07"
+  },
+  {
+   "id": "hhroe1114",
+   "vid": "roedovrehallen",
+   "ikon": "🤾",
+   "navn": "Rødovre HK – Fredericia Håndboldklub Kvinder",
+   "venue": "Rødovrehallen",
+   "lat": 55.68,
+   "lon": 12.4415,
+   "kapacitet": 1500,
+   "start": "15:30",
+   "slut": "16:30",
+   "vindue": "16:30 – 17:30",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 10,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2026-11-14"
+  },
+  {
+   "id": "hhroe0123",
+   "vid": "roedovrehallen",
+   "ikon": "🤾",
+   "navn": "Rødovre HK – Hadsten Håndbold",
+   "venue": "Rødovrehallen",
+   "lat": 55.68,
+   "lon": 12.4415,
+   "kapacitet": 1500,
+   "start": "15:30",
+   "slut": "16:30",
+   "vindue": "16:30 – 17:30",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 10,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2027-01-23"
+  },
+  {
+   "id": "hhroe0205",
+   "vid": "roedovrehallen",
+   "ikon": "🤾",
+   "navn": "Rødovre HK – Ajax København",
+   "venue": "Rødovrehallen",
+   "lat": 55.68,
+   "lon": 12.4415,
+   "kapacitet": 1500,
+   "start": "19:00",
+   "slut": "20:00",
+   "vindue": "20:00 – 21:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 10,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2027-02-05"
+  },
+  {
+   "id": "hhroe0220",
+   "vid": "roedovrehallen",
+   "ikon": "🤾",
+   "navn": "Rødovre HK – SIK Viborg",
+   "venue": "Rødovrehallen",
+   "lat": 55.68,
+   "lon": 12.4415,
+   "kapacitet": 1500,
+   "start": "15:00",
+   "slut": "16:00",
+   "vindue": "16:00 – 17:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 10,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2027-02-20"
+  },
+  {
+   "id": "hhroe0314",
+   "vid": "roedovrehallen",
+   "ikon": "🤾",
+   "navn": "Rødovre HK – DHG Håndbold",
+   "venue": "Rødovrehallen",
+   "lat": 55.68,
+   "lon": 12.4415,
+   "kapacitet": 1500,
+   "start": "15:00",
+   "slut": "16:00",
+   "vindue": "16:00 – 17:00",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 10,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2027-03-14"
+  },
+  {
+   "id": "hhroe0320",
+   "vid": "roedovrehallen",
+   "ikon": "🤾",
+   "navn": "Rødovre HK – GOG Dame Elite",
+   "venue": "Rødovrehallen",
+   "lat": 55.68,
+   "lon": 12.4415,
+   "kapacitet": 1500,
+   "start": "15:30",
+   "slut": "16:30",
+   "vindue": "16:30 – 17:30",
+   "type": "sport",
+   "type_label": "🤾 Håndbold",
+   "score": 10,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–7 min",
+   "boostere": [
+    [
+     "🤾",
+     "1. division kvinder"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–7 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "tophaandbold.dk",
+   "note": "1. division kvinder",
+   "dato": "2027-03-20"
   }
  ],
  "venues": [
@@ -19749,6 +21696,36 @@
    "transport_gab": 0.45,
    "type": "koncert",
    "spot": "Hovedindgangen · Ahornsgade"
+  },
+  {
+   "id": "frederiksberg_hallerne",
+   "navn": "Frederiksberg-Hallerne",
+   "lat": 55.681,
+   "lon": 12.52,
+   "kapacitet": 1200,
+   "transport_gab": 0.45,
+   "type": "sport",
+   "spot": "Hovedindgangen · C.F. Richs Vej"
+  },
+  {
+   "id": "bavnehoej_hallen",
+   "navn": "Bavnehøj-Hallen",
+   "lat": 55.6596,
+   "lon": 12.5386,
+   "kapacitet": 1000,
+   "transport_gab": 0.5,
+   "type": "sport",
+   "spot": "Hovedindgangen · Bavnehøj Allé"
+  },
+  {
+   "id": "roedovrehallen",
+   "navn": "Rødovrehallen",
+   "lat": 55.68,
+   "lon": 12.4415,
+   "kapacitet": 1500,
+   "transport_gab": 0.55,
+   "type": "sport",
+   "spot": "Hovedindgangen · Rødovre Parkvej"
   }
  ]
 }
