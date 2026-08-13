@@ -15790,6 +15790,1481 @@
    "kilde": "mønster (estimat)",
    "note": "Typisk mønster — rigtige ankomster kun for i dag",
    "dato": "2026-08-26"
+  },
+  {
+   "id": "kgl116830813",
+   "vid": "gamle_scene",
+   "ikon": "🚶",
+   "navn": "Rundvisning på Gamle Scene",
+   "venue": "Gamle Scene · Det Kongelige",
+   "lat": 55.6794,
+   "lon": 12.5857,
+   "kapacitet": 1600,
+   "start": "16:30",
+   "slut": "17:45",
+   "vindue": "17:45 – 18:45",
+   "type": "kultur",
+   "type_label": "🚶 Rundvisning",
+   "score": 8,
+   "kurve": "gala",
+   "spot": "Hovedindgangen · Kongens Nytorv",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🚶",
+     "Rundvisning"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Kongens Nytorv",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Rundvisning · fra 135 kr",
+   "dato": "2026-08-13"
+  },
+  {
+   "id": "kgl223630813",
+   "vid": "gamle_scene",
+   "ikon": "🎼",
+   "navn": "Klassisk på Kyssetrappen 2026",
+   "venue": "Gamle Scene · Det Kongelige",
+   "lat": 55.6794,
+   "lon": 12.5857,
+   "kapacitet": 1600,
+   "start": "17:00",
+   "slut": "18:00",
+   "vindue": "18:00 – 19:00",
+   "type": "koncert",
+   "type_label": "🎼 Koncert",
+   "score": 10,
+   "kurve": "gala",
+   "spot": "Hovedindgangen · Kongens Nytorv",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🎼",
+     "Koncert"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Kongens Nytorv",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Koncert",
+   "dato": "2026-08-13"
+  },
+  {
+   "id": "kgl221900813",
+   "vid": "operaen",
+   "ikon": "🎼",
+   "navn": "Equinox Festival",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "19:30",
+   "slut": "21:30",
+   "vindue": "21:30 – 22:30",
+   "type": "koncert",
+   "type_label": "🎼 Koncert",
+   "score": 7,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🎼",
+     "Koncert"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Koncert · fra 100 kr",
+   "dato": "2026-08-13"
+  },
+  {
+   "id": "kgl104080813",
+   "vid": "operaen",
+   "ikon": "🎭",
+   "navn": "Askepot the Musical",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "19:30",
+   "slut": "22:10",
+   "vindue": "22:10 – 23:10",
+   "type": "kultur",
+   "type_label": "🎭 Musical",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🎭",
+     "Musical"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Musical · fra 265 kr",
+   "dato": "2026-08-13"
+  },
+  {
+   "id": "kgl191060814",
+   "vid": "gamle_scene",
+   "ikon": "🚶",
+   "navn": "Guided Tours, The Old Stage",
+   "venue": "Gamle Scene · Det Kongelige",
+   "lat": 55.6794,
+   "lon": 12.5857,
+   "kapacitet": 1600,
+   "start": "15:00",
+   "slut": "16:15",
+   "vindue": "16:15 – 17:15",
+   "type": "kultur",
+   "type_label": "🚶 Rundvisning",
+   "score": 8,
+   "kurve": "gala",
+   "spot": "Hovedindgangen · Kongens Nytorv",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🚶",
+     "Rundvisning"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Kongens Nytorv",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Rundvisning · fra 135 kr",
+   "dato": "2026-08-14"
+  },
+  {
+   "id": "kgl118000814",
+   "vid": "gamle_scene",
+   "ikon": "🎭",
+   "navn": "Kongelig sommeropera - turné",
+   "venue": "Gamle Scene · Det Kongelige",
+   "lat": 55.6794,
+   "lon": 12.5857,
+   "kapacitet": 1600,
+   "start": "18:00",
+   "slut": "19:30",
+   "vindue": "19:30 – 20:30",
+   "type": "kultur",
+   "type_label": "🎭 Opera",
+   "score": 8,
+   "kurve": "gala",
+   "spot": "Hovedindgangen · Kongens Nytorv",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🎭",
+     "Opera"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Kongens Nytorv",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Opera",
+   "dato": "2026-08-14"
+  },
+  {
+   "id": "kgl221900814",
+   "vid": "operaen",
+   "ikon": "🎼",
+   "navn": "Equinox Festival",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "19:30",
+   "slut": "21:30",
+   "vindue": "21:30 – 22:30",
+   "type": "koncert",
+   "type_label": "🎼 Koncert",
+   "score": 7,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🎼",
+     "Koncert"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Koncert · fra 100 kr",
+   "dato": "2026-08-14"
+  },
+  {
+   "id": "kgl104080814",
+   "vid": "operaen",
+   "ikon": "🎭",
+   "navn": "Askepot the Musical",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "20:00",
+   "slut": "22:40",
+   "vindue": "22:40 – 23:40",
+   "type": "kultur",
+   "type_label": "🎭 Musical",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🎭",
+     "Musical"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Musical · fra 265 kr",
+   "dato": "2026-08-14"
+  },
+  {
+   "id": "kgl116800815",
+   "vid": "operaen",
+   "ikon": "🚶",
+   "navn": "Rundvisning i Operaen",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "11:00",
+   "slut": "12:15",
+   "vindue": "12:15 – 13:15",
+   "type": "kultur",
+   "type_label": "🚶 Rundvisning",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🚶",
+     "Rundvisning"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Rundvisning · fra 135 kr",
+   "dato": "2026-08-15"
+  },
+  {
+   "id": "kgl190700815",
+   "vid": "operaen",
+   "ikon": "🚶",
+   "navn": "Guided Tours, The Opera House",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "11:00",
+   "slut": "12:15",
+   "vindue": "12:15 – 13:15",
+   "type": "kultur",
+   "type_label": "🚶 Rundvisning",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🚶",
+     "Rundvisning"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Rundvisning · fra 135 kr",
+   "dato": "2026-08-15"
+  },
+  {
+   "id": "kgl104080815",
+   "vid": "operaen",
+   "ikon": "🎭",
+   "navn": "Askepot the Musical",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "15:00",
+   "slut": "17:40",
+   "vindue": "17:40 – 18:40",
+   "type": "kultur",
+   "type_label": "🎭 Musical",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🎭",
+     "Musical"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Musical · fra 265 kr",
+   "dato": "2026-08-15"
+  },
+  {
+   "id": "kgl118000815",
+   "vid": "gamle_scene",
+   "ikon": "🎭",
+   "navn": "Kongelig sommeropera - turné",
+   "venue": "Gamle Scene · Det Kongelige",
+   "lat": 55.6794,
+   "lon": 12.5857,
+   "kapacitet": 1600,
+   "start": "16:00",
+   "slut": "17:30",
+   "vindue": "17:30 – 18:30",
+   "type": "kultur",
+   "type_label": "🎭 Opera",
+   "score": 8,
+   "kurve": "gala",
+   "spot": "Hovedindgangen · Kongens Nytorv",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🎭",
+     "Opera"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Kongens Nytorv",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Opera",
+   "dato": "2026-08-15"
+  },
+  {
+   "id": "kgl221900815",
+   "vid": "operaen",
+   "ikon": "🎼",
+   "navn": "Equinox Festival",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "19:30",
+   "slut": "21:30",
+   "vindue": "21:30 – 22:30",
+   "type": "koncert",
+   "type_label": "🎼 Koncert",
+   "score": 7,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🎼",
+     "Koncert"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Koncert · fra 100 kr",
+   "dato": "2026-08-15"
+  },
+  {
+   "id": "kgl104080815",
+   "vid": "operaen",
+   "ikon": "🎭",
+   "navn": "Askepot the Musical",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "19:30",
+   "slut": "22:10",
+   "vindue": "22:10 – 23:10",
+   "type": "kultur",
+   "type_label": "🎭 Musical",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🎭",
+     "Musical"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Musical · fra 265 kr",
+   "dato": "2026-08-15"
+  },
+  {
+   "id": "kgl116800816",
+   "vid": "operaen",
+   "ikon": "🚶",
+   "navn": "Rundvisning i Operaen",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "11:00",
+   "slut": "12:15",
+   "vindue": "12:15 – 13:15",
+   "type": "kultur",
+   "type_label": "🚶 Rundvisning",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🚶",
+     "Rundvisning"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Rundvisning · fra 135 kr",
+   "dato": "2026-08-16"
+  },
+  {
+   "id": "kgl190700816",
+   "vid": "operaen",
+   "ikon": "🚶",
+   "navn": "Guided Tours, The Opera House",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "11:00",
+   "slut": "12:15",
+   "vindue": "12:15 – 13:15",
+   "type": "kultur",
+   "type_label": "🚶 Rundvisning",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🚶",
+     "Rundvisning"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Rundvisning · fra 135 kr",
+   "dato": "2026-08-16"
+  },
+  {
+   "id": "kgl104080816",
+   "vid": "operaen",
+   "ikon": "🎭",
+   "navn": "Askepot the Musical",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "14:00",
+   "slut": "16:40",
+   "vindue": "16:40 – 17:40",
+   "type": "kultur",
+   "type_label": "🎭 Musical",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🎭",
+     "Musical"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Musical · fra 265 kr",
+   "dato": "2026-08-16"
+  },
+  {
+   "id": "kgl221900816",
+   "vid": "operaen",
+   "ikon": "🎼",
+   "navn": "Equinox Festival",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "17:00",
+   "slut": "19:00",
+   "vindue": "19:00 – 20:00",
+   "type": "koncert",
+   "type_label": "🎼 Koncert",
+   "score": 7,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🎼",
+     "Koncert"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Koncert · fra 100 kr",
+   "dato": "2026-08-16"
+  },
+  {
+   "id": "kgl118000816",
+   "vid": "gamle_scene",
+   "ikon": "🎭",
+   "navn": "Kongelig sommeropera - turné",
+   "venue": "Gamle Scene · Det Kongelige",
+   "lat": 55.6794,
+   "lon": 12.5857,
+   "kapacitet": 1600,
+   "start": "18:00",
+   "slut": "19:30",
+   "vindue": "19:30 – 20:30",
+   "type": "kultur",
+   "type_label": "🎭 Opera",
+   "score": 8,
+   "kurve": "gala",
+   "spot": "Hovedindgangen · Kongens Nytorv",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🎭",
+     "Opera"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Kongens Nytorv",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Opera",
+   "dato": "2026-08-16"
+  },
+  {
+   "id": "kgl220930817",
+   "vid": "operaen",
+   "ikon": "🩰",
+   "navn": "DYR – det indre menneskedyr",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "09:00",
+   "slut": "10:00",
+   "vindue": "10:00 – 11:00",
+   "type": "kultur",
+   "type_label": "🩰 Ballet/Dans",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🩰",
+     "Dans"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Dans · fra 170 kr",
+   "dato": "2026-08-17"
+  },
+  {
+   "id": "kgl220930817",
+   "vid": "operaen",
+   "ikon": "🩰",
+   "navn": "DYR – det indre menneskedyr",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "11:00",
+   "slut": "12:00",
+   "vindue": "12:00 – 13:00",
+   "type": "kultur",
+   "type_label": "🩰 Ballet/Dans",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🩰",
+     "Dans"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Dans · fra 170 kr",
+   "dato": "2026-08-17"
+  },
+  {
+   "id": "kgl190700817",
+   "vid": "operaen",
+   "ikon": "🚶",
+   "navn": "Guided Tours, The Opera House",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "13:00",
+   "slut": "14:15",
+   "vindue": "14:15 – 15:15",
+   "type": "kultur",
+   "type_label": "🚶 Rundvisning",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🚶",
+     "Rundvisning"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Rundvisning · fra 135 kr",
+   "dato": "2026-08-17"
+  },
+  {
+   "id": "kgl190700817",
+   "vid": "operaen",
+   "ikon": "🚶",
+   "navn": "Guided Tours, The Opera House",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "15:00",
+   "slut": "16:15",
+   "vindue": "16:15 – 17:15",
+   "type": "kultur",
+   "type_label": "🚶 Rundvisning",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🚶",
+     "Rundvisning"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Rundvisning · fra 135 kr",
+   "dato": "2026-08-17"
+  },
+  {
+   "id": "kgl220930817",
+   "vid": "operaen",
+   "ikon": "🩰",
+   "navn": "DYR – det indre menneskedyr",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "18:00",
+   "slut": "19:00",
+   "vindue": "19:00 – 20:00",
+   "type": "kultur",
+   "type_label": "🩰 Ballet/Dans",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🩰",
+     "Dans"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Dans · fra 170 kr",
+   "dato": "2026-08-17"
+  },
+  {
+   "id": "kgl190700818",
+   "vid": "operaen",
+   "ikon": "🚶",
+   "navn": "Guided Tours, The Opera House",
+   "venue": "Operaen",
+   "lat": 55.682,
+   "lon": 12.6,
+   "kapacitet": 1000,
+   "start": "13:00",
+   "slut": "14:15",
+   "vindue": "14:15 – 15:15",
+   "type": "kultur",
+   "type_label": "🚶 Rundvisning",
+   "score": 5,
+   "kurve": "gala",
+   "spot": "Hovedindgangen",
+   "ventetid": "5–8 min",
+   "boostere": [
+    [
+     "🚶",
+     "Rundvisning"
+    ],
+    [
+     "💶",
+     "Høj gennemsnitsfart"
+    ],
+    [
+     "🎟️",
+     "Forudbestilte billetter"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · mest trafik",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxaholdeplads",
+     "note": "Spill-over fra andre gæster",
+     "ventetid": "7–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod byen · hovedvej",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Det Kongelige Teater",
+   "note": "Rundvisning · fra 135 kr",
+   "dato": "2026-08-18"
   }
  ],
  "venues": [
@@ -15998,6 +17473,86 @@
    "transport_gab": 0.35,
    "type": "business",
    "spot": "Taxirækken · Terminal 3"
+  },
+  {
+   "id": "gamle_scene",
+   "navn": "Gamle Scene · Det Kongelige",
+   "lat": 55.6794,
+   "lon": 12.5857,
+   "kapacitet": 1600,
+   "transport_gab": 0.35,
+   "type": "kultur",
+   "spot": "Hovedindgangen · Kongens Nytorv"
+  },
+  {
+   "id": "skuespilhuset",
+   "navn": "Skuespilhuset",
+   "lat": 55.6809,
+   "lon": 12.5906,
+   "kapacitet": 650,
+   "transport_gab": 0.45,
+   "type": "kultur",
+   "spot": "Hovedindgangen · Sankt Annæ Plads"
+  },
+  {
+   "id": "det_ny_teater",
+   "navn": "Det Ny Teater",
+   "lat": 55.6741,
+   "lon": 12.552,
+   "kapacitet": 1150,
+   "transport_gab": 0.4,
+   "type": "kultur",
+   "spot": "Hovedindgangen · Gammel Kongevej"
+  },
+  {
+   "id": "oestre_gasvaerk",
+   "navn": "Østre Gasværk Teater",
+   "lat": 55.6852,
+   "lon": 12.5815,
+   "kapacitet": 800,
+   "transport_gab": 0.45,
+   "type": "kultur",
+   "spot": "Hovedindgangen · Nyborggade"
+  },
+  {
+   "id": "noerrebros_teater",
+   "navn": "Nørrebros Teater",
+   "lat": 55.6905,
+   "lon": 12.5508,
+   "kapacitet": 400,
+   "transport_gab": 0.5,
+   "type": "kultur",
+   "spot": "Hovedindgangen · Nørrebrogade"
+  },
+  {
+   "id": "aveny_t",
+   "navn": "Aveny-T",
+   "lat": 55.6739,
+   "lon": 12.5323,
+   "kapacitet": 300,
+   "transport_gab": 0.45,
+   "type": "kultur",
+   "spot": "Hovedindgangen · Frederiksberg Allé"
+  },
+  {
+   "id": "betty_nansen",
+   "navn": "Betty Nansen Teatret",
+   "lat": 55.6755,
+   "lon": 12.5354,
+   "kapacitet": 500,
+   "transport_gab": 0.45,
+   "type": "kultur",
+   "spot": "Hovedindgangen · Frederiksberg Allé"
+  },
+  {
+   "id": "folketeatret",
+   "navn": "Folketeatret",
+   "lat": 55.6806,
+   "lon": 12.5708,
+   "kapacitet": 900,
+   "transport_gab": 0.35,
+   "type": "kultur",
+   "spot": "Hovedindgangen · Nørregade"
   }
  ]
 }

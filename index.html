@@ -1109,7 +1109,15 @@ const VENUE_TABLE = [
   {id:"comwell_portside",navn:"Comwell Copenhagen Portside",lat:55.7080,lon:12.5874,kapacitet:800,gab:0.55,type:"business",spot:"Hovedindgangen · Alfred Nobels Vej"},
   {id:"falkoner",navn:"Falkoner Center",lat:55.6808,lon:12.5348,kapacitet:600,gab:0.40,type:"business",spot:"Hovedindgangen · Falkoner Allé"},
   {id:"odd_fellow",navn:"Odd Fellow Palæet",lat:55.6802,lon:12.5908,kapacitet:400,gab:0.35,type:"business",spot:"Hovedindgangen · Bredgade"},
-  {id:"lufthavnen",navn:"Københavns Lufthavn (CPH)",lat:55.618,lon:12.6508,kapacitet:30000,gab:0.35,type:"business",spot:"Taxirækken · Terminal 3"}
+  {id:"lufthavnen",navn:"Københavns Lufthavn (CPH)",lat:55.618,lon:12.6508,kapacitet:30000,gab:0.35,type:"business",spot:"Taxirækken · Terminal 3"},
+  {id:"gamle_scene",navn:"Gamle Scene · Det Kongelige",lat:55.6794,lon:12.5857,kapacitet:1600,gab:0.35,type:"kultur",spot:"Hovedindgangen · Kongens Nytorv"},
+  {id:"skuespilhuset",navn:"Skuespilhuset",lat:55.6809,lon:12.5906,kapacitet:650,gab:0.45,type:"kultur",spot:"Hovedindgangen · Sankt Annæ Plads"},
+  {id:"det_ny_teater",navn:"Det Ny Teater",lat:55.6741,lon:12.5520,kapacitet:1150,gab:0.40,type:"kultur",spot:"Hovedindgangen · Gammel Kongevej"},
+  {id:"oestre_gasvaerk",navn:"Østre Gasværk Teater",lat:55.6852,lon:12.5815,kapacitet:800,gab:0.45,type:"kultur",spot:"Hovedindgangen · Nyborggade"},
+  {id:"noerrebros_teater",navn:"Nørrebros Teater",lat:55.6905,lon:12.5508,kapacitet:400,gab:0.50,type:"kultur",spot:"Hovedindgangen · Nørrebrogade"},
+  {id:"aveny_t",navn:"Aveny-T",lat:55.6739,lon:12.5323,kapacitet:300,gab:0.45,type:"kultur",spot:"Hovedindgangen · Frederiksberg Allé"},
+  {id:"betty_nansen",navn:"Betty Nansen Teatret",lat:55.6755,lon:12.5354,kapacitet:500,gab:0.45,type:"kultur",spot:"Hovedindgangen · Frederiksberg Allé"},
+  {id:"folketeatret",navn:"Folketeatret",lat:55.6806,lon:12.5708,kapacitet:900,gab:0.35,type:"kultur",spot:"Hovedindgangen · Nørregade"}
 ];
 const LN_SLUGS = [
   ["royal-arena-tickets-vdp845782","royal_arena"],
@@ -1463,6 +1471,27 @@ async function fetchCPHArrivals(){
   return out;
 }
 
+/* Teater & opera — Det Kongelige Teaters åbne API (kglteater.dk) */
+const KGL_LOC2VID = {"Operaen":"operaen","Gamle Scene":"gamle_scene","Skuespilhuset":"skuespilhuset"};
+const KGL_CAT = {"Opera":["🎭","kultur","🎭 Opera"],"Musical":["🎭","kultur","🎭 Musical"],
+  "Dans":["🩰","kultur","🩰 Ballet/Dans"],"Koncert":["🎼","koncert","🎼 Koncert"],"Rundvisning":["🚶","kultur","🚶 Rundvisning"]};
+async function fetchKGL(){
+  const txt = await proxyFetch("https://www.kglteater.dk/api/calendar/activities", 30000);
+  const d = JSON.parse(txt);
+  const items = (d.items||[]).filter(i=>!i.canceled);
+  const dayStr = todayStr();
+  return items.map(a=>{
+    const vid = KGL_LOC2VID[a.location] || "gamle_scene";
+    const [icon, typ, lbl] = KGL_CAT[a.category] || ["🎭","kultur","🎭 Teater"];
+    const start = a.startDate.slice(11,16), datestr = a.startDate.slice(0,10);
+    const slut = (a.endDate&&a.endDate.slice(11,16)) || String((+start.slice(0,2)+2)%24).padStart(2,"0")+":"+start.slice(3);
+    return {navn:a.showName, vid, type:typ, type_label:lbl, ikon:icon, dato:datestr,
+      start, slut, vindue:slut+" – "+String((+slut.slice(0,2)+1)%24).padStart(2,"0")+":"+slut.slice(3),
+      kilde:"Det Kongelige Teater", note:a.category+(a.minPrice? " · fra "+a.minPrice+" kr":""),
+      kapacitet:null, score:null};
+  }).filter(e=>e.dato===dayStr || e.dato>dayStr);
+}
+
 async function fetchWeatherBrowser(){  const r = await fetch("https://api.open-meteo.com/v1/forecast?latitude=55.6761&longitude=12.5683&hourly=temperature_2m,precipitation&timezone=Europe/Copenhagen&forecast_days=2");
   const d = await r.json();
   let rain=false, t21=null;
@@ -1553,6 +1582,7 @@ async function buildBrowserData(){
   push("https://www.fck.dk/kamp", parseFCKHTML);
   push("https://cruisedig.com/node/285", txt=>parseCruiseHTML(txt, dayStr));
   push("https://api.flightradar24.com/common/v1/airport.json?code=CPH&plugin%5B%5D=schedule&plugin-setting%5Bschedule%5D%5Bmode%5D=arrivals&plugin-setting%5Bschedule%5D%5Blimit%5D=100", fetchCPHArrivals);
+  push("https://www.kglteater.dk/api/calendar/activities", fetchKGL);
   const groups = new Array(jobs.length);
   let idx=0;
   const worker = async()=>{
