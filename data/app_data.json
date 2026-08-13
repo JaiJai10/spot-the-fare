@@ -21218,6 +21218,3074 @@
    "kilde": "tophaandbold.dk",
    "note": "1. division kvinder",
    "dato": "2027-03-20"
+  },
+  {
+   "id": "ihroe6-9-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Frederikshavn White Hawks",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-09-01"
+  },
+  {
+   "id": "ihroe6-9-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – SønderjyskE",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-09-08"
+  },
+  {
+   "id": "ihroe6-9-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Herning Blue Fox",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-09-16"
+  },
+  {
+   "id": "ihroe6-9-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Rungsted Seier",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-09-25"
+  },
+  {
+   "id": "ihroe6-0-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Herlev Eagles",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Lokalopgør"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-10-02"
+  },
+  {
+   "id": "ihroe6-0-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Esbjerg Energy",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-10-05"
+  },
+  {
+   "id": "ihroe6-0-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Aalborg Pirates",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-10-11"
+  },
+  {
+   "id": "ihroe6-0-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Frederikshavn White Hawks",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-10-18"
+  },
+  {
+   "id": "ihroe6-0-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Herlev Eagles",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Lokalopgør"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-10-23"
+  },
+  {
+   "id": "ihroe6-0-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Odense Bulldogs",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-10-30"
+  },
+  {
+   "id": "ihroe6-1-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – SønderjyskE",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-11-02"
+  },
+  {
+   "id": "ihroe6-1-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Herlev Eagles",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Lokalopgør"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-11-13"
+  },
+  {
+   "id": "ihroe6-1-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Aalborg Pirates",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-11-20"
+  },
+  {
+   "id": "ihroe6-1-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – SønderjyskE",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-11-24"
+  },
+  {
+   "id": "ihroe6-1-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Rungsted Seier",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-11-27"
+  },
+  {
+   "id": "ihroe6-2-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Esbjerg Energy",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-12-07"
+  },
+  {
+   "id": "ihroe6-2-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Odense Bulldogs",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-12-18"
+  },
+  {
+   "id": "ihroe6-2-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Herning Blue Fox",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-12-21"
+  },
+  {
+   "id": "ihroe6-2-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Rungsted Seier",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-12-28"
+  },
+  {
+   "id": "ihroe7-1-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – SønderjyskE",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-01-12"
+  },
+  {
+   "id": "ihroe7-1-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Herning Blue Fox",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-01-19"
+  },
+  {
+   "id": "ihroe7-1-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Aalborg Pirates",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-01-24"
+  },
+  {
+   "id": "ihroe7-2-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Frederikshavn White Hawks",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-02-01"
+  },
+  {
+   "id": "ihroe7-2-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Esbjerg Energy",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-02-16"
+  },
+  {
+   "id": "ihroe7-2-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Odense Bulldogs",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-02-19"
+  },
+  {
+   "id": "ihroe7-2-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Frederikshavn White Hawks",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-02-28"
+  },
+  {
+   "id": "ihroe7-3-",
+   "vid": "roedovre_arena",
+   "ikon": "🏒",
+   "navn": "Rødovre Mighty Bulls – Herlev Eagles",
+   "venue": "Rødovre Centrum Arena (ishockey)",
+   "lat": 55.6803,
+   "lon": 12.4417,
+   "kapacitet": 3600,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 21,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Rødovre Parkvej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Lokalopgør"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Rødovre Parkvej",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-03-05"
+  },
+  {
+   "id": "ihher6-9-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Esbjerg Energy",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-09-09"
+  },
+  {
+   "id": "ihher6-9-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Odense Bulldogs",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-09-20"
+  },
+  {
+   "id": "ihher6-9-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – SønderjyskE",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-09-23"
+  },
+  {
+   "id": "ihher6-0-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Rødovre Mighty Bulls",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Lokalopgør"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-10-02"
+  },
+  {
+   "id": "ihher6-0-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Aalborg Pirates",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-10-12"
+  },
+  {
+   "id": "ihher6-0-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Frederikshavn White Hawks",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-10-16"
+  },
+  {
+   "id": "ihher6-0-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Rødovre Mighty Bulls",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Lokalopgør"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-10-23"
+  },
+  {
+   "id": "ihher6-0-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Herning Blue Fox",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-10-30"
+  },
+  {
+   "id": "ihher6-1-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – SønderjyskE",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-11-11"
+  },
+  {
+   "id": "ihher6-1-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Frederikshavn White Hawks",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-11-15"
+  },
+  {
+   "id": "ihher6-1-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Rungsted Seier",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-11-20"
+  },
+  {
+   "id": "ihher6-1-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Esbjerg Energy",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-11-27"
+  },
+  {
+   "id": "ihher6-2-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Odense Bulldogs",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-12-01"
+  },
+  {
+   "id": "ihher6-2-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Herning Blue Fox",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-12-06"
+  },
+  {
+   "id": "ihher6-2-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Rungsted Seier",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-12-11"
+  },
+  {
+   "id": "ihher6-2-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Frederikshavn White Hawks",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-12-18"
+  },
+  {
+   "id": "ihher6-2-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Rødovre Mighty Bulls",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Lokalopgør"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202026-12-30"
+  },
+  {
+   "id": "ihher7-1-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Rødovre Mighty Bulls",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Lokalopgør"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-01-08"
+  },
+  {
+   "id": "ihher7-1-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Herning Blue Fox",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-01-26"
+  },
+  {
+   "id": "ihher7-2-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Aalborg Pirates",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-02-01"
+  },
+  {
+   "id": "ihher7-2-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Aalborg Pirates",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-02-21"
+  },
+  {
+   "id": "ihher7-2-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Esbjerg Energy",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-02-28"
+  },
+  {
+   "id": "ihher7-3-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – SønderjyskE",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-03-02"
+  },
+  {
+   "id": "ihher7-3-",
+   "vid": "herlevhallen",
+   "ikon": "🏒",
+   "navn": "Herlev Eagles – Odense Bulldogs",
+   "venue": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "start": "19:30",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "🏒 Ishockey",
+   "score": 8,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Herlev",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🏒",
+     "Metal Ligaen"
+    ],
+    [
+     "🔥",
+     "Hjemmekamp"
+    ],
+    [
+     "💶",
+     "Gode ture efter kamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Herlev",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste taxa-stand",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "metalligaen.dk",
+   "note": "Metal Ligaen · start 19:30 (estimat)",
+   "dato": "202027-03-07"
+  },
+  {
+   "id": "cphhalf2026",
+   "vid": "raadhuspladsen",
+   "ikon": "🏃",
+   "navn": "Copenhagen Half Marathon 2026",
+   "venue": "Rådhuspladsen (start/mål)",
+   "lat": 55.676,
+   "lon": 12.568,
+   "kapacitet": 30000,
+   "start": "09:30",
+   "slut": "14:00",
+   "vindue": "14:00 – 16:00",
+   "type": "sport",
+   "type_label": "🏃 Løb",
+   "score": 88,
+   "kurve": "fest",
+   "spot": "Rådhuspladsen · målområdet",
+   "ventetid": "3–6 min",
+   "boostere": [
+    [
+     "🏃",
+     "20.000+ løbere + WM"
+    ],
+    [
+     "🌍",
+     "Verdensmesterskab i landevejsløb"
+    ],
+    [
+     "🚕",
+     "Mange ture efter mål"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Rådhuspladsen · målområdet",
+     "note": "Størst trafik efter målgang",
+     "ventetid": "3–6 min",
+     "taxier": 10,
+     "best": true
+    },
+    {
+     "navn": "Østerbro · langs ruten",
+     "note": "Tilskuere + udmattede løbere",
+     "ventetid": "5–8 min",
+     "taxier": 6,
+     "best": false
+    },
+    {
+     "navn": "Fælledparken-siden",
+     "note": "Spill-over fra familier",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    }
+   ],
+   "kilde": "cphhalf.dk",
+   "note": "Verdensmesterskaberne i landevejsløb afholdes samme dag",
+   "dato": "2026-09-20"
   }
  ],
  "venues": [
