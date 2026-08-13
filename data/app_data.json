@@ -21459,65 +21459,6 @@
    "id": "ihroe6-0-",
    "vid": "roedovre_arena",
    "ikon": "🏒",
-   "navn": "Rødovre Mighty Bulls – Herlev Eagles",
-   "venue": "Rødovre Centrum Arena (ishockey)",
-   "lat": 55.6803,
-   "lon": 12.4417,
-   "kapacitet": 3600,
-   "start": "19:30",
-   "slut": "22:00",
-   "vindue": "22:00 – 23:00",
-   "type": "sport",
-   "type_label": "🏒 Ishockey",
-   "score": 21,
-   "kurve": "match",
-   "spot": "Hovedindgangen · Rødovre Parkvej",
-   "ventetid": "4–8 min",
-   "boostere": [
-    [
-     "🏒",
-     "Metal Ligaen"
-    ],
-    [
-     "🔥",
-     "Lokalopgør"
-    ],
-    [
-     "💶",
-     "Gode ture efter kamp"
-    ]
-   ],
-   "steder": [
-    {
-     "navn": "Hovedindgangen · Rødovre Parkvej",
-     "note": "Hovedudgang · flest fans",
-     "ventetid": "4–8 min",
-     "taxier": 6,
-     "best": true
-    },
-    {
-     "navn": "Nærmeste taxa-stand",
-     "note": "Spill-over fra fans",
-     "ventetid": "6–10 min",
-     "taxier": 4,
-     "best": false
-    },
-    {
-     "navn": "Mod hovedvejen",
-     "note": "Fanger biler på vej ud",
-     "ventetid": "8–12 min",
-     "taxier": 3,
-     "best": false
-    }
-   ],
-   "kilde": "metalligaen.dk",
-   "note": "Metal Ligaen · start 19:30 (estimat)",
-   "dato": "2026-10-02"
-  },
-  {
-   "id": "ihroe6-0-",
-   "vid": "roedovre_arena",
-   "ikon": "🏒",
    "navn": "Rødovre Mighty Bulls – Esbjerg Energy",
    "venue": "Rødovre Centrum Arena (ishockey)",
    "lat": 55.6803,
@@ -23165,65 +23106,6 @@
    "kilde": "metalligaen.dk",
    "note": "Metal Ligaen · start 19:30 (estimat)",
    "dato": "2026-10-16"
-  },
-  {
-   "id": "ihher6-0-",
-   "vid": "herlevhallen",
-   "ikon": "🏒",
-   "navn": "Herlev Eagles – Rødovre Mighty Bulls",
-   "venue": "Herlevhallen",
-   "lat": 55.7369,
-   "lon": 12.4482,
-   "kapacitet": 1200,
-   "start": "19:30",
-   "slut": "22:00",
-   "vindue": "22:00 – 23:00",
-   "type": "sport",
-   "type_label": "🏒 Ishockey",
-   "score": 8,
-   "kurve": "match",
-   "spot": "Hovedindgangen · Herlev",
-   "ventetid": "4–8 min",
-   "boostere": [
-    [
-     "🏒",
-     "Metal Ligaen"
-    ],
-    [
-     "🔥",
-     "Lokalopgør"
-    ],
-    [
-     "💶",
-     "Gode ture efter kamp"
-    ]
-   ],
-   "steder": [
-    {
-     "navn": "Hovedindgangen · Herlev",
-     "note": "Hovedudgang · flest fans",
-     "ventetid": "4–8 min",
-     "taxier": 6,
-     "best": true
-    },
-    {
-     "navn": "Nærmeste taxa-stand",
-     "note": "Spill-over fra fans",
-     "ventetid": "6–10 min",
-     "taxier": 4,
-     "best": false
-    },
-    {
-     "navn": "Mod hovedvejen",
-     "note": "Fanger biler på vej ud",
-     "ventetid": "8–12 min",
-     "taxier": 3,
-     "best": false
-    }
-   ],
-   "kilde": "metalligaen.dk",
-   "note": "Metal Ligaen · start 19:30 (estimat)",
-   "dato": "2026-10-23"
   },
   {
    "id": "ihher6-0-",
