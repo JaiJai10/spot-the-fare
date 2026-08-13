@@ -21726,6 +21726,46 @@
    "transport_gab": 0.55,
    "type": "sport",
    "spot": "Hovedindgangen · Rødovre Parkvej"
+  },
+  {
+   "id": "gentoftehallen",
+   "navn": "Gentoftehallen (SISU Basket)",
+   "lat": 55.7576,
+   "lon": 12.526,
+   "kapacitet": 1000,
+   "transport_gab": 0.5,
+   "type": "sport",
+   "spot": "Hovedindgangen · Ved Stadion 10"
+  },
+  {
+   "id": "skovlunde_arena",
+   "navn": "Sportsworld Arena Skovlunde (BMS Herlev)",
+   "lat": 55.7218,
+   "lon": 12.4118,
+   "kapacitet": 1200,
+   "transport_gab": 0.55,
+   "type": "sport",
+   "spot": "Hovedindgangen · Skovlundehallen"
+  },
+  {
+   "id": "herlevhallen",
+   "navn": "Herlevhallen",
+   "lat": 55.7369,
+   "lon": 12.4482,
+   "kapacitet": 1200,
+   "transport_gab": 0.55,
+   "type": "sport",
+   "spot": "Hovedindgangen · Herlev"
+  },
+  {
+   "id": "vaerloesehallen",
+   "navn": "Værløsehallen (Blue Hawks)",
+   "lat": 55.79,
+   "lon": 12.38,
+   "kapacitet": 800,
+   "transport_gab": 0.6,
+   "type": "sport",
+   "spot": "Hovedindgangen · Værløse"
   }
  ]
 }
