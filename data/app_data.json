@@ -17898,6 +17898,26 @@
    "transport_gab": 0.5,
    "type": "koncert",
    "spot": "Hovedindgangen · Wibrandtsvej"
+  },
+  {
+   "id": "valby_idraetspark",
+   "navn": "Valby Idrætspark (BK Frem)",
+   "lat": 55.6471,
+   "lon": 12.5145,
+   "kapacitet": 3000,
+   "transport_gab": 0.55,
+   "type": "sport",
+   "spot": "Hovedindgangen · Spontinisvej"
+  },
+  {
+   "id": "sundby_idraetspark",
+   "navn": "Sundby Idrætspark (Fremad Amager)",
+   "lat": 55.6483,
+   "lon": 12.6013,
+   "kapacitet": 7000,
+   "transport_gab": 0.55,
+   "type": "sport",
+   "spot": "Hovedindgangen · Grønløkkevej"
   }
  ]
 }
