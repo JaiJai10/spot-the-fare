@@ -17878,6 +17878,26 @@
    "transport_gab": 0.65,
    "type": "sport",
    "spot": "Hovedindgangen · Farum"
+  },
+  {
+   "id": "valbyhallen",
+   "navn": "Valbyhallen",
+   "lat": 55.6491,
+   "lon": 12.5165,
+   "kapacitet": 2000,
+   "transport_gab": 0.5,
+   "type": "kultur",
+   "spot": "Hovedindgangen · Julius Andersens Vej"
+  },
+  {
+   "id": "beta2300",
+   "navn": "BETA2300 · Amager",
+   "lat": 55.6538,
+   "lon": 12.6108,
+   "kapacitet": 400,
+   "transport_gab": 0.5,
+   "type": "koncert",
+   "spot": "Hovedindgangen · Wibrandtsvej"
   }
  ]
 }
