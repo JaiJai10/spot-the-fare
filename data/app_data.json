@@ -17560,6 +17560,124 @@
    "kilde": "Superliga 2026",
    "note": "Mod FCK",
    "dato": "2026-09-20"
+  },
+  {
+   "id": "fbbro0813",
+   "vid": "broenshoej_stadion",
+   "ikon": "⚽",
+   "navn": "Brønshøj BK – Kastrup",
+   "venue": "Brønshøj Stadion (Tingbjerg)",
+   "lat": 55.7182,
+   "lon": 12.4926,
+   "kapacitet": 4000,
+   "start": "20:00",
+   "slut": "22:00",
+   "vindue": "22:00 – 23:00",
+   "type": "sport",
+   "type_label": "⚽ Fodbold",
+   "score": 24,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Ruten, Tingbjerg",
+   "ventetid": "3–6 min",
+   "boostere": [
+    [
+     "⚽",
+     "Mod Kastrup IA"
+    ],
+    [
+     "🚌",
+     "Svag offentlig transport → taxa"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Ruten, Tingbjerg",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "3–6 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste station",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–9 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Klubbernes kampprogram",
+   "note": "Mod Kastrup IA",
+   "dato": "2026-08-13"
+  },
+  {
+   "id": "fbbro0824",
+   "vid": "broenshoej_stadion",
+   "ikon": "⚽",
+   "navn": "Brønshøj BK – Skovshoved",
+   "venue": "Brønshøj Stadion (Tingbjerg)",
+   "lat": 55.7182,
+   "lon": 12.4926,
+   "kapacitet": 4000,
+   "start": "20:30",
+   "slut": "22:30",
+   "vindue": "22:30 – 23:30",
+   "type": "sport",
+   "type_label": "⚽ Fodbold",
+   "score": 24,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Ruten, Tingbjerg",
+   "ventetid": "3–6 min",
+   "boostere": [
+    [
+     "⚽",
+     "Mod Skovshoved IF"
+    ],
+    [
+     "🚌",
+     "Svag offentlig transport → taxa"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Ruten, Tingbjerg",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "3–6 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste station",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–9 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod hovedvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Klubbernes kampprogram",
+   "note": "Mod Skovshoved IF",
+   "dato": "2026-08-24"
   }
  ],
  "venues": [
@@ -17918,6 +18036,26 @@
    "transport_gab": 0.55,
    "type": "sport",
    "spot": "Hovedindgangen · Grønløkkevej"
+  },
+  {
+   "id": "broenshoej_stadion",
+   "navn": "Brønshøj Stadion (Tingbjerg)",
+   "lat": 55.7182,
+   "lon": 12.4926,
+   "kapacitet": 4000,
+   "transport_gab": 0.6,
+   "type": "sport",
+   "spot": "Hovedindgangen · Ruten, Tingbjerg"
+  },
+  {
+   "id": "vanloese_idraetspark",
+   "navn": "Vanløse Idrætspark",
+   "lat": 55.6868,
+   "lon": 12.4764,
+   "kapacitet": 2000,
+   "transport_gab": 0.55,
+   "type": "sport",
+   "spot": "Hovedindgangen · Vanløse Byvej"
   }
  ]
 }
