@@ -48,7 +48,6 @@
   .bell{position:relative;width:38px;height:38px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);
         display:flex;align-items:center;justify-content:center;cursor:pointer;flex:0 0 auto;}
   .bell svg{width:17px;height:17px;}
-  #refreshBtn{border:1px solid var(--border);font-family:inherit;color:var(--muted);}
   #themeBtn{font-size:17px;line-height:1;}
   .bell .badge{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;border-radius:9px;background:var(--hot);
         color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 4px;}
@@ -287,9 +286,6 @@
       </div>
       <div class="clock"><span class="pulse-dot"></span><span id="clock">21:15</span></div>
       <div class="bell" id="themeBtn" title="Lys / Mørk">☀️</div>
-      <div class="bell" id="refreshBtn" title="Opdater / Refresh">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#8fa0b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
-      </div>
       <div class="bell" id="bellBtn">
         <svg viewBox="0 0 24 24" fill="none" stroke="#8fa0b8" stroke-width="2" stroke-linecap="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
         <span class="badge">3</span>
@@ -1725,8 +1721,8 @@ async function loadLive(){
   // 3) filen (selvom gammel) — med tydelig besked
   if(filedata){
     applyLive(filedata,"data");
-    setStatus("⚠️ " + (lang==="da" ? "Kunne ikke hente dagens data — viser fra "+fmtDate(filedata.dato)+" (tryk ↻ for at prøve igen)"
-                                     : "Could not fetch today's data — showing from "+fmtDate(filedata.dato)+" (tap ↻ to retry)"), true);
+    setStatus("⚠️ " + (lang==="da" ? "Kunne ikke hente dagens data — viser fra "+fmtDate(filedata.dato)+" (opdater siden for at prøve igen)"
+                                     : "Could not fetch today's data — showing from "+fmtDate(filedata.dato)+" (refresh the page to retry)"), true);
     return;
   }
   // 4) cache i browseren
@@ -1734,7 +1730,7 @@ async function loadLive(){
     const c = JSON.parse(LS.getItem("stf_cache"));
     if(c && c.dato){ applyLive(c,"cache"); setStatus("⚠️ Kunne ikke hente live — viser gemte data fra "+fmtDate(c.dato), true); return; }
   }catch(e){}
-  setStatus("⚠️ Kunne ikke hente live-data — viser demo (tryk ↻ for at prøve igen)", true);
+  setStatus("⚠️ Kunne ikke hente live-data — viser demo (opdater siden for at prøve igen)", true);
 }
 
 /* ============ DINE EGNE EVENTS ============ */
@@ -1897,8 +1893,8 @@ function renderStatic(){
   if(LIVE && LIVE.dato !== todayStr()){
     st.style.display = "block";
     st.textContent = lang==="da"
-      ? `⚠️ Data er fra ${fmtDate(LIVE.dato)} — tryk ↻ for at prøve live-opdatering`
-      : `⚠️ Data is from ${fmtDate(LIVE.dato)} — tap ↻ to try live update`;
+      ? `⚠️ Data er fra ${fmtDate(LIVE.dato)} — opdater siden for at prøve live-opdatering`
+      : `⚠️ Data is from ${fmtDate(LIVE.dato)} — refresh the page to try live update`;
   } else st.style.display = "none";
 }
 function renderAll(){
@@ -1944,7 +1940,6 @@ function init(){
     renderList();
   });
   $("bellBtn").addEventListener("click",e=>{ e.stopPropagation(); $("alerts").classList.toggle("show"); });
-  $("refreshBtn").addEventListener("click",loadLive);
   $("themeBtn").addEventListener("click",()=>{
     setTheme(document.documentElement.dataset.theme==="light" ? "dark" : "light");
   });
