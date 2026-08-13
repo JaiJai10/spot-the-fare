@@ -17265,6 +17265,301 @@
    "kilde": "Det Kongelige Teater",
    "note": "Rundvisning · fra 135 kr",
    "dato": "2026-08-18"
+  },
+  {
+   "id": "fbbro0812",
+   "vid": "broendby_stadion",
+   "ikon": "⚽",
+   "navn": "Brøndby – Sønderjyske",
+   "venue": "Brøndby Stadion",
+   "lat": 55.6503,
+   "lon": 12.418,
+   "kapacitet": 29000,
+   "start": "19:00",
+   "slut": "21:00",
+   "vindue": "21:00 – 22:00",
+   "type": "sport",
+   "type_label": "⚽ Fodbold",
+   "score": 61,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Brøndby Stadion",
+   "ventetid": "3–6 min",
+   "boostere": [
+    [
+     "⚽",
+     "Mod Sønderjyske"
+    ],
+    [
+     "🚌",
+     "Svag offentlig transport → taxa"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Brøndby Stadion",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "3–6 min",
+     "taxier": 8,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste station",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–9 min",
+     "taxier": 5,
+     "best": false
+    },
+    {
+     "navn": "Mod motorvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Superliga 2026",
+   "note": "Mod Sønderjyske",
+   "dato": "2026-08-12"
+  },
+  {
+   "id": "fbpar0831",
+   "vid": "parken",
+   "ikon": "⚽",
+   "navn": "FCK – Sønderjyske",
+   "venue": "Parken",
+   "lat": 55.702,
+   "lon": 12.572,
+   "kapacitet": 10000,
+   "start": "19:00",
+   "slut": "21:00",
+   "vindue": "21:00 – 22:00",
+   "type": "sport",
+   "type_label": "⚽ Fodbold",
+   "score": 43,
+   "kurve": "match",
+   "spot": "Hovedindgangen",
+   "ventetid": "3–6 min",
+   "boostere": [
+    [
+     "⚽",
+     "Mod Sønderjyske"
+    ],
+    [
+     "🚌",
+     "Svag offentlig transport → taxa"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "3–6 min",
+     "taxier": 8,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste station",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–9 min",
+     "taxier": 5,
+     "best": false
+    },
+    {
+     "navn": "Mod motorvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Superliga 2026",
+   "note": "Mod Sønderjyske",
+   "dato": "2026-08-31"
+  },
+  {
+   "id": "fbpar0913",
+   "vid": "parken",
+   "ikon": "⚽",
+   "navn": "FCK – OB",
+   "venue": "Parken",
+   "lat": 55.702,
+   "lon": 12.572,
+   "kapacitet": 10000,
+   "start": "19:00",
+   "slut": "21:00",
+   "vindue": "21:00 – 22:00",
+   "type": "sport",
+   "type_label": "⚽ Fodbold",
+   "score": 43,
+   "kurve": "match",
+   "spot": "Hovedindgangen",
+   "ventetid": "3–6 min",
+   "boostere": [
+    [
+     "⚽",
+     "Mod OB"
+    ],
+    [
+     "🚌",
+     "Svag offentlig transport → taxa"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "3–6 min",
+     "taxier": 8,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste station",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–9 min",
+     "taxier": 5,
+     "best": false
+    },
+    {
+     "navn": "Mod motorvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Superliga 2026",
+   "note": "Mod OB",
+   "dato": "2026-09-13"
+  },
+  {
+   "id": "fbpar1108",
+   "vid": "parken",
+   "ikon": "⚽",
+   "navn": "FCK – Brøndby",
+   "venue": "Parken",
+   "lat": 55.702,
+   "lon": 12.572,
+   "kapacitet": 10000,
+   "start": "18:00",
+   "slut": "20:00",
+   "vindue": "20:00 – 21:00",
+   "type": "sport",
+   "type_label": "⚽ Fodbold",
+   "score": 43,
+   "kurve": "match",
+   "spot": "Hovedindgangen",
+   "ventetid": "3–6 min",
+   "boostere": [
+    [
+     "⚽",
+     "Mod Brøndby IF"
+    ],
+    [
+     "🚌",
+     "Svag offentlig transport → taxa"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "3–6 min",
+     "taxier": 8,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste station",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–9 min",
+     "taxier": 5,
+     "best": false
+    },
+    {
+     "navn": "Mod motorvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Superliga 2026",
+   "note": "Mod Brøndby IF",
+   "dato": "2026-11-08"
+  },
+  {
+   "id": "fbbro0920",
+   "vid": "broendby_stadion",
+   "ikon": "⚽",
+   "navn": "Brøndby – FCK",
+   "venue": "Brøndby Stadion",
+   "lat": 55.6503,
+   "lon": 12.418,
+   "kapacitet": 29000,
+   "start": "18:00",
+   "slut": "20:00",
+   "vindue": "20:00 – 21:00",
+   "type": "sport",
+   "type_label": "⚽ Fodbold",
+   "score": 61,
+   "kurve": "match",
+   "spot": "Hovedindgangen · Brøndby Stadion",
+   "ventetid": "3–6 min",
+   "boostere": [
+    [
+     "⚽",
+     "Mod FCK"
+    ],
+    [
+     "🚌",
+     "Svag offentlig transport → taxa"
+    ],
+    [
+     "🏟️",
+     "Hjemmekamp"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Brøndby Stadion",
+     "note": "Hovedudgang · flest fans",
+     "ventetid": "3–6 min",
+     "taxier": 8,
+     "best": true
+    },
+    {
+     "navn": "Nærmeste station",
+     "note": "Spill-over fra fans",
+     "ventetid": "6–9 min",
+     "taxier": 5,
+     "best": false
+    },
+    {
+     "navn": "Mod motorvejen",
+     "note": "Fanger biler på vej ud",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "Superliga 2026",
+   "note": "Mod FCK",
+   "dato": "2026-09-20"
   }
  ],
  "venues": [
@@ -17553,6 +17848,36 @@
    "transport_gab": 0.35,
    "type": "kultur",
    "spot": "Hovedindgangen · Nørregade"
+  },
+  {
+   "id": "broendby_stadion",
+   "navn": "Brøndby Stadion",
+   "lat": 55.6503,
+   "lon": 12.418,
+   "kapacitet": 29000,
+   "transport_gab": 0.55,
+   "type": "sport",
+   "spot": "Hovedindgangen · Brøndby Stadion"
+  },
+  {
+   "id": "lyngby_stadion",
+   "navn": "Lyngby Stadion",
+   "lat": 55.7706,
+   "lon": 12.5015,
+   "kapacitet": 10000,
+   "transport_gab": 0.55,
+   "type": "sport",
+   "spot": "Hovedindgangen · Lyngby Stadion"
+  },
+  {
+   "id": "fcn_stadion",
+   "navn": "Right to Dream Park (FCN)",
+   "lat": 55.8738,
+   "lon": 12.3725,
+   "kapacitet": 11000,
+   "transport_gab": 0.65,
+   "type": "sport",
+   "spot": "Hovedindgangen · Farum"
   }
  ]
 }
