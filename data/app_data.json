@@ -125,7 +125,7 @@
    "lat": 55.676,
    "lon": 12.568,
    "kapacitet": 20000.0,
-   "start": "18:00",
+   "start": "12:00",
    "slut": "22:00",
    "vindue": "22:00 – 23:30",
    "type": "festival",
@@ -168,7 +168,7 @@
     }
    ],
    "kilde": "Københavns Kommune",
-   "note": "10.08 – 16.08",
+   "note": "10.08 – 16.08 · tider fra kendt program",
    "dato": "2026-08-12"
   },
   {
@@ -231,9 +231,9 @@
    "lat": 55.6419,
    "lon": 12.5205,
    "kapacitet": 12000.0,
-   "start": "18:00",
-   "slut": "22:00",
-   "vindue": "22:00 – 23:30",
+   "start": "15:00",
+   "slut": "23:00",
+   "vindue": "23:00 – 00:30",
    "type": "kultur",
    "type_label": "🎭 Kultur",
    "score": 42,
@@ -274,7 +274,7 @@
     }
    ],
    "kilde": "Københavns Kommune",
-   "note": "13.08 – 15.08",
+   "note": "13.08 – 15.08 · tider fra kendt program",
    "dato": "2026-08-13"
   },
   {
@@ -337,9 +337,9 @@
    "lat": 55.682,
    "lon": 12.6,
    "kapacitet": 1600.0,
-   "start": "18:00",
-   "slut": "22:00",
-   "vindue": "22:00 – 23:30",
+   "start": "19:00",
+   "slut": "21:30",
+   "vindue": "21:30 – 23:00",
    "type": "festival",
    "type_label": "🎪 Festival",
    "score": 14,
@@ -376,7 +376,7 @@
     }
    ],
    "kilde": "Københavns Kommune",
-   "note": "14.08 – 23.08",
+   "note": "14.08 – 23.08 · tider fra kendt program",
    "dato": "2026-08-14"
   },
   {
