@@ -21766,6 +21766,16 @@
    "transport_gab": 0.6,
    "type": "sport",
    "spot": "Hovedindgangen · Værløse"
+  },
+  {
+   "id": "amagerhallen",
+   "navn": "Amagerhallen (BK Amager)",
+   "lat": 55.6238,
+   "lon": 12.6151,
+   "kapacitet": 1500,
+   "transport_gab": 0.55,
+   "type": "sport",
+   "spot": "Hovedindgangen · Amagerhallen"
   }
  ]
 }
