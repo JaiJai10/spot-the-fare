@@ -24168,6 +24168,419 @@
    "kilde": "cphhalf.dk",
    "note": "Verdensmesterskaberne i landevejsløb afholdes samme dag",
    "dato": "2026-09-20"
+  },
+  {
+   "id": "tr0812",
+   "vid": "charlottenlund_travbane",
+   "ikon": "🐎",
+   "navn": "Charlottenlund · Travløb (onsdag)",
+   "venue": "Charlottenlund Travbane",
+   "lat": 55.7539,
+   "lon": 12.5879,
+   "kapacitet": 8000,
+   "start": "17:00",
+   "slut": "21:00",
+   "vindue": "21:00 – 22:00",
+   "type": "sport",
+   "type_label": "🐎 Travløb",
+   "score": 74,
+   "kurve": "fest",
+   "spot": "Hovedindgangen · Traverbanevej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🐎",
+     "Travløb"
+    ],
+    [
+     "👨‍👩‍👧",
+     "Hele familien kommer"
+    ],
+    [
+     "🚕",
+     "Mange ture efter sidste løb"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Traverbanevej",
+     "note": "Størst trafik ved lukketid",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Parkeringspladsen",
+     "note": "Fanger familier på vej hjem",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod Ordrup/Klampenborg",
+     "note": "Lange ture mod nord",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "travbanen.dk",
+   "note": "Derby Kvalifikation V65",
+   "dato": "2026-08-12"
+  },
+  {
+   "id": "tr0823",
+   "vid": "charlottenlund_travbane",
+   "ikon": "🐎",
+   "navn": "Charlottenlund · Travløb",
+   "venue": "Charlottenlund Travbane",
+   "lat": 55.7539,
+   "lon": 12.5879,
+   "kapacitet": 8000,
+   "start": "13:00",
+   "slut": "17:00",
+   "vindue": "17:00 – 18:00",
+   "type": "sport",
+   "type_label": "🐎 Travløb",
+   "score": 74,
+   "kurve": "fest",
+   "spot": "Hovedindgangen · Traverbanevej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🐎",
+     "Travløb"
+    ],
+    [
+     "👨‍👩‍👧",
+     "Hele familien kommer"
+    ],
+    [
+     "🚕",
+     "Mange ture efter sidste løb"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Traverbanevej",
+     "note": "Størst trafik ved lukketid",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Parkeringspladsen",
+     "note": "Fanger familier på vej hjem",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod Ordrup/Klampenborg",
+     "note": "Lange ture mod nord",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "travbanen.dk",
+   "note": "Søndagsløb",
+   "dato": "2026-08-23"
+  },
+  {
+   "id": "tr0829",
+   "vid": "charlottenlund_travbane",
+   "ikon": "🐎",
+   "navn": "J. Jensen Dansk Hoppe Derby",
+   "venue": "Charlottenlund Travbane",
+   "lat": 55.7539,
+   "lon": 12.5879,
+   "kapacitet": 8000,
+   "start": "13:00",
+   "slut": "17:00",
+   "vindue": "17:00 – 18:00",
+   "type": "sport",
+   "type_label": "🐎 Travløb",
+   "score": 74,
+   "kurve": "fest",
+   "spot": "Hovedindgangen · Traverbanevej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🐎",
+     "Travløb"
+    ],
+    [
+     "👨‍👩‍👧",
+     "Hele familien kommer"
+    ],
+    [
+     "🚕",
+     "Mange ture efter sidste løb"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Traverbanevej",
+     "note": "Størst trafik ved lukketid",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Parkeringspladsen",
+     "note": "Fanger familier på vej hjem",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod Ordrup/Klampenborg",
+     "note": "Lange ture mod nord",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "travbanen.dk",
+   "note": "Derby-weekend · hoppederby",
+   "dato": "2026-08-29"
+  },
+  {
+   "id": "tr0830",
+   "vid": "charlottenlund_travbane",
+   "ikon": "🐎",
+   "navn": "J. Jensen Dansk Trav Derby",
+   "venue": "Charlottenlund Travbane",
+   "lat": 55.7539,
+   "lon": 12.5879,
+   "kapacitet": 8000,
+   "start": "13:35",
+   "slut": "17:35",
+   "vindue": "17:35 – 18:35",
+   "type": "sport",
+   "type_label": "🐎 Travløb",
+   "score": 74,
+   "kurve": "fest",
+   "spot": "Hovedindgangen · Traverbanevej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🐎",
+     "Travløb"
+    ],
+    [
+     "👨‍👩‍👧",
+     "Hele familien kommer"
+    ],
+    [
+     "🚕",
+     "Mange ture efter sidste løb"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Traverbanevej",
+     "note": "Størst trafik ved lukketid",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Parkeringspladsen",
+     "note": "Fanger familier på vej hjem",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod Ordrup/Klampenborg",
+     "note": "Lange ture mod nord",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "travbanen.dk",
+   "note": "ÅRETS STØRSTE LØB · derby",
+   "dato": "2026-08-30"
+  },
+  {
+   "id": "tr0909",
+   "vid": "charlottenlund_travbane",
+   "ikon": "🐎",
+   "navn": "Charlottenlund · After Work Racing",
+   "venue": "Charlottenlund Travbane",
+   "lat": 55.7539,
+   "lon": 12.5879,
+   "kapacitet": 8000,
+   "start": "17:00",
+   "slut": "21:00",
+   "vindue": "21:00 – 22:00",
+   "type": "sport",
+   "type_label": "🐎 Travløb",
+   "score": 74,
+   "kurve": "fest",
+   "spot": "Hovedindgangen · Traverbanevej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🐎",
+     "Travløb"
+    ],
+    [
+     "👨‍👩‍👧",
+     "Hele familien kommer"
+    ],
+    [
+     "🚕",
+     "Mange ture efter sidste løb"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Traverbanevej",
+     "note": "Størst trafik ved lukketid",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Parkeringspladsen",
+     "note": "Fanger familier på vej hjem",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod Ordrup/Klampenborg",
+     "note": "Lange ture mod nord",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "travbanen.dk",
+   "note": "After work-travløb",
+   "dato": "2026-09-09"
+  },
+  {
+   "id": "tr0923",
+   "vid": "charlottenlund_travbane",
+   "ikon": "🐎",
+   "navn": "Charlottenlund · Kriteriumskvalifikation",
+   "venue": "Charlottenlund Travbane",
+   "lat": 55.7539,
+   "lon": 12.5879,
+   "kapacitet": 8000,
+   "start": "17:00",
+   "slut": "21:00",
+   "vindue": "21:00 – 22:00",
+   "type": "sport",
+   "type_label": "🐎 Travløb",
+   "score": 74,
+   "kurve": "fest",
+   "spot": "Hovedindgangen · Traverbanevej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🐎",
+     "Travløb"
+    ],
+    [
+     "👨‍👩‍👧",
+     "Hele familien kommer"
+    ],
+    [
+     "🚕",
+     "Mange ture efter sidste løb"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Traverbanevej",
+     "note": "Størst trafik ved lukketid",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Parkeringspladsen",
+     "note": "Fanger familier på vej hjem",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod Ordrup/Klampenborg",
+     "note": "Lange ture mod nord",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "travbanen.dk",
+   "note": "Kriterium",
+   "dato": "2026-09-23"
+  },
+  {
+   "id": "tr0927",
+   "vid": "charlottenlund_travbane",
+   "ikon": "🐎",
+   "navn": "Charlottenlund · Travløb",
+   "venue": "Charlottenlund Travbane",
+   "lat": 55.7539,
+   "lon": 12.5879,
+   "kapacitet": 8000,
+   "start": "12:00",
+   "slut": "16:00",
+   "vindue": "16:00 – 17:00",
+   "type": "sport",
+   "type_label": "🐎 Travløb",
+   "score": 74,
+   "kurve": "fest",
+   "spot": "Hovedindgangen · Traverbanevej",
+   "ventetid": "4–8 min",
+   "boostere": [
+    [
+     "🐎",
+     "Travløb"
+    ],
+    [
+     "👨‍👩‍👧",
+     "Hele familien kommer"
+    ],
+    [
+     "🚕",
+     "Mange ture efter sidste løb"
+    ]
+   ],
+   "steder": [
+    {
+     "navn": "Hovedindgangen · Traverbanevej",
+     "note": "Størst trafik ved lukketid",
+     "ventetid": "4–8 min",
+     "taxier": 6,
+     "best": true
+    },
+    {
+     "navn": "Parkeringspladsen",
+     "note": "Fanger familier på vej hjem",
+     "ventetid": "6–10 min",
+     "taxier": 4,
+     "best": false
+    },
+    {
+     "navn": "Mod Ordrup/Klampenborg",
+     "note": "Lange ture mod nord",
+     "ventetid": "8–12 min",
+     "taxier": 3,
+     "best": false
+    }
+   ],
+   "kilde": "travbanen.dk",
+   "note": "Søndagsløb",
+   "dato": "2026-09-27"
   }
  ],
  "venues": [
@@ -24726,6 +25139,16 @@
    "transport_gab": 0.55,
    "type": "sport",
    "spot": "Hovedindgangen · Amagerhallen"
+  },
+  {
+   "id": "charlottenlund_travbane",
+   "navn": "Charlottenlund Travbane",
+   "lat": 55.7539,
+   "lon": 12.5879,
+   "kapacitet": 8000,
+   "transport_gab": 0.55,
+   "type": "sport",
+   "spot": "Hovedindgangen · Traverbanevej"
   }
  ]
 }
