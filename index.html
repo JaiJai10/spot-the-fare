@@ -297,7 +297,6 @@
       </div>
     </header>
 
-    <div id="fetchStatus" style="display:none;margin:0 16px 4px;padding:8px 12px;border-radius:10px;font-size:12px;border:1px solid rgba(61,220,132,.35);background:rgba(61,220,132,.10);color:var(--green)"></div>
     <nav id="tabs">
       <button data-tab="tonight" class="on">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
@@ -315,7 +314,6 @@
 
     <main>
       <section id="tab-tonight">
-        <div id="stale" style="display:none;background:rgba(255,159,67,.12);border:1px solid rgba(255,159,67,.4);color:var(--orange);border-radius:12px;padding:10px 12px;font-size:12.5px;margin-bottom:10px"></div>
         <div class="dayseg" id="daySel"></div>
         <div class="chips" id="filters">
           <button class="chip on" data-f="all" data-t="fAll">Alle</button>
@@ -1934,13 +1932,6 @@ function renderStatic(){
   $("daySel").style.display = LIVE ? "flex" : "none";
   $("sortChip").textContent = curSort==="score" ? L.sortScore : L.sortTime;
   $("sortChip").classList.toggle("on", curSort==="time");
-  const st = $("stale");
-  if(LIVE && LIVE.dato !== todayStr()){
-    st.style.display = "block";
-    st.textContent = lang==="da"
-      ? `⚠️ Data er fra ${fmtDate(LIVE.dato)} — opdater siden for at prøve live-opdatering`
-      : `⚠️ Data is from ${fmtDate(LIVE.dato)} — refresh the page to try live update`;
-  } else st.style.display = "none";
 }
 function renderAll(){
   renderStatic();
