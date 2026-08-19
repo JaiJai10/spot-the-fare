@@ -485,6 +485,15 @@ let LIVE = null;
 const wrap = s => ({da: s, en: s});
 const fmtCap = n => n ? n.toLocaleString("da-DK") : "—";
 const fmtDate = iso => iso ? iso.slice(8,10)+"."+iso.slice(5,7)+"."+iso.slice(0,4) : "";
+function fmtDateTime(t){
+  try{
+    const p = new Intl.DateTimeFormat(lang==="da" ? "da-DK" : "en-GB",
+      {timeZone:"Europe/Copenhagen", day:"2-digit", month:"2-digit", year:"numeric", hour:"2-digit", minute:"2-digit"}).formatToParts(new Date(t));
+    const g = x => p.find(o=>o.type===x).value;
+    return lang==="da" ? `${g("day")}.${g("month")}.${g("year")} ${g("hour")}:${g("minute")}`
+                       : `${g("day")}/${g("month")}/${g("year")} ${g("hour")}:${g("minute")}`;
+  }catch(e){ return ""; }
+}
 
 /* ============ DATA (real Aug 2026 events, demo forecasts) ============ */
 const NOW = "21:15"; // fixed demo clock, Sat 15 Aug 2026
@@ -1703,6 +1712,12 @@ function setStatus(msg, warn){
 }
 function applyLive(d, mode){
   LIVE = d; LIVE._mode = mode;
+  // Gem hvornår appen sidst blev opdateret (lokalt på enheden)
+  try{
+    const upd = new Date();
+    LS.setItem("stf_lastupdate", upd.toISOString());
+    LIVE._updated = upd;
+  }catch(e){ LIVE._updated = new Date(); }
   buildLive(); mergeMyEvents(); renderAll(); tickClock();
 }
 async function loadLive(){
@@ -1716,7 +1731,11 @@ async function loadLive(){
   // 2) hent live direkte i browseren (især hvis filen er gammel)
   setStatus("⏳ Henter live-data fra kilderne…");
   try{
-    const d = await buildBrowserData();
+    // max 15 sek på live-hentning — ellers brug datafilen
+    const d = await Promise.race([
+      buildBrowserData(),
+      new Promise((_, rej)=>setTimeout(()=>rej(new Error("live-timeout")), 15000))
+    ]);
     if(d && d.events.length){
       try{ LS.setItem("stf_cache", JSON.stringify(d)); }catch(e){}
       applyLive(d,"live"); setStatus("");
@@ -1881,7 +1900,16 @@ function buildLive(){
 /* ============ UI / INIT ============ */
 function liveNoteText(){
   const d = fmtDate(LIVE.dato);
-  return lang==="da" ? `LIVE · data fra ${d}` : `LIVE · data from ${d}`;
+  let upd = LIVE._updated;
+  if(!upd){
+    try{
+      const s = LS.getItem("stf_lastupdate");
+      if(s) upd = new Date(s);
+    }catch(e){}
+  }
+  if(!upd && LIVE.genereret) upd = new Date(LIVE.genereret.replace("T"," ").replace(/-/g,"/"));
+  const updTxt = upd && !isNaN(upd) ? " · " + (lang==="da" ? "sidst opdateret " : "last updated ") + fmtDateTime(upd) : "";
+  return (lang==="da" ? `LIVE · data fra ${d}` : `LIVE · data from ${d}`) + updTxt;
 }
 function renderStatic(){
   document.querySelectorAll("[data-t]").forEach(el=>{
