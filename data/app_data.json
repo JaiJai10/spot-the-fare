@@ -20299,6 +20299,106 @@
    "transport_gab": 0.55,
    "type": "sport",
    "spot": "Hovedindgangen · Traverbanevej"
+  },
+  {
+   "id": "ac_bella_sky",
+   "navn": "AC Hotel Bella Sky",
+   "lat": 55.6395,
+   "lon": 12.5782,
+   "kapacitet": 2000,
+   "transport_gab": 0.45,
+   "type": "business",
+   "spot": "Hovedindgangen · Center Boulevard"
+  },
+  {
+   "id": "marriott",
+   "navn": "Copenhagen Marriott Hotel",
+   "lat": 55.6686,
+   "lon": 12.5738,
+   "kapacitet": 800,
+   "transport_gab": 0.4,
+   "type": "business",
+   "spot": "Hovedindgangen · Kalvebod Brygge"
+  },
+  {
+   "id": "radisson_royal",
+   "navn": "Radisson Blu Royal",
+   "lat": 55.6749,
+   "lon": 12.5638,
+   "kapacitet": 600,
+   "transport_gab": 0.35,
+   "type": "business",
+   "spot": "Hovedindgangen · Hammerichsgade"
+  },
+  {
+   "id": "dangleterre",
+   "navn": "Hotel D'Angleterre",
+   "lat": 55.6806,
+   "lon": 12.5843,
+   "kapacitet": 300,
+   "transport_gab": 0.3,
+   "type": "kultur",
+   "spot": "Hovedindgangen · Kongens Nytorv"
+  },
+  {
+   "id": "scandic_spectrum",
+   "navn": "Scandic Spectrum",
+   "lat": 55.6696,
+   "lon": 12.574,
+   "kapacitet": 1000,
+   "transport_gab": 0.4,
+   "type": "business",
+   "spot": "Hovedindgangen · Kalvebod Brygge"
+  },
+  {
+   "id": "copenhagen_island",
+   "navn": "Copenhagen Island",
+   "lat": 55.6634,
+   "lon": 12.5633,
+   "kapacitet": 500,
+   "transport_gab": 0.45,
+   "type": "business",
+   "spot": "Hovedindgangen · Kalvebod Brygge"
+  },
+  {
+   "id": "villa_copenhagen",
+   "navn": "Villa Copenhagen",
+   "lat": 55.6714,
+   "lon": 12.5677,
+   "kapacitet": 500,
+   "transport_gab": 0.35,
+   "type": "business",
+   "spot": "Hovedindgangen · Tietgensgade"
+  },
+  {
+   "id": "nimb",
+   "navn": "Nimb Hotel",
+   "lat": 55.6735,
+   "lon": 12.5665,
+   "kapacitet": 200,
+   "transport_gab": 0.3,
+   "type": "kultur",
+   "spot": "Hovedindgangen · Bernstorffsgade"
+  },
+  {
+   "id": "hilton_cph",
+   "navn": "Hilton Copenhagen Airport",
+   "lat": 55.6285,
+   "lon": 12.645,
+   "kapacitet": 600,
+   "transport_gab": 0.35,
+   "type": "business",
+   "spot": "Hovedindgangen · Lufthavnen"
+  },
+  {
+   "id": "manon",
+   "navn": "Manon Les Suites",
+   "lat": 55.6804,
+   "lon": 12.5613,
+   "kapacitet": 300,
+   "transport_gab": 0.45,
+   "type": "business",
+   "spot": "Hovedindgangen · Islands Brygge"
   }
  ]
 }
