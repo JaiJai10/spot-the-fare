@@ -705,7 +705,7 @@ function nowMin(){
 function todayStr(){
   return new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Copenhagen"}).format(new Date());
 }
-function dataToday(){ return LIVE ? LIVE.dato : todayStr(); }
+function dataToday(){ return todayStr(); } // altid telefonens rigtige dato
 function addDaysStr(iso, n){
   const d = new Date(iso.slice(0,4), +iso.slice(5,7)-1, +iso.slice(8,10));
   d.setDate(d.getDate()+n);
@@ -727,7 +727,7 @@ function status(e){
 }
 function tickClock(){
   $("clock").textContent = nowClock();
-  $("mapSub").textContent = fmtDate(LIVE ? LIVE.dato : todayStr()) + " · " + nowClock();
+  $("mapSub").textContent = fmtDate(todayStr()) + " · " + nowClock();
 }
 function ring(s, size, lw){
   const r = (size-lw)/2, C = 2*Math.PI*r, off = C*(1-s/100);
@@ -780,7 +780,7 @@ function renderUpcoming(){
   const el = $("upcoming");
   let rows = "";
   if(LIVE){
-    const ups = EVENTS.filter(e=>e.dato>LIVE.dato)
+    const ups = EVENTS.filter(e=>e.dato>dataToday())
       .sort((a,b)=>(a.dato+a.start).localeCompare(b.dato+b.start)).slice(0,6);
     rows = ups.map(u=>`
       <button class="up-row" onclick="toast('${L.upToast}')">
@@ -873,7 +873,7 @@ function renderMarkers(){
     MARKERS = Lf.layerGroup().addTo(MAP);
     const pts = [];
     const list = LIVE
-      ? EVENTS.filter(e=>e.dato===LIVE.dato && e.lat!=null && e.lon!=null)
+      ? EVENTS.filter(e=>e.dato===todayStr() && e.lat!=null && e.lon!=null)
       : EVENTS.filter(e=>EVMAP[e.id]).map(e=>{ const v=VENUES.find(x=>x.id===EVMAP[e.id]); return v? Object.assign({},e,{lat:v.lat,lon:v.lon}) : null; }).filter(Boolean);
     const seenVenues = new Set();
     list.forEach(e=>{
@@ -1891,13 +1891,13 @@ function buildLive(){
   });
   // planlægger fra dagens events (hele døgnet: krydstogter, konferencer, aften — score ≥ 25)
   // Sorteret efter LET-OUT (sluttid) — det er dér folk strømmer ud og taxa-kunderne er
-  PLAN_BASE = EVENTS.filter(e=>e.dato===LIVE.dato && e.score>=25)
+  PLAN_BASE = EVENTS.filter(e=>e.dato===todayStr() && e.score>=25)
     .sort((a,b)=>toM(a.end)-toM(b.end));
   PLAN_SOURCE = PLAN_BASE.slice(0,5);
   rebuildPlanner();
   // alerts
   ALERTS = [];
-  const tonightAll = EVENTS.filter(e=>e.dato===LIVE.dato);
+  const tonightAll = EVENTS.filter(e=>e.dato===todayStr());
   const top = tonightAll.slice().sort((a,b)=>b.score-a.score)[0];
   if(top) ALERTS.push({ic:"🚕",
     title:wrap(`${tonightAll.length} events i aften — top: ${tr(top.name)} (${top.score})`),
@@ -1929,7 +1929,7 @@ function liveNoteText(){
   }
   if(!upd && LIVE.genereret) upd = new Date(LIVE.genereret.replace("T"," ").replace(/-/g,"/"));
   const updTxt = upd && !isNaN(upd) ? " · " + (lang==="da" ? "sidst opdateret " : "last updated ") + fmtDateTime(upd) : "";
-  return (lang==="da" ? `LIVE · data fra ${d}` : `LIVE · data from ${d}`) + updTxt;
+  return (lang==="da" ? `LIVE · datafil fra ${d}` : `LIVE · data file from ${d}`) + updTxt;
 }
 function renderStatic(){
   document.querySelectorAll("[data-t]").forEach(el=>{
@@ -1937,7 +1937,7 @@ function renderStatic(){
     if(T[lang][k] !== undefined) el.textContent = T[lang][k];
   });
   $("brandSub").textContent = L.brandSub;
-  $("mapSub").textContent = fmtDate(LIVE ? LIVE.dato : todayStr()) + " · " + nowClock();
+  $("mapSub").textContent = fmtDate(todayStr()) + " · " + nowClock();
   $("demoNote").textContent = LIVE ? liveNoteText() : L.demoNote;
   $("daySel").style.display = LIVE ? "flex" : "none";
   $("sortChip").textContent = curSort==="score" ? L.sortScore : L.sortTime;
